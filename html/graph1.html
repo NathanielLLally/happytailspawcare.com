@@ -1,0 +1,90 @@
+<div id="chart_div" style="width:101%; height:500px;"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+function getData(url) {
+  try {
+    const response = fetch(url, {
+      headers: {
+'Access-Control-Allow-Origin':'*'
+},
+      method: 'GET'
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const responseData =  response.json();
+    console.log('Success:', responseData);
+  } catch (error) {
+    console.error('Error posting data:', error);
+  }
+}
+</script>
+<script>
+google.charts.load('current',{'packages':['corechart','controls']});
+google.charts.setOnLoadCallback(chartStuff);
+function chartStuff() {
+var dataSourceUrl = 
+"https://script.google.com/macros/s/AKfycbw4zHkAUbRLoSHmkYuleuOAUr6o9hMzl7ule6A6IEnEytsxfMUCQG3tFNcSqVfGHUwr/exec?action=update";
+var query = new google.visualization.Query(dataSourceUrl);
+query.setTimeout(1);
+query.send(qr);
+}
+function qr(response) {
+drawChart();
+      if (response.isError()) {
+        return;
+      }
+}
+
+function drawChart() {
+var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/gviz/tq?gid=433166320&headers=1&tq=';
+var query = new google.visualization.Query(dataSourceUrl);
+query.send(handleQueryResponse);
+}
+function handleQueryResponse(response) {
+      if (response.isError()) {
+        alert('Error in query: ' + response.getMessage() + ' ' + response.getDetailedMessage());
+        return;
+      }
+      var data = response.getDataTable();
+      var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+
+        const options = {
+          title: 'Business Growth Model (Retention-Driven)',
+          height: 500,
+          legend: { position: 'top' },
+          seriesType: 'bars',
+          series: {
+            0: { type: 'bars', targetAxisIndex: 0 }, // New Clients
+            1: { type: 'bars', targetAxisIndex: 0 }, // Churned Clients
+            2: { type: 'line', targetAxisIndex: 0 }, // Active Clients
+            3: { type: 'line', targetAxisIndex: 1 }, // Revenue
+            4: { type: 'line', targetAxisIndex: 1 }  // ROAS
+          },
+          vAxes: {
+            0: {
+              title: 'Clients',
+              viewWindow: { min: -10 }
+            },
+            1: {
+              title: 'Revenue / ROAS',
+              format: 'short'
+            }
+          },
+          focusTarget: 'category',
+          tooltip: { isHtml: true }
+        };
+ 
+        // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
+
+        // Establish dependencies, declaring that 'filter' drives 'pieChart',
+        // so that the pie chart will only display entries that are let through
+        // given the chosen slider range.
+
+chart.draw(data, options);
+    }
+</script>
