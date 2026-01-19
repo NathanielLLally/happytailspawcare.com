@@ -1,4 +1,18 @@
 "use strict";
+//find a way?
+//<script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+
+function include(filename) {
+  return HtmlService.createHtmlOutputFromFile(filename).getContent();
+}
+
+
+function testMath() {
+  let math = include('math')
+  //console.log(math)
+  console.log(math.evaluate('2+2'))
+}
+
 
 const MIN_TIME_UNIT = 1;
 const MAX_TIME_UNIT = 240;
@@ -17,6 +31,8 @@ const TIME_UNIT = {
   QUARTER: 3,
   YEAR: 12
 }
+
+let gDataTable;
 
 function today() {
   const today = new Date();
@@ -141,12 +157,22 @@ function calc(time, model, key, value) {
 
 }
 
+String.prototype.format = String.prototype.f = function() {
+    var s = this,
+        i = arguments.length;
+
+    while (i--) {
+        s = s.replace(new RegExp('\\{' + i + '\\}', 'gm'), arguments[i]);
+    }
+    return s;
+};
+
 //  takes timeUnits, modelTuning, data, n (time step index) 
 //    returns resultSet
 //
 //  TODO rename this
 //
-function rCalc(data, t = TIME_UNIT.MONTH, m, timeStep = 1, fields = []) {
+function rCalc(t = TIME_UNIT.MONTH, m, timeStep = 0, tRange, fields = []) {
   assertValidTime(t);
   assertValidModel(m);
 
@@ -174,102 +200,124 @@ function rCalc(data, t = TIME_UNIT.MONTH, m, timeStep = 1, fields = []) {
     */
 
 function getRandomInt(max,min) {
-  return Math.floor(Math.random() * (max-min+1)) + min;
+  return Math.floor(Math.random() * (max-min+1)) + +min;
 }
 
-//
-//const timeFunc = (t=TIME_UNIT.MONTH,n=MIN_TIME_UNIT) => {
 let funcFromStr = {
+  //
+  //BE SURE TO ADDRESS THE FULL KEY NAME WHEN ACCESSING GLOBAL DATA TABLE
+  //  THERE IS NO SHORT FIELD NAME, THEY ALL CONTAING time_unit and model_tuning
+  //
   //TODO vary data or have some tabulation input from actual leads sheet
   //  onboarding close rate transparency
   //
   'new_clients': (d,timeUnit,modelTuning, n) => {
-    console.log('f(x) new_clients');
     //  previous timeStep(n)
     //  if n == 0, initial is 'active_clients'
     d['close_rate']  = 0.05;
-    console.log(`close_rate: ${d['close_rate']} new_leads: ${d['new_leads']}`) 
-    let fX = Math.round((getRandomInt(5,-5) + d['new_leads'] )* d['close_rate']);
+    
+    //let fX = Math.round(+(getRandomInt(5,-5) + +d['new_leads'] ) * +d['close_rate']);
+    let fX = Math.round(+(getRandomInt(5,-5) + +d['new_leads'] ));
     return fX;
   },
 
+
+  //  for illustration purposes, it might be nice to have 
+  //  the first time period containing initial values, deriving values for subsequent time periods
+  //     either with n=0 or etc..?
+  //
+  //     currently, this function derives on time=[initial]
+  //
   'active_clients': (d,timeUnit,modelTuning, n) => {
-    console.log('f(x) active_clients');
-    //  previous timeStep(n)
-    //  if n == 0, initial is 'active_clients'
-    let f = 'active_clients_'+ longTime(timeUnit) + "_" + longModel(modelTuning) + "_" + n - 1;
+    //  
+    //  initial is in fact 1
+    let f0 = 'active_clients_{0}_{1}_{2}'.f(longTime(timeUnit),longModel(modelTuning), 0);
 
-    if (typeof(d['f']) === 'undefined') {
-      console.log('active_clients '+d['f'])
-      d['f'] = d['active_clients'] 
-      console.log('active_clients ' + d['f'])
+    let fp = 'active_clients_{0}_{1}_{2}'.f(longTime(timeUnit),longModel(modelTuning), (+n - 1));
+    let f = 'new_clients_{0}_{1}_{2}'.f(longTime(timeUnit),longModel(modelTuning), (+n));
+
+    console.log('f(x) active_clients f {0} d {1}'.f(f,d[f]))
+    console.log('f(x) active_clients f prev {0} d prev {1}'.f(fp,d[fp]))
+
+    //  if n == 1, initial,... [0] is set to d['active_clients'
+    if (typeof(d[fp]) === 'undefined') {
+      d[f0] = +d['active_clients']
+      console.log('fp === undef, initial from form submission: {0}'.f(d['active_clients']));
     }
-    let fX = d['f'] * d['client_retention_rate'] + d['new_leads'] 
-    console.log(`f ${f} client_retention_rate: ${d['client_retention_rate']} new_leads: ${d['new_leads']}`) 
+
+    let fX = Math.round(+d[fp] * +d['client_retention_rate']) + +d[f] 
+    let a = d[fp]
+    let b = d['client_retention_rate'] 
+    let c = +a * +b
+
+    console.log('f(x) active_clients n {0} f {1} df {2} fp {3} dfp {4} dfp * crr {5} c {6} fx {7}'.f(n, f, 
+      +d[f], fp, d[fp], +d[fp] * +d['client_retention_rate'], c, fX));
     return fX;
   },
-
-  'churned_clients': (d,timeUnit,modelTuning,n) => {
+  'non_retained_clients': (d,timeUnit,modelTuning,n) => {
+    let f = 'active_clients_{0}_{1}_{2}'.f(longTime(timeUnit),longModel(modelTuning), (+n));
     let fX;
     switch (modelTuning) {
       case MODEL_TUNING.BASELINE:
-        fX = -(d['active_clients'] * (1 - d['client_retention_rate']));
+        fX = Math.round(-(+d[f] * (1 - +d['client_retention_rate'])));
         break;
       default:
-        fX = -(d['active_clients'] * (1 - d['client_retention_rate']));
+        fX = Math.round(-(+d[f] * (1 - +d['client_retention_rate'])));
     }
-    console.log(`f(x) churned_clients ${fX}`);
+    console.log('f(x) active_clients: {0} non_retained_clients {1}'.f(d[f],fX));
     return fX;
   },
-
   'lifetime_value': (d,timeUnit,modelTuning, n) => {
     console.log('f(x) lifetime_value');
     switch (modelTuning) {
       case MODEL_TUNING.BASELINE:
-        return d['revenue_per_client'] * d['avg_client_lifespan'];
+        return +d['revenue_per_client'] * +d['avg_client_lifespan'];
         break;
       case MODEL_TUNING.MAX:
-        return d['revenue_per_client'] * d['avg_client_lifespan'];
+        return +d['revenue_per_client'] * +d['avg_client_lifespan'];
         break;
       default:
-        return d['revenue_per_client'] * d['avg_client_lifespan'] ;
+        return +d['revenue_per_client'] * +d['avg_client_lifespan'] ;
     }
-
   },
   //Total money earned from sales before any costs.
   'gross_revenue': (d,timeUnit,modelTuning, n) => {
     console.log('f(x) gross_revenue');
-    return (d['revenue_per_client'] * d['active_clients'])
+    return (+d['revenue_per_client'] * +d['active_clients'])
   },
-
   'net_profit_per_client': (d,timeUnit,modelTuning, n) => {
     console.log('f(x) net_profit_per_client');
-    return (d['gross_revenue'] * d['profit_margin'])
+    return (+d['gross_revenue'] * +d['profit_margin'])
   },
-
-
   //TODO: rangeSlider
   //
   'ad_spend': (d,timeUnit,modelTuning, n) => {
-    console.log('f(x) ad_spend');
+
+    /*d['time_begin']
+    d['time_end']
+    */
+    let range = (+d['ad_spend_max'] - +d['ad_spend_min']) / tRange
+    let fX
     switch (modelTuning) {
       case MODEL_TUNING.BASELINE:
-        return Math.round(d['ad_spend_min'])
+        fX = Math.round(+d['ad_spend_min'] + range * (n-1))
         break;
       case MODEL_TUNING.MAX:
-        return Math.round(d['ad_spend_min'] + (d['ad_spend_min'] / n))
+        fX =  Math.round(+d['ad_spend_min'] + (+d['ad_spend_min'] / +n))
         break;
       default:
-        return Math.round(d['ad_spend_min'] + (d['ad_spend_min'] * (n / MAX_TIME_UNIT)))
+        fX =  Math.round(+d['ad_spend_min'] + (+d['ad_spend_min'] * (n / MAX_TIME_UNIT)))
     }
+    console.log(`f(x) t ${timeUnit} m ${modelTuning} n ${n} tRange ${tRange} range ${range} ad_spend max ${d['ad_spend_max']} min ${d['ad_spend_min']} fX ${fX}` );
+    return fX;
   },
   'new_leads': (d,timeUnit,modelTuning, n) => {
-    let fX = d['new_leads'];
+    let fX = +d['new_leads'];
     console.log(`f(x) new_leads ${fX}`);
     return fX;
   },
   'client_retention_rate': (d,timeUnit,modelTuning, n) => {
-    let fX = d['client_retention_rate'];
+    let fX = +d['client_retention_rate'];
     console.log(`f(x) client_retention_rate ${fX}`);
     return fX;
   },
@@ -284,24 +332,20 @@ let funcFromStr = {
 //  
 //console.log(`TODO assert that ('month' == 'month') is true [${longTime(t)}]`);
 
-//  let rs = [];
-// eg. month => month
-//  data[`${longTime(t)}_${timeStep}`] = timeStep;
-//  console.log(`${longTime(t)}_${timeStep}`);
-//  console.log(data[`${longTime(t)}_${timeStep}`]);
-
 //  field renaming can happen here
 //
 let out = [timeFunc(t,timeStep)]
-
+//
 for (let [field, fn] of Object.entries(funcFromStr)) {
-  let f = field + "_" + longTime(t) + "_" + longModel(m) + "_" + timeStep;
+  let f = field + "_" + longTime(t) + "_" + longModel(m) + "_" + (timeStep);
+
   //  derivedFieldName_stringOfTimeUnit_stringOfModelTuning = value
-  let v = fn(data, t, m, timeStep);
-  data[f] = v;
+  let v = fn(gDataTable, t, m, timeStep);
+  
+  console.log('rCalc: funcFromStr n:{0} f:{1} v:{2}'.f(timeStep,f,v)); 
+  gDataTable[f] = v;
 
   if (fields.includes(field)) {
-    console.log(v);
     out.push(v);
   } else {
     console.log(`field not included ${field}`)
@@ -531,16 +575,16 @@ function populateSheet() {
 
   console.log(`niche ${niche} active_clients: ${active_clients}`);
   let link = `${sheet_url}&${n}:${n}`;
-  let dataTable = funroll(niche, `=HYPERLINK("${link}", "row ${n}")`);
+  gDataTable = funroll(niche, `=HYPERLINK("${link}", "row ${n}")`);
 
-  dataTable = addDataSubNiche(dataTable);
-  console.log(dataTable)
+  gDataTable = addDataSubNiche(gDataTable);
+  console.log(gDataTable)
   //  let graphTable = funroll(niche, `=HYPERLINK("${link}", "row ${n}")`);
 
-  dataTable['active_clients'] = active_clients;
+  gDataTable['active_clients'] = active_clients;
 
-  assertValidTime(dataTable.time)
-  assertValidModel(dataTable.model)
+  assertValidTime(gDataTable.time)
+  assertValidModel(gDataTable.model)
 
   //  TODO: this could & should be tied to the UI
   //
@@ -548,7 +592,7 @@ function populateSheet() {
   const graph_sheet = ss.getSheetByName('Graph');
 
   let c = 1;  let r = 1;
-  for (let [k, v] of Object.entries(dataTable)) {
+  for (let [k, v] of Object.entries(gDataTable)) {
     console.log("k: "+k+" v:"+v);
     data_sheet.getRange(r,1).setValue(k);  
     data_sheet.getRange(r,2).setValue(v);
@@ -559,7 +603,7 @@ function populateSheet() {
   //  getA1Notation()
   //console.log(graph_sheet.getRange(1,1));
   //for (let f of graphFields) {
-  //  graphTable["A1"]= longTime(dataTable.time);
+  //  graphTable["A1"]= longTime(gDataTable.time);
   //}
 
   //   console.log(JSON.stringify(graphTable));
@@ -572,24 +616,30 @@ function populateSheet() {
   // Force all pending changes to be applied to the sheet
   //    SpreadsheetApp.flush();
 
-  //    var graphTable = dataTable
+  //    var graphTable = gDataTable
   var newData = [];
 
-  var fields = ["new_clients", "churned_clients", "active_clients", "gross_revenue", "ad_spend","new_leads","client_retention_rate"];//, "tooltip"];
+  var fields = ["new_clients", "active_clients", "non_retained_clients", "gross_revenue", "ad_spend","new_leads","client_retention_rate"];
+  var header = ["New Clients", "Active Clients", "Non-retained Clients", "Revenue", "Ad Spend","New Leads","Client Retention Rate"];
   //  headers
   //
-  let headers = [longTime(dataTable.time)];
-  for (let header of fields) {
-    headers.push(header);
+  let headers = [longTime(gDataTable.time)];
+  for (let el of header) {
+    headers.push(el);
   }
-  console.log('newData');
   newData.push(headers);
   console.log(JSON.stringify(newData));
 
-  for (let timeStep = dataTable['time_begin'] + 1; timeStep <= dataTable['time_end']; timeStep += 1) {
-    newData.push( rCalc(dataTable, dataTable.time, dataTable.model, timeStep, fields) );
+  let tRange = +gDataTable['time_end'] - +gDataTable['time_begin']
+
+  // from 1 
+  //
+  for (let timeStep = gDataTable['time_begin'] + 1; timeStep <= gDataTable['time_end']; timeStep += 1) {
+
+    newData.push( rCalc(gDataTable.time, gDataTable.model, timeStep,tRange,fields) );
   }
 
+  console.log('pushing data to graph sheet');
   console.log(JSON.stringify(newData));
 
   //    var multiCellRange = graph_sheet.getRange('A1:N4');
@@ -688,5 +738,6 @@ function writeData(sheet, data) {
 
   //return ContentService.createTextOutput('ID not found');
 }
+
 
 
