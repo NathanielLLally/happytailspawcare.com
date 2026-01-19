@@ -1,7 +1,7 @@
 
 function addDataSubNiche(data={}) {
   //if (hasOwnProperty !Object.data.includes("niche")) {
-    data["niche"] = "emergency"
+   // data["niche"] = "emergency"
   if (!"niche" in data) {
      throw new Error(`passed invalid dataTable, missing 'niche'`);
   }

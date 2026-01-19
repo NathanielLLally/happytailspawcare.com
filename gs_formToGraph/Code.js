@@ -24,6 +24,23 @@ const MODEL_TUNING = {
   UPPERQUARTILE: "Baller Bracket",
   MAX: "Boss Level"
 }
+function modelFromString(text) {
+  let map = {
+    'baseline' : MODEL_TUNING.BASELINE,
+    'lowerquartile' : MODEL_TUNING.LOWERQUARTILE,
+    'median': MODEL_TUNING.MEDIAN,
+    'upperquartile': MODEL_TUNING.UPPERQUARTILE,
+    'max': MODEL_TUNING.MAX
+  } 
+  let model = undefined;
+  if (text in map) {
+    model = map[text];
+  } else {
+    throw new Error(`Invalid Model: ${text}`);
+  }
+  return model
+}
+
 const TIME_UNIT = {
   DAY: 0.35,
   WEEK: 0.25,
@@ -214,10 +231,9 @@ let funcFromStr = {
   'new_clients': (d,timeUnit,modelTuning, n) => {
     //  previous timeStep(n)
     //  if n == 0, initial is 'active_clients'
-    d['close_rate']  = 0.05;
     
     //let fX = Math.round(+(getRandomInt(5,-5) + +d['new_leads'] ) * +d['close_rate']);
-    let fX = Math.round(+(getRandomInt(5,-5) + +d['new_leads'] ));
+    let fX = Math.floor(+d['new_leads'] * +d['close_rate'] );
     return fX;
   },
 
@@ -297,13 +313,15 @@ let funcFromStr = {
     d['time_end']
     */
     let range = (+d['ad_spend_max'] - +d['ad_spend_min']) / tRange
+    let interpolated = Math.round(+d['ad_spend_min'] + range * (n-1))
+
     let fX
     switch (modelTuning) {
       case MODEL_TUNING.BASELINE:
         fX = Math.round(+d['ad_spend_min'] + range * (n-1))
         break;
       case MODEL_TUNING.MAX:
-        fX =  Math.round(+d['ad_spend_min'] + (+d['ad_spend_min'] / +n))
+        fX =  Math.round(+d['ad_spend_min'] + range * (n-1))
         break;
       default:
         fX =  Math.round(+d['ad_spend_min'] + (+d['ad_spend_min'] * (n / MAX_TIME_UNIT)))
@@ -312,7 +330,7 @@ let funcFromStr = {
     return fX;
   },
   'new_leads': (d,timeUnit,modelTuning, n) => {
-    let fX = +d['new_leads'];
+    let fX = Math.round(+(getRandomInt(5,-5) + +d['new_leads'] ));
     console.log(`f(x) new_leads ${fX}`);
     return fX;
   },
@@ -333,7 +351,7 @@ let funcFromStr = {
 //console.log(`TODO assert that ('month' == 'month') is true [${longTime(t)}]`);
 
 //  field renaming can happen here
-//
+// cap first letter string.charAt(0).toUpperCase() + string.slice(1);
 let out = [timeFunc(t,timeStep)]
 //
 for (let [field, fn] of Object.entries(funcFromStr)) {
@@ -392,12 +410,11 @@ function funroll(nicheEnum, formLink) {
 
   var data = {
     "form_row_link": formLink,
-    "time": TIME_UNIT.MONTH,
-    "model": MODEL_TUNING.BASELINE,
+    "niche": nicheEnum,
+    "time": TIME_UNIT.WEEK,
+    "time_longname": "",
+    "model": "",
     "graph": {"fields": [] },
-    "avg_client_lifespan": "12",  //time base month
-    "client_retention_rate": 0.8,
-    "new_leads": 10,
     //split these out per niche
     "revenue_per_client": 300,
     "overhead": 100,
@@ -409,12 +426,15 @@ function funroll(nicheEnum, formLink) {
   //TODO: fixthis
   //data["time_end"] = data["time"] * MAX_TIME_UNIT;
   data["time_end"] = 11;
+  data["time_longname"] = longTime(data["time"])
 
 
   switch (nicheEnum) {
     case "emergency":
       data["ad_spend_min"] = "20000";
       data["ad_spend_max"] = "100000";
+      data['client_retention_min'] = 1;
+      data['client_retention_max'] = 6;
       data['service'] = ['Emergency Triage & Critical Care','After-Hours Diagnostics','Trauma & Surgery Intervention'];
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
       data['service_price'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
@@ -424,84 +444,114 @@ function funroll(nicheEnum, formLink) {
     case "surgical":
       data['service'] = ['Orthopedic Surgery Package','Oncology Treatment Protocol','Specialty Diagnostics'];
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 3;
+      data['client_retention_max'] = 18;
+
       data["ad_spend_min"] = "10000";
       data["ad_spend_max"] = "50000";
       break;
     case "franchise_vet":
       data['service'] = ['Annual Wellness Plan','Pet Vaccination Package','Preventative Dental Program'];
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 12;
+      data['client_retention_max'] = 72;
       data["ad_spend_min"] = "8000";
       data["ad_spend_max"] = "40000";
+
       break;
     case "training":
       data['service'] = ['Board & Train Intensive Program','Obedience Group Classes','One-on-One Behavioral Coaching']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 2;
+      data['client_retention_max'] = 12;
       data["ad_spend_min"] = "5000";
       data["ad_spend_max"] = "25000";
       break;
     case "boarding":
       data['service'] = ['Overnight Boarding Package','Daycare Enrollment','Playtime & Socialization Add-on']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 6;
+      data['client_retention_max'] = 60;
       data["ad_spend_min"] = "4000";
       data["ad_spend_max"] = "20000";
       break;
     case "mobile_vet":
       data['service'] = ['Mobile Wellness Exam','At-Home Vaccination Service','In-Home Lab & Diagnostics']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 12;
+      data['client_retention_max'] = 60;
       data["ad_spend_min"] = "3000";
       data["ad_spend_max"] = "15000";
       break;
     case "luxury_sitting":
       data['service'] = ['Premium Overnight Sitting','Daily Check-Ins & Playtime','Special Needs / Med Admin']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 6;
+      data['client_retention_max'] = 48;
       data["ad_spend_min"] = "3000";
       data["ad_spend_max"] = "12000";
       break;
     case "luxury_grooming":
       data['service'] = ['Full Groom & Styling','Show Groom Prep','Specialty Breed Maintenance']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 12;
+      data['client_retention_max'] = 84;
       data["ad_spend_min"] = "2000";
       data["ad_spend_max"] = "10000";
       break;
     case "walking":
       data['service'] = ['30-min Daily Walk Plan','60-min Premium Walk Plan','Pack Walk / Socialization Class']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 6;
+      data['client_retention_max'] = 48;
       data["ad_spend_min"] = "1500";
       data["ad_spend_max"] = "8000";
       break;
     case "transportation":
       data['service'] = ['Airport Pet Transfer','Vet / Grooming Pickup & Drop-Off','Long-Distance Relocation']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 1;
+      data['client_retention_max'] = 6;
       data["ad_spend_min"] = "1500";
       data["ad_spend_max"] = "7000";
       break;
     case "cremation":
       data['service'] = ['Individual Cremation','Communal Cremation','Memorial Keepsake Package']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 1;
+      data['client_retention_max'] = 1;
       data["ad_spend_min"] = "1000";
       data["ad_spend_max"] = "6000";
       break;
     case "delivery":
       data['service'] = ['Monthly Raw Food Delivery','Prescription Diet Subscription','Supplemental Treat Packs']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 6;
+      data['client_retention_max'] = 36;
       data["ad_spend_min"] = "1000";
       data["ad_spend_max"] = "5000";
       break;
     case "photo":
       data['service'] = ['Studio Portrait Session','Outdoor Adventure Shoot','Event Coverage (Birthday / Adoption Day)']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 1;
+      data['client_retention_max'] = 3;
       data["ad_spend_min"] = "500";
       data["ad_spend_max"] = "3000";
       break;
     case "exotic":
       data['service'] = ['Reptile Health Exam','Bird Beak / Feather Care','Small Mammal Wellness Plan']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 12;
+      data['client_retention_max'] = 96;
       data["ad_spend_min"] = "300";
       data["ad_spend_max"] = "2000";
       break;
     case "waste":
       data['service'] = ['Weekly Pooper Scooper Plan','Bi-Weekly Clean-Up','One-Time Yard Clean Event']
       data['service_hours'] = [{'min': 2, 'median': 3, 'max': 4}, {'min':0, "median":0, "max":0}, {'min':0,'median':0,'max':0}];
+      data['client_retention_min'] = 6;
+      data['client_retention_max'] = 60;
       data["ad_spend_min"] = "300";
       data["ad_spend_max"] = "1500";
       break;
@@ -554,34 +604,66 @@ function populateSheet() {
 
   console.log("await fetchXHR "+url)
   html = " fetching data <p>";
-  let sheet_url = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/edit?resourcekey=&gid=25088639#gid=25088639';
+  let sheet_url = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/edit?gid=748445865#gid=748445865';
   const ss = SpreadsheetApp.openByUrl(sheet_url);
-  const form_sheet = ss.getSheetByName('Forminator');
+  const form_sheet = ss.getSheetByName('Forminator-Growth1');
 
   //console.log(`spreadsheet name ${form_sheet.getFormUrl()}`)
 
-  //ui.showModalDialog(HtmlService.createHtmlOutput(html), 'Executing sequence');
+  //ui.showModalDialog(HtmlService.createHtmlOutput(html)/she 'Executing sequence');
   let response = UrlFetchApp.fetch(url);
   //  data = response.getContentText();
   var data = JSON.parse(response.getContentText());
 
   var n = data.length + 1;//data.slice(-1);
-  let el = data.pop();
-  //  var niche = el["Niche|select-1"];
-  var active_clients = el["Active Clients|number-1"];
-
-  var nicheArray = JSON.parse(el["Niche|select-1"]);
+  let form_input = data.pop();
+  console.log(form_input)
+  
+  var nicheArray = JSON.parse(form_input["Pet Service Type|select-1"]);
   let niche = nicheArray.pop();
 
-  console.log(`niche ${niche} active_clients: ${active_clients}`);
   let link = `${sheet_url}&${n}:${n}`;
+
+  //  dataTable constructor
+  //
   gDataTable = funroll(niche, `=HYPERLINK("${link}", "row ${n}")`);
 
-  gDataTable = addDataSubNiche(gDataTable);
-  console.log(gDataTable)
-  //  let graphTable = funroll(niche, `=HYPERLINK("${link}", "row ${n}")`);
+ 
+  gDataTable['active_clients'] = form_input["Active Clients|number-1"];
+  gDataTable['model'] = modelFromString(form_input["Speculation Model|radio-1"]);
+  
+  gDataTable['new_leads'] = form_input["Leads|radio-2"]
 
-  gDataTable['active_clients'] = active_clients;
+  gDataTable["avg_client_lifespan"]  = "5"
+  gDataTable["client_retention_rate"] = 0.8
+
+  switch (gDataTable['model']) {
+    case MODEL_TUNING.BASELINE:
+      gDataTable['close_rate']  = 0.05;
+      break;
+    case MODEL_TUNING.LOWERQUARTILE:
+      gDataTable['close_rate']  = 0.15;
+      break;
+    case MODEL_TUNING.MEDIAN:
+      gDataTable['close_rate']  = 0.30;
+      break;
+    case MODEL_TUNING.UPPERQUARTILE:
+      gDataTable['close_rate']  = 0.40;
+      break;
+    case MODEL_TUNING.MAX:
+      gDataTable['close_rate']  = 0.6;
+      break;
+    default:
+      gDataTable["avg_client_lifespan"]  = "12"
+      gDataTable["client_retention_rate"] = 0.8
+      dDataTable['close_rate']  = 0.05;
+      break;
+  }
+  gDataTable["avg_client_lifespan"]  = "12"
+  gDataTable["client_retention_rate"] = 0.8
+  gDataTable['close_rate']  = 0.05;
+
+  console.log(gDataTable)
 
   assertValidTime(gDataTable.time)
   assertValidModel(gDataTable.model)
@@ -619,8 +701,8 @@ function populateSheet() {
   //    var graphTable = gDataTable
   var newData = [];
 
-  var fields = ["new_clients", "active_clients", "non_retained_clients", "gross_revenue", "ad_spend","new_leads","client_retention_rate"];
-  var header = ["New Clients", "Active Clients", "Non-retained Clients", "Revenue", "Ad Spend","New Leads","Client Retention Rate"];
+  var fields = ["new_clients", "active_clients", "non_retained_clients", "gross_revenue", "ad_spend"];
+  var header = ["New Clients", "Active Clients", "Non-retained Clients", "Revenue", "Ad Spend"];
   //  headers
   //
   let headers = [longTime(gDataTable.time)];
@@ -699,9 +781,9 @@ function doPost(e) {
 function readData() {
 
   const ss = SpreadsheetApp.openByUrl(
-    'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/edit?resourcekey=&gid=25088639#gid=25088639'
+    'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/edit?gid=748445865#gid=748445865'
   );
-  const sheet = ss.getSheetByName('Forminator');
+  const sheet = ss.getSheetByName('Forminator-Growth1');
 
   const values = sheet.getDataRange().getValues();
   const headers = values.shift();
