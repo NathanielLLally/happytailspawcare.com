@@ -1,3 +1,4 @@
+
 <!--Div that will hold the dashboard-->
     <div id="dashboard_div">
       <!--Divs that will hold each control and chart-->
@@ -17,7 +18,7 @@
 
 function chartStuff() {
   console.log("chartStuff begin")
-  var dataSourceUrl = "https://script.google.com/macros/s/AKfycbw4zHkAUbRLoSHmkYuleuOAUr6o9hMzl7ule6A6IEnEytsxfMUCQG3tFNcSqVfGHUwr/exec?action=update";
+  var dataSourceUrl = "https://script.google.com/macros/s/AKfycbwJXeC4vPpjUAZGqNQ-_qq8cKTB5g5tSSIyvfDzOchjxNv9V_Z4auBwC-adljfYQ2m6/exec?action=update";
 
   //  kludge here
   //
@@ -31,7 +32,7 @@ function chartStuff() {
 function queryResponseWebAppScript(response) {
   console.log("queryResponseWebAppScript begin")
 
-  var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/gviz/tq?gid=433166320&headers=1&tq=';
+  var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/edit?gid=433166320#gid=433166320';
 
   var query = new google.visualization.Query(dataSourceUrl);
   query.send(drawChart);
@@ -92,6 +93,7 @@ function drawToolbar() {
 function drawChart(response) {
        console.log("drawChart begin")
        var data = response.getDataTable();
+console.log(data);
 
      // var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
 
@@ -142,11 +144,13 @@ function drawChart(response) {
           seriesType: 'bars',
 
           series: {
-            0: { type: 'bars', targetAxisIndex: 0 }, // New Clients
-            1: { type: 'line', targetAxisIndex: 0 }, // Active Clients
-            2: { type: 'bars', targetAxisIndex: 0 }, // Churned Clients
-            3: { type: 'line', targetAxisIndex: 1 }, // Revenue
-            4: { type: 'line', targetAxisIndex: 1 }  // Ad_Spend
+            0: { type: 'bars', targetAxisIndex: 0 }, // New Leads
+
+            1: { type: 'bars', targetAxisIndex: 0 }, // New Clients
+            2: { type: 'line', targetAxisIndex: 0 }, // Active Clients
+            3: { type: 'bars', targetAxisIndex: 0 }, // Churned Clients
+            4: { type: 'line', targetAxisIndex: 1 }, // Revenue
+            5: { type: 'line', targetAxisIndex: 1 }  // Ad_Spend
           },
 
           vAxes: {
@@ -176,50 +180,23 @@ format:'short'
           'options': { 'filterColumnLabel': "Ad Spend" }
         });
 
-        var rangeSlider2 = new google.visualization.ControlWrapper({
-          'controlType': 'CategoryFilter',
-          'containerId': 'filter2_div',
-          'options': { 
-                'ui': {
-                  'allowMultiple': false
-                },
-                'filterColumnLabel': "New Leads",
-                'values': ['10','20','30','40'],
-          }
-        });
-
-        var rangeSlider3 = new google.visualization.ControlWrapper({
-          'controlType': 'NumberRangeFilter',
-          'containerId': 'filter3_div',
-          'options': { 'filterColumnLabel': "Client Retention Rate" }
-        });
-
-        
   drawToolbar();
 
 //slider range func            programmaticSlider.setState({'lowValue': 2, 'highValue': 5}); 
   // save reference to dashboard
        console.log("constructor dashboard.bind")
   var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'))
-    dashboard.bind(rangeSlider, chart);
-    dashboard.bind(rangeSlider2, chart);
-    dashboard.bind(rangeSlider3, chart);
        console.log("draw")
+dashboard.bind(rangeSlider, chart);
   dashboard.draw(view);
 //  dashboard.draw(dataView);
        console.log("resize")
-/*
-  // include within drawDashboard
-  $(window).resize(function() {
-       console.log("resize")
-    // reference dashboard instance
-    dashboard.draw(dataView);
-  });
-*/
         // Establish dependencies, declaring that 'filter' drives 'pieChart',
         // so that the pie chart will only display entries that are let through
         // given the chosen slider range.
-//        dashboard.bind(rangeSlider, chart);
+        
        console.log("drawChart exit")
     }
 </script>
+
+

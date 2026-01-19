@@ -1,18 +1,4 @@
 "use strict";
-//find a way?
-//<script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
-
-function include(filename) {
-  return HtmlService.createHtmlOutputFromFile(filename).getContent();
-}
-
-
-function testMath() {
-  let math = include('math')
-  //console.log(math)
-  console.log(math.evaluate('2+2'))
-}
-
 
 const MIN_TIME_UNIT = 1;
 const MAX_TIME_UNIT = 240;
@@ -225,6 +211,12 @@ let funcFromStr = {
   //BE SURE TO ADDRESS THE FULL KEY NAME WHEN ACCESSING GLOBAL DATA TABLE
   //  THERE IS NO SHORT FIELD NAME, THEY ALL CONTAING time_unit and model_tuning
   //
+ 'new_leads': (d,timeUnit,modelTuning, n) => {
+    let fX = Math.round(+(getRandomInt(5,-5) + +d['new_leads'] ));
+    console.log(`f(x) new_leads ${fX}`);
+    return fX;
+  },
+
   //TODO vary data or have some tabulation input from actual leads sheet
   //  onboarding close rate transparency
   //
@@ -327,16 +319,6 @@ let funcFromStr = {
         fX =  Math.round(+d['ad_spend_min'] + (+d['ad_spend_min'] * (n / MAX_TIME_UNIT)))
     }
     console.log(`f(x) t ${timeUnit} m ${modelTuning} n ${n} tRange ${tRange} range ${range} ad_spend max ${d['ad_spend_max']} min ${d['ad_spend_min']} fX ${fX}` );
-    return fX;
-  },
-  'new_leads': (d,timeUnit,modelTuning, n) => {
-    let fX = Math.round(+(getRandomInt(5,-5) + +d['new_leads'] ));
-    console.log(`f(x) new_leads ${fX}`);
-    return fX;
-  },
-  'client_retention_rate': (d,timeUnit,modelTuning, n) => {
-    let fX = +d['client_retention_rate'];
-    console.log(`f(x) client_retention_rate ${fX}`);
     return fX;
   },
   //https://developers.google.com/chart/interactive/docs/customizing_tooltip_content#placing-charts-in-tooltips
@@ -597,7 +579,8 @@ function populateSheet() {
   console.log("populateSheet() begin")
   //'https://script.google.com/macros/s/AKfycbw4zHkAUbRLoSHmkYuleuOAUr6o9hMzl7ule6A6IEnEytsxfMUCQG3tFNcSqVfGHUwr/exec'
   //https://script.google.com/macros/s/AKfycbw4zHkAUbRLoSHmkYuleuOAUr6o9hMzl7ule6A6IEnEytsxfMUCQG3tFNcSqVfGHUwr/exec
-  var path = "macros/s/AKfycbw4zHkAUbRLoSHmkYuleuOAUr6o9hMzl7ule6A6IEnEytsxfMUCQG3tFNcSqVfGHUwr/exec";
+  var path = "macros/s/AKfycbwJXeC4vPpjUAZGqNQ-_qq8cKTB5g5tSSIyvfDzOchjxNv9V_Z4auBwC-adljfYQ2m6/exec";
+  
   var query = "?action=read"
   var url = "https://script.google.com/"+path+query; // Replace with your URL
   var html;
@@ -627,15 +610,17 @@ function populateSheet() {
   //  dataTable constructor
   //
   gDataTable = funroll(niche, `=HYPERLINK("${link}", "row ${n}")`);
-
+  gDataTable = addDataSubNiche(gDataTable)
  
   gDataTable['active_clients'] = form_input["Active Clients|number-1"];
   gDataTable['model'] = modelFromString(form_input["Speculation Model|radio-1"]);
   
   gDataTable['new_leads'] = form_input["Leads|radio-2"]
 
-  gDataTable["avg_client_lifespan"]  = "5"
-  gDataTable["client_retention_rate"] = 0.8
+
+  gDataTable['client_retention_rate']  = 1 - 1 / ((+gDataTable['client_retention_min'] + +gDataTable['client_retention_max']) / 2 )
+
+
 
   switch (gDataTable['model']) {
     case MODEL_TUNING.BASELINE:
@@ -655,14 +640,9 @@ function populateSheet() {
       break;
     default:
       gDataTable["avg_client_lifespan"]  = "12"
-      gDataTable["client_retention_rate"] = 0.8
       dDataTable['close_rate']  = 0.05;
       break;
   }
-  gDataTable["avg_client_lifespan"]  = "12"
-  gDataTable["client_retention_rate"] = 0.8
-  gDataTable['close_rate']  = 0.05;
-
   console.log(gDataTable)
 
   assertValidTime(gDataTable.time)
@@ -701,8 +681,8 @@ function populateSheet() {
   //    var graphTable = gDataTable
   var newData = [];
 
-  var fields = ["new_clients", "active_clients", "non_retained_clients", "gross_revenue", "ad_spend"];
-  var header = ["New Clients", "Active Clients", "Non-retained Clients", "Revenue", "Ad Spend"];
+  var fields = ["new_leads", "new_clients", "active_clients", "non_retained_clients", "gross_revenue", "ad_spend"];
+  var header = ["New Leads", "New Clients", "Active Clients", "Non-retained Clients", "Revenue", "Ad Spend"];
   //  headers
   //
   let headers = [longTime(gDataTable.time)];
@@ -748,7 +728,9 @@ function populateSheet() {
     */
 }
 
+
 function doGet(e) {
+
   if (e.parameter.action === 'read') {
     return readData();
   }
@@ -760,6 +742,11 @@ function doGet(e) {
   if (e.parameter.action === 'populate') {
     return populateSheet();
   }
+
+  return HtmlService.createHtmlOutputFromFile('index')
+    .setTitle('Graph')
+    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+
 
   return ContentService
     .createTextOutput('Invalid action')
