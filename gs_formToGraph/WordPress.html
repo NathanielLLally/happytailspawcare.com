@@ -1,4 +1,3 @@
-
 <!--Div that will hold the dashboard-->
     <div id="dashboard_div">
       <!--Divs that will hold each control and chart-->
@@ -32,7 +31,7 @@ function chartStuff() {
 function queryResponseWebAppScript(response) {
   console.log("queryResponseWebAppScript begin")
 
-  var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/edit?gid=433166320#gid=433166320';
+  var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/gviz/tq?gid=433166320&headers=1&tq=';
 
   var query = new google.visualization.Query(dataSourceUrl);
   query.send(drawChart);
@@ -77,13 +76,10 @@ function queryResponseWebAppScript(response) {
   //export / downloads
 function drawToolbar() {
   var components = [
-      {type: 'igoogle', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA',
-       gadget: 'https://www.google.com/ig/modules/pie-chart.xml',
-       userprefs: {'3d': 1}},
-      {type: 'html', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA'},
+    {type: 'metadata', datasource: 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/edit?gid=454960513#gid=454960513'},
+      {type: 'sheetdata', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA'},
       {type: 'csv', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA'},
-      {type: 'htmlcode', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA',
-       gadget: 'https://www.google.com/ig/modules/pie-chart.xml'}
+
   ];
 
   var container = document.getElementById('toolbar_div');
@@ -93,36 +89,10 @@ function drawToolbar() {
 function drawChart(response) {
        console.log("drawChart begin")
        var data = response.getDataTable();
-console.log(data);
 
-     // var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
-
-  /*
-          // Draw a column chart
-        var  wrapper = new google.visualization.ChartWrapper({
-            chartType: 'LineChart',
-            options: {'title': 'blargh'},
-            containerId: 'chart_div'
-          });
-*/
-
-  //https://stackoverflow.com/questions/46613501/how-to-add-a-style-role-column-to-a-google-charts-aggregated-datatable
-  /*
-      var dataView = new google.visualization.DataView(data);
-  dataView.setColumns([3,4, {
-    role: 'tooltip',
-      type: 'string'
-  }])
-*/
 
       var view = new google.visualization.DataView(data);
-//  view.hideColumns([5,6]);
-  /*
-  view.setRows(data.getFilteredRows([{
-    column: 0,
-    minValue: data.getColumnRange(0).max
-  }]));
-*/
+
       var chart = new google.visualization.ChartWrapper({
         'chartType': 'ComboChart',
         'containerId': 'chart_div',
@@ -144,13 +114,11 @@ console.log(data);
           seriesType: 'bars',
 
           series: {
-            0: { type: 'bars', targetAxisIndex: 0 }, // New Leads
-
-            1: { type: 'bars', targetAxisIndex: 0 }, // New Clients
-            2: { type: 'line', targetAxisIndex: 0 }, // Active Clients
-            3: { type: 'bars', targetAxisIndex: 0 }, // Churned Clients
-            4: { type: 'line', targetAxisIndex: 1 }, // Revenue
-            5: { type: 'line', targetAxisIndex: 1 }  // Ad_Spend
+            0: { type: 'bars', targetAxisIndex: 0 }, // New Clients
+            1: { type: 'line', targetAxisIndex: 0 }, // Active Clients
+            2: { type: 'bars', targetAxisIndex: 0 }, // Churned Clients
+            3: { type: 'line', targetAxisIndex: 1 }, // Revenue
+            4: { type: 'line', targetAxisIndex: 1 }  // Ad_Spend
           },
 
           vAxes: {
@@ -169,34 +137,18 @@ format:'short'
         // Create a dashboard.
         var dashboard = new google.visualization.Dashboard(
             document.getElementById('dashboard_div'));
-
-       console.log(" post setDataSource")
-
-       console.log("new range slider")
-        // Create a range slider, passing some options
-        var rangeSlider = new google.visualization.ControlWrapper({
-          'controlType': 'NumberRangeFilter',
-          'containerId': 'filter_div',
-          'options': { 'filterColumnLabel': "Ad Spend" }
-        });
-
+        
   drawToolbar();
 
 //slider range func            programmaticSlider.setState({'lowValue': 2, 'highValue': 5}); 
   // save reference to dashboard
        console.log("constructor dashboard.bind")
   var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'))
+
        console.log("draw")
-dashboard.bind(rangeSlider, chart);
   dashboard.draw(view);
-//  dashboard.draw(dataView);
-       console.log("resize")
-        // Establish dependencies, declaring that 'filter' drives 'pieChart',
-        // so that the pie chart will only display entries that are let through
-        // given the chosen slider range.
-        
+
+//        dashboard.bind(rangeSlider, chart);
        console.log("drawChart exit")
     }
 </script>
-
-

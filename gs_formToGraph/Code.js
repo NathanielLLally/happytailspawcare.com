@@ -277,6 +277,7 @@ let funcFromStr = {
   },
   'lifetime_value': (d,timeUnit,modelTuning, n) => {
     console.log('f(x) lifetime_value');
+    d['revenue_per_client'] = (+d['revenue_per_client_min_usd'] + d['revenue_per_client_max_usd']) / 2;
     switch (modelTuning) {
       case MODEL_TUNING.BASELINE:
         return +d['revenue_per_client'] * +d['avg_client_lifespan'];
@@ -288,10 +289,19 @@ let funcFromStr = {
         return +d['revenue_per_client'] * +d['avg_client_lifespan'] ;
     }
   },
-  //Total money earned from sales before any costs.
+  //Total money earned from sales before any costs for new clients
   'gross_revenue': (d,timeUnit,modelTuning, n) => {
-    console.log('f(x) gross_revenue');
-    return (+d['revenue_per_client'] * +d['active_clients'])
+    //lifetime_revenue
+    d['revenue_per_client'] = (+d['revenue_per_client_min_usd'] + +d['revenue_per_client_max_usd']) / 2;
+    let fnc = 'new_clients_{0}_{1}_{2}'.f(longTime(timeUnit),longModel(modelTuning), (+n));
+    let fac = 'active_clients_{0}_{1}_{2}'.f(longTime(timeUnit),longModel(modelTuning), (+n));
+    console.log('revenue_per_client {0} min {1} max {2} new clients {3}'.f(d['revenue_per_client'],+d['revenue_per_client_min_usd'], +d['revenue_per_client_max_usd'], d[fac]))
+    d['avg_client_lifespan'] = (+d['client_retention_min'] + +d['client_retention_max']) / 2
+    
+    //let fX = Math.round((+d['revenue_per_client'] * +d[f] + Number.EPSILON) * 100) / 100
+    let fX = Math.round((+d['revenue_per_client'] * +d[fac] + Number.EPSILON) * 100) / 100
+    console.log('gross_revenue {0}'.f(fX) )
+    return fX
   },
   'net_profit_per_client': (d,timeUnit,modelTuning, n) => {
     console.log('f(x) net_profit_per_client');
@@ -307,16 +317,29 @@ let funcFromStr = {
     let range = (+d['ad_spend_max'] - +d['ad_spend_min']) / tRange
     let interpolated = Math.round(+d['ad_spend_min'] + range * (n-1))
 
+    //half 
+    let timerange = (+d['time_end'] - +d['time_begin']) / 3
+
     let fX
     switch (modelTuning) {
       case MODEL_TUNING.BASELINE:
-        fX = Math.round(+d['ad_spend_min'] + range * (n-1))
+        fX = Math.round(+d['cost_per_lead'] * +d['new_leads'] * n)
+        break;
+      case MODEL_TUNING.LOWERQUARTILE:
+        fX = Math.round(+d['cost_per_lead'] * +d['new_leads'] * n)
+        break;
+      case MODEL_TUNING.MEDIAN:
+        fX = Math.round(+d['cost_per_lead'] * +d['new_leads'] * n)
+        break;
+      case MODEL_TUNING.UPPERQUARTILE:
+        fX = Math.round(+d['cost_per_lead'] * +d['new_leads'] * n)
         break;
       case MODEL_TUNING.MAX:
-        fX =  Math.round(+d['ad_spend_min'] + range * (n-1))
+        fX = Math.round(+d['cost_per_lead'] * +d['new_leads'] * n)
         break;
       default:
         fX =  Math.round(+d['ad_spend_min'] + (+d['ad_spend_min'] * (n / MAX_TIME_UNIT)))
+        break;
     }
     console.log(`f(x) t ${timeUnit} m ${modelTuning} n ${n} tRange ${tRange} range ${range} ad_spend max ${d['ad_spend_max']} min ${d['ad_spend_min']} fX ${fX}` );
     return fX;
@@ -393,21 +416,20 @@ function funroll(nicheEnum, formLink) {
   var data = {
     "form_row_link": formLink,
     "niche": nicheEnum,
+    "short_name":"",
+    "sub_niche": "",
     "time": TIME_UNIT.WEEK,
     "time_longname": "",
     "model": "",
     "graph": {"fields": [] },
     //split these out per niche
-    "revenue_per_client": 300,
-    "overhead": 100,
-    "profit_margin": 0.25,
-    "cost_per_sale": 100, //CAC (Customer Acquisition Cost)	= TotalMarketingSpend / NewClientsAcquired
+    "cost_per_sale": "CAC (Customer Acquisition Cost)	= TotalMarketingSpend / NewClientsAcquired"
   };
   data["time_begin"] = 0;
 
   //TODO: fixthis
   //data["time_end"] = data["time"] * MAX_TIME_UNIT;
-  data["time_end"] = 11;
+  data["time_end"] = 12;
   data["time_longname"] = longTime(data["time"])
 
 
@@ -616,10 +638,10 @@ function populateSheet() {
   gDataTable['model'] = modelFromString(form_input["Speculation Model|radio-1"]);
   
   gDataTable['new_leads'] = form_input["Leads|radio-2"]
+  gDataTable['cost_per_lead'] = 50; 
 
 
   gDataTable['client_retention_rate']  = 1 - 1 / ((+gDataTable['client_retention_min'] + +gDataTable['client_retention_max']) / 2 )
-
 
 
   switch (gDataTable['model']) {
@@ -660,6 +682,13 @@ function populateSheet() {
     data_sheet.getRange(r,2).setValue(v);
     r+=1;
   }
+  let max = r + 10;
+  for (r; r<=max; r++) {
+    data_sheet.getRange(r,1).setValue('');
+    data_sheet.getRange(r,2).setValue('');
+
+  }
+
 
   //let graphFields = ["month", "lifetime_value"];
   //  getA1Notation()
