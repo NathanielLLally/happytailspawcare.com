@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base target="_top">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      margin-top: 0;
+    }
+    #chart_div {
+      width: 100%;
+      height: 400px;
+      margin-bottom: 20px;
+    }
+    #control_div {
+      width: 100%;
+      height: 100px;
+    }
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Time Series Data with Range Slider</h1>
+    <div id="chart_div"></div>
+    <div id="control_div"></div>
+    <div id="loading" class="loading">Loading data...</div>
+  </div>
+
+  <script>
+    google.charts.load('current', {'packages':['corechart', 'controls']});
+    google.charts.setOnLoadCallback(loadData);
+
+    function loadData() {
+      google.script.run
+        .withSuccessHandler(drawChart)
+        .withFailureHandler(function(error) {
+          document.getElementById('loading').innerHTML = 'Error loading data: ' + error.message;
+        })
+        .getData();
+    }
+
+    function drawChart(rawData) {
+      document.getElementById('loading').style.display = 'none';
+      
+      // Create DataTable
+      const data = new google.visualization.DataTable();
+      data.addColumn('date', 'Date');
+      data.addColumn('number', 'Metric 1');
+      data.addColumn('number', 'Metric 2');
+      
+      // Add rows
+      rawData.forEach(function(row) {
+        data.addRow([new Date(row[0]), row[1], row[2]]);
+      });
+
+      // Create dashboard
+      const dashboard = new google.visualization.Dashboard(
+        document.getElementById('control_div')
+      );
+
+      // Create a date range slider
+      const slider = new google.visualization.ControlWrapper({
+        'controlType': 'ChartRangeFilter',
+        'containerId': 'control_div',
+        'options': {
+          'filterColumnLabel': 'Date',
+          'ui': {
+            'chartType': 'LineChart',
+            'chartOptions': {
+              'chartArea': {'width': '90%', 'height': '50%'},
+              'hAxis': {'baselineColor': 'none'}
+            },
+            'chartView': {
+              'columns': [0, 1]
+            },
+            'minRangeSize': 86400000 // 1 day in milliseconds
+          }
+        },
+        'state': {
+          'range': {
+            'start': new Date(2024, 0, 1),
+            'end': new Date(2024, 2, 31)
+          }
+        }
+      });
+
+      // Create the main chart
+      const chart = new google.visualization.ChartWrapper({
+        'chartType': 'LineChart',
+        'containerId': 'chart_div',
+        'options': {
+          'title': 'Time Series Analysis',
+          'curveType': 'function',
+          'legend': {'position': 'bottom'},
+          'chartArea': {'width': '85%', 'height': '70%'},
+          'hAxis': {
+            'title': 'Date',
+            'format': 'MMM dd, yyyy'
+          },
+          'vAxis': {
+            'title': 'Value'
+          },
+          'colors': ['#4285F4', '#EA4335']
+        }
+      });
+
+      // Bind the chart and slider
+      dashboard.bind(slider, chart);
+      dashboard.draw(data);
+    }
+    //window.addEventListener("resize", drawChart);
+  </script>
+</body>
+</html>

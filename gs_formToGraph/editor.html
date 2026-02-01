@@ -1,0 +1,190 @@
+<!--Div that will hold the dashboard-->
+    <div id="dashboard_div">
+      <!--Divs that will hold each control and chart-->
+      <div id="toolbar_div"></div>
+      <div id="filter_div"></div>
+      <div id="filter2_div"></div>
+      <div id="filter3_div"></div>
+      <div id="chart_div" style="width:100%; height:500px;"></div>
+      <input type="submit" name="loadcharteditor" id="loadcharteditor" value="Edit me!" onclick="loadEditor()" style="font-size:18px;">
+      <div id="b1"></div>
+    </div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script>
+
+  google.charts.load('current',{'packages':['corechart','controls', 'charteditor']});
+  google.charts.setOnLoadCallback(chartStuff);
+
+      var chartEditor = null;
+
+    function loadEditor() {
+      // Create the chart to edit.
+      var wrapper = new google.visualization.ChartWrapper({
+         'chartType':'LineChart',
+         'dataSourceUrl':'http://spreadsheets.google.com/tq?key=pCQbetd-CptGXxxQIG7VFIQ&pub=1',
+         'query':'SELECT A,D WHERE D > 100 ORDER BY D',
+         'options': {'title':'Population Density (people/km^2)', 'legend':'none'}
+      });
+
+      chartEditor = new google.visualization.ChartEditor();
+      google.visualization.events.addListener(chartEditor, 'ok', redrawChart);
+      chartEditor.openDialog(wrapper, {});
+    }
+
+    // On "OK" save the chart to a <div> on the page.
+    function redrawChart(){
+      chartEditor.getChartWrapper().draw(document.getElementById('chart_div'));
+    }
+
+function chartStuff() {
+  console.log("chartStuff begin")
+  var dataSourceUrl = "https://script.google.com/macros/s/AKfycbw4zHkAUbRLoSHmkYuleuOAUr6o9hMzl7ule6A6IEnEytsxfMUCQG3tFNcSqVfGHUwr/exec?action=update";
+
+  //  kludge here
+  //
+  var query = new google.visualization.Query(dataSourceUrl);
+  console.log("CORS bypass workaround, this call should fail!")
+  query.setTimeout(1);
+  query.send(queryResponseWebAppScript);
+}
+
+//
+function queryResponseWebAppScript(response) {
+  console.log("queryResponseWebAppScript begin")
+
+  var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1YYVl5EGOy2WOk74l3DmtaugP5RgW_c6UQDtJkTE4itE/gviz/tq?gid=433166320&headers=1&tq=';
+
+  var query = new google.visualization.Query(dataSourceUrl);
+  query.send(drawChart);
+}
+
+
+  //export / downloads
+function drawToolbar() {
+  var components = [
+      {type: 'igoogle', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA',
+       gadget: 'https://www.google.com/ig/modules/pie-chart.xml',
+       userprefs: {'3d': 1}},
+      {type: 'html', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA'},
+      {type: 'csv', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA'},
+      {type: 'htmlcode', datasource: 'https://spreadsheets.google.com/tq?key=pCQbetd-CptHnwJEfo8tALA',
+       gadget: 'https://www.google.com/ig/modules/pie-chart.xml'}
+  ];
+
+  var container = document.getElementById('toolbar_div');
+  google.visualization.drawToolbar(container, components);
+};
+
+function drawChart(response) {
+       console.log("drawChart begin")
+       var data = response.getDataTable();
+
+        var chartEditor = null;
+
+      var chart = new google.visualization.ChartWrapper({
+        'chartType': 'ComboChart',
+        'containerId': 'chart_div',
+        'options': {
+          title: 'Business Growth Model (Retention-Driven)',
+          height: 500,
+          legend: { position: 'top' },
+          focusTarget: 'category',
+          tooltip: { isHtml: true },
+          
+          seriesType: 'bars',
+
+          series: {
+            0: { type: 'bars', targetAxisIndex: 0 }, // New Clients
+            1: { type: 'bars', targetAxisIndex: 0 }, // Churned Clients
+            2: { type: 'line', targetAxisIndex: 0 }, // Active Clients
+            3: { type: 'line', targetAxisIndex: 1 }, // Revenue
+            4: { type: 'line', targetAxisIndex: 1 }  // Ad_Spend
+          },
+
+          vAxes: {
+            0: {
+              title: 'Clients',
+format:'short'
+            },
+            1: {
+              title: 'Revenue / Ad Spend',
+              format: 'short'
+            }
+          },
+        }
+        });
+ 
+      chartEditor = new google.visualization.ChartEditor();
+      google.visualization.events.addListener(chartEditor, 'ok', redrawChart);
+
+  //  can it do a dashboard?
+
+      chartEditor.openDialog(chart, {});
+
+      // On "OK" save the chart to a <div> on the page.
+    function redrawChart(){
+      chartEditor.getChartWrapper().draw(document.getElementById('chart_div'));
+    }
+
+        // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
+
+       console.log(" post setDataSource")
+
+       console.log("new range slider")
+        // Create a range slider, passing some options
+        var rangeSlider = new google.visualization.ControlWrapper({
+          'controlType': 'NumberRangeFilter',
+          'containerId': 'filter_div',
+          'options': { 'filterColumnLabel': "ad_spend" }
+        });
+
+        var rangeSlider2 = new google.visualization.ControlWrapper({
+          'controlType': 'CategoryFilter',
+          'containerId': 'filter2_div',
+          'options': { 
+                'ui': {
+                  'allowMultiple': "false"
+                },
+                'filterColumnLabel': "new_leads",
+                'values': ['10','20','30','40'],
+          }
+        });
+
+        var rangeSlider3 = new google.visualization.ControlWrapper({
+          'controlType': 'NumberRangeFilter',
+          'containerId': 'filter3_div',
+          'options': { 'filterColumnLabel': "client_retention_rate" }
+        });
+
+        
+  drawToolbar();
+
+//slider range func            programmaticSlider.setState({'lowValue': 2, 'highValue': 5}); 
+  // save reference to dashboard
+       console.log("constructor dashboard.bind")
+  var dashboard = new google.visualization.Dashboard(document.getElementById('dashboard_div'))
+    dashboard.bind(rangeSlider, chart);
+    dashboard.bind(rangeSlider2, chart);
+    dashboard.bind(rangeSlider3, chart);
+       console.log("draw")
+  dashboard.draw(data);
+//  dashboard.draw(dataView);
+       console.log("resize")
+/*
+  // include within drawDashboard
+  $(window).resize(function() {
+       console.log("resize")
+    // reference dashboard instance
+    dashboard.draw(dataView);
+  });
+*/
+        // Establish dependencies, declaring that 'filter' drives 'pieChart',
+        // so that the pie chart will only display entries that are let through
+        // given the chosen slider range.
+//        dashboard.bind(rangeSlider, chart);
+       console.log("drawChart exit")
+    }
+</script>

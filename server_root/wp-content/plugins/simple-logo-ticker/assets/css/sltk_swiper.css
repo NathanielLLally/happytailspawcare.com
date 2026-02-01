@@ -1,0 +1,30 @@
+/*Slider swiper */
+.sltk_swiper img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.sltk_swiper {
+    width: 100%;
+    text-align: center;
+}
+
+.sltk_swiper-wrapper {
+    transition-timing-function: linear !important;
+}
+
+
+
+.sltk_custom-slider-container.bw {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+
+.sltk_custom-slider-container.bw .swiper-wrapper {
+    filter: none; 
+}
+
+
+

@@ -1,0 +1,295 @@
+{
+  "apiVersion": "1",
+  "name": "ttb/text-typing",
+  "title": "Text Typing",
+  "description": "Make your text in amazing typing effect.",
+  "category": "widgets",
+  "keywords": [
+    "typing text",
+    "typing effect",
+    "typed js"
+  ],
+  "textdomain": "text-typing",
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "effects": {
+      "type": "object",
+      "default": {
+        "effect": "matrix"
+      }
+    },
+    "themes": {
+      "type": "object",
+      "default": {
+        "theme": "default"
+      }
+    },
+    "terminal": {
+      "type": "object",
+      "default": {
+        "headerText": "developer@portfolio"
+      }
+    },
+    "prefixText": {
+      "type": "string",
+      "default": "We create "
+    },
+    "typingContents": {
+      "type": "array",
+      "default": [
+        {
+          "text": "WordPress Plugins",
+          "color": "#52c41a"
+        },
+        {
+          "text": "WordPress Themes",
+          "color": "#fa8c16"
+        },
+        {
+          "text": "Drupal Modules",
+          "color": "#1890ff"
+        },
+        {
+          "text": "Prestashop Modules",
+          "color": "#df0067"
+        },
+        {
+          "text": "Magento Extensions",
+          "color": "#f46f25"
+        },
+        {
+          "text": "Shopify Apps",
+          "color": "#95bf47"
+        }
+      ]
+    },
+    "suffixText": {
+      "type": "string",
+      "default": ""
+    },
+    "typeSpeed": {
+      "type": "number",
+      "default": 100
+    },
+    "startDelay": {
+      "type": "number",
+      "default": 500
+    },
+    "backSpeed": {
+      "type": "number",
+      "default": 75
+    },
+    "backDelay": {
+      "type": "number",
+      "default": 500
+    },
+    "isShuffle": {
+      "type": "boolean",
+      "default": false
+    },
+    "isFadeOut": {
+      "type": "boolean",
+      "default": false
+    },
+    "fadeOutDelay": {
+      "type": "number",
+      "default": 500
+    },
+    "isLoop": {
+      "type": "boolean",
+      "default": true
+    },
+    "loopCount": {
+      "type": "number",
+      "default": 0
+    },
+    "isCursor": {
+      "type": "boolean",
+      "default": true
+    },
+    "cursorChar": {
+      "type": "string",
+      "default": "|"
+    },
+    "textAlign": {
+      "type": "string",
+      "default": "center"
+    },
+    "background": {
+      "type": "object",
+      "default": {
+        "color": "transparent"
+      }
+    },
+    "terminalHeadingBg": {
+      "type": "object",
+      "default": {
+        "color": "#2b2b3c"
+      }
+    },
+    "terminalHeadingTextColor": {
+      "type": "string",
+      "default": "#ccc"
+    },
+    "terminalHeadTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 12,
+          "tablet": 12,
+          "mobile": 12
+        }
+      }
+    },
+    "isIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "iconList": {
+      "type": "object",
+      "default": {
+        "size": 60,
+        "uploadIconUrl": "https://i.ibb.co.com/Y4DRLrNL/deciduous-tree-1f333.png"
+      }
+    },
+    "padding": {
+      "type": "object",
+      "default": {
+        "vertical": "10px",
+        "horizontal": "15px"
+      }
+    },
+    "prefixTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 22,
+          "tablet": 20,
+          "mobile": 18
+        }
+      }
+    },
+    "content": {
+      "type": "string",
+      "default": "Animated text for animation",
+      "selector": ".atbAnimatedText .content"
+    },
+    "textAlignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "color": {
+      "type": "string",
+      "default": "#fff"
+    },
+    "repeat": {
+      "type": "boolean",
+      "default": true
+    },
+    "prefixColor": {
+      "type": "string",
+      "default": "#333"
+    },
+    "typingContentsTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 22,
+          "tablet": 20,
+          "mobile": 18
+        },
+        "fontWeight": 600
+      }
+    },
+    "suffixTypo": {
+      "type": "object",
+      "default": {
+        "fontSize": {
+          "desktop": 22,
+          "tablet": 20,
+          "mobile": 18
+        }
+      }
+    },
+    "suffixColor": {
+      "type": "string",
+      "default": "#333"
+    },
+    "isRandomColor": {
+      "type": "boolean",
+      "default": true
+    },
+    "isCustomBG": {
+      "type": "boolean",
+      "default": false
+    },
+    "animatedSize": {
+      "type": "object",
+      "default": {
+        "width": {
+          "desktop": "100%",
+          "tablet": "",
+          "mobile": ""
+        },
+        "height": {
+          "desktop": "200px",
+          "tablet": "",
+          "mobile": ""
+        }
+      }
+    },
+    "iconSize": {
+      "type": "object",
+      "default": {
+        "width": {
+          "desktop": "60px",
+          "tablet": "",
+          "mobile": ""
+        }
+      }
+    },
+    "border": {
+      "type": "object",
+      "default": {
+        "radius": "8px",
+        "width": "0px",
+        "style": "solid",
+        "color": "#000000"
+      }
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false
+  },
+  "example": {
+    "attributes": {
+      "preview": true
+    }
+  },
+  "editorScript": [
+    "file:./index.js",
+    "typedJS",
+    "textillate",
+    "wp-api",
+    "wp-api-request",
+    "wp-block-editor"
+  ],
+  "editorStyle": "file:./index.css",
+  "style": [
+    "file:./view.css",
+    "animate"
+  ],
+  "render": "file:./render.php",
+  "viewScript": [
+    "file:./view.js",
+    "typedJS",
+    "textillate"
+  ]
+}

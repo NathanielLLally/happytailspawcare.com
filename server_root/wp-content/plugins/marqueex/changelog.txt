@@ -1,0 +1,60 @@
+== Changelog ==
+
+= 0.2.3 – December 12, 2025 =
+* Fixed: WordPress 6.9 compatibility issues.
+
+= 0.2.1 – October 25, 2025 =
+* Fixed: WordPress 6.8.3 compatibility issues .
+* Fixed: Elementor 3.32.5 compatibility issues.
+
+= 0.2.0 – October 13, 2025 =
+* Added Animated Word Roller widget.
+* Added Animated Heading widget.
+
+= 0.1.2 – October 5, 2025 =
+* Fixed News Ticker height issue for safari browser.
+
+= 0.1.1 – September 10, 2025 =
+* Improved Dashboard UI for better user experience.
+* Minor performance optimizations.
+
+= 0.1.0 – August 16, 2025 =
+
+* **New:** Elementor integration added 🎉
+
+  * **Image Marquee** widget
+  * **Text Marquee** widget
+  * **News Ticker** widget
+* Improved compatibility with both Gutenberg and Elementor page builders.
+* Minor performance optimizations.
+
+
+= 0.0.6 – August 16, 2025 =
+* Added SEO improvements for marquee content
+* Enhanced accessibility features
+* Fixed compatibility issues with latest WordPress version
+* Optimized CSS loading for better page speed
+
+= 0.0.5 – July 27, 2025 =
+* Fixed plugin text domain issue
+
+= 0.0.4 – July 22, 2025 =
+* Fixed plugin naming issues
+* Updated plugin description
+* Improved compliance with WordPress.org guidelines
+
+= 0.0.3 – May 23, 2025=
+* Enhanced SEO optimization
+* Improved core performance
+* Extended theme compatibility
+* Added smart meta descriptions
+* Fixed accessibility issues
+* Optimized animation rendering
+
+= 0.0.2 – February 17, 2025 =
+* Improved scrolling performance
+* Added advanced customization
+* Fixed theme compatibility issues
+
+= 0.0.1 – February 01, 2025 =
+* Initial release

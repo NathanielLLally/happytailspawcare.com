@@ -1,0 +1,111 @@
+.marqueex--block-id{margin:0 0 1em}.marqueex--block-id>div{display:flex;padding:2px 0}.marqueex--block-id>div>div{flex:1 0 auto}.marqueex--block-id .marqueex-label{display:inline-block;font-size:11px;font-weight:500;line-height:1.4;margin-bottom:8px;padding:0;text-transform:uppercase}
+.marqueex--clear-button{display:flex;justify-content:flex-end}
+.marqueex--control-header .components-button.is-small.has-icon:not(.has-text),.marqueex--control-header-button{border:0;box-shadow:none;color:#a0aec0;font-size:18px;height:auto;margin-bottom:0;min-width:0;outline:0;padding:2px 4px;width:auto}.marqueex--control-header .components-button.is-small.has-icon:not(.has-text) svg,.marqueex--control-header-button svg{box-sizing:border-box;height:1em;width:1em}.marqueex--control-header .components-button.is-small.has-icon:not(.has-text) .dashicon,.marqueex--control-header-button .dashicon{color:#a0aec0;font-size:15px;height:15px;width:15px}.marqueex--control-header .is-pressed.components-button.is-small.has-icon:not(.has-text),.marqueex--control-header .is-pressed.components-button.is-small.has-icon:not(.has-text) .dashicon,.marqueex--control-header-button.is-pressed,.marqueex--control-header-button.is-pressed .dashicon{background-color:var(--wp-admin-theme-color,#3858e9)}.marqueex--button-group{border:1px solid #a0aec0;display:flex;width:100%}.marqueex--button-group .components-button{align-items:center;border-radius:0;box-shadow:none;color:#a0aec0;display:flex;flex-grow:1;font-size:13px;justify-content:center;outline:none}.marqueex--button-group .components-button:focus{box-shadow:none;outline:none}.marqueex--button-group .components-button.is-pressed{background-color:var(--wp-admin-theme-color,#3858e9);color:#fff}.marqueex--button-group .components-button.has-icon{font-size:24px}.marqueex--button-group .components-button>svg{height:28px;width:28px}.marqueex--control-header{align-items:center;display:flex;margin-bottom:4px}.marqueex--control-header label{display:flex;flex-grow:1;font-size:11px;font-weight:500;gap:4px;line-height:24px;text-transform:uppercase}.marqueex--control-header span{color:#757575}.marqueex--control-header .components-button-group .components-button.is-small.has-icon:not(.has-text).is-pressed,.marqueex--control-header .components-button-group .components-button.is-small.has-icon:not(.has-text).is-pressed .dashicon{background-color:transparent}
+.marqueex--container-contents{display:grid;padding:1em}.marqueex--container-contents>*,.marqueex--container-contents>.components-base-control{margin-bottom:1em}.marqueex--container-contents hr{margin:0 0 1em}.marqueex--container-contents+.marqueex--container-contents{padding-top:0}.marqueex--divider{background-color:#e0e0e0;height:1em}
+.marqueex--color-control{box-sizing:border-box;padding:0;width:100%}.marqueex--popover{box-sizing:border-box;padding:.5em}.marqueex--container-contents .marqueex--color-control{margin-bottom:0}
+.marqueex--color-display{align-items:center;background-color:#fff;border:1px solid rgba(0,0,0,.1);border-radius:2px;display:flex;gap:8px;margin-top:-1px;padding:10px;width:100%}
+.marqueex--background-image-control .marqueex--media-control .block-editor-media-placeholder{margin-bottom:.5em}.marqueex--background-image-control .marqueex--media-control .marqueex--filename{margin:1em 0}.marqueex--background-image-control .components-form-toggle{margin:.5em 0}
+.marqueex--control-header-button{border:0;box-shadow:none;color:#a0aec0;font-size:18px;height:auto;margin-bottom:0;min-width:0;outline:0;padding:2px 4px;width:auto}.marqueex--control-header-button svg{box-sizing:border-box;height:1em;width:1em}.marqueex--control-header-button .dashicon{color:#a0aec0;font-size:15px;height:15px;width:15px}.marqueex--control-header-button.is-pressed,.marqueex--control-header-button.is-pressed .dashicon{background-color:var(--wp-admin-theme-color,#3858e9)}.marqueex--block-align-control>.components-button-group,.marqueex--button-group{border:1px solid #a0aec0;display:flex;width:100%}.marqueex--block-align-control>.components-button-group .components-button,.marqueex--button-group .components-button{align-items:center;border-radius:0;box-shadow:none;color:#a0aec0;display:flex;flex-grow:1;font-size:13px;justify-content:center;outline:none}.marqueex--block-align-control>.components-button-group .components-button:focus,.marqueex--button-group .components-button:focus{box-shadow:none;outline:none}.marqueex--block-align-control>.components-button-group .components-button.is-pressed,.marqueex--button-group .components-button.is-pressed{background-color:var(--wp-admin-theme-color,#3858e9);color:#fff}.marqueex--block-align-control>.components-button-group .components-button.has-icon,.marqueex--button-group .components-button.has-icon{font-size:24px}.marqueex--block-align-control>.components-button-group .components-button>svg,.marqueex--button-group .components-button>svg{height:28px;width:28px}
+.marqueex--border-control .components-range-control,.marqueex--border-control .components-unit-control{margin-bottom:0!important}.marqueex--border-control .marqueex--border-radius-control{margin-top:1em}.marqueex--border-control .marqueex--border-radius-control .components-range-control{padding-left:6px;padding-right:6px}.marqueex--border-control .components-border-box-control-linked-button .components-button{color:#a0aec0}
+.marqueex--unit-range-control{display:flex}.marqueex--unit-range-control>*{width:50%}.marqueex--unit-range-control .components-unit-control{margin-bottom:0}.marqueex--unit-range-control .components-range-control{margin-bottom:0!important;margin-left:16px}
+.marqueex--box-shadow-control .marqueex--color-control{margin-bottom:1.5em;margin-top:1.5em}
+.marqueex--container-control{border:none;border-top:1px solid #e0e0e0;margin-top:-1px}.marqueex--container-control h2,.marqueex--container-control h3{display:block;font-size:inherit;margin-bottom:0;margin-top:0;padding:0;transition:background .1s ease-in-out}.marqueex--container-control h2:hover,.marqueex--container-control h3:hover{background:#f0f0f0;border:none}.marqueex--container-control .components-button{border:none;box-shadow:none;box-sizing:border-box;color:#1e1e1e;font-weight:500;height:auto;outline:none;padding:16px 48px 16px 16px;position:relative;text-align:left;transition:background .1s ease-in-out;width:100%}.marqueex--container-control .components-button svg{color:#1e1e1e;fill:currentColor;margin-right:0!important;position:absolute;right:16px;top:50%;transform:translateY(-50%);transition:color .1s ease-in-out}.marqueex--container-control .components-button.has-icon.has-text{padding-left:16px}.marqueex--container-control .components-button:focus:not(:disabled){border-radius:0;box-shadow:inset 0 0 0 var(--wp-admin-border-width-focus) var(--wp-components-color-accent,var(--wp-admin-theme-color,#007cba))}.marqueex--container-control svg{height:24px;width:24px}
+.marqueex--custom-css-control small,.marqueex--custom-css-control--modal small{display:block;margin:1em 0}.marqueex--custom-css-control .CodeMirror,.marqueex--custom-css-control--modal .CodeMirror{border:1px solid #eee;height:auto}
+.marqueex--font-appearance-control .components-custom-select-control label{display:none}
+.marqueex--control-header-button{border:0;box-shadow:none;color:#a0aec0;font-size:18px;height:auto;margin-bottom:0;min-width:0;outline:0;padding:2px 4px;width:auto}.marqueex--control-header-button svg{box-sizing:border-box;height:1em;width:1em}.marqueex--control-header-button .dashicon{color:#a0aec0;font-size:15px;height:15px;width:15px}.marqueex--control-header-button.is-pressed,.marqueex--control-header-button.is-pressed .dashicon{background-color:var(--wp-admin-theme-color,#3858e9)}.marqueex--button-group,.marqueex--font-size-control>.components-button-group{border:1px solid #a0aec0;display:flex;width:100%}.marqueex--button-group .components-button,.marqueex--font-size-control>.components-button-group .components-button{align-items:center;border-radius:0;box-shadow:none;color:#a0aec0;display:flex;flex-grow:1;font-size:13px;justify-content:center;outline:none}.marqueex--button-group .components-button:focus,.marqueex--font-size-control>.components-button-group .components-button:focus{box-shadow:none;outline:none}.marqueex--button-group .components-button.is-pressed,.marqueex--font-size-control>.components-button-group .components-button.is-pressed{background-color:var(--wp-admin-theme-color,#3858e9);color:#fff}.marqueex--button-group .components-button.has-icon,.marqueex--font-size-control>.components-button-group .components-button.has-icon{font-size:24px}.marqueex--button-group .components-button>svg,.marqueex--font-size-control>.components-button-group .components-button>svg{height:28px;width:28px}
+.marqueex--gap-control .components-range-control{margin-bottom:.5em;padding-left:6px;padding-right:6px}
+.marqueex--width-height-control .components-range-control{margin-bottom:.5em;padding-left:6px;padding-right:6px}
+.marqueex--heading-tag-control{margin-bottom:1em}
+.marqueex--control-header-button{border:0;box-shadow:none;color:#a0aec0;font-size:18px;height:auto;margin-bottom:0;min-width:0;outline:0;padding:2px 4px;width:auto}.marqueex--control-header-button svg{box-sizing:border-box;height:1em;width:1em}.marqueex--control-header-button .dashicon{color:#a0aec0;font-size:15px;height:15px;width:15px}.marqueex--control-header-button.is-pressed,.marqueex--control-header-button.is-pressed .dashicon{background-color:var(--wp-admin-theme-color,#3858e9)}.marqueex--button-group,.marqueex--justify-content-control>.components-button-group{border:1px solid #a0aec0;display:flex;width:100%}.marqueex--button-group .components-button,.marqueex--justify-content-control>.components-button-group .components-button{align-items:center;border-radius:0;box-shadow:none;color:#a0aec0;display:flex;flex-grow:1;font-size:13px;justify-content:center;outline:none}.marqueex--button-group .components-button:focus,.marqueex--justify-content-control>.components-button-group .components-button:focus{box-shadow:none;outline:none}.marqueex--button-group .components-button.is-pressed,.marqueex--justify-content-control>.components-button-group .components-button.is-pressed{background-color:var(--wp-admin-theme-color,#3858e9);color:#fff}.marqueex--button-group .components-button.has-icon,.marqueex--justify-content-control>.components-button-group .components-button.has-icon{font-size:24px}.marqueex--button-group .components-button>svg,.marqueex--justify-content-control>.components-button-group .components-button>svg{height:28px;width:28px}
+
+.marqueex--width-height-control .components-range-control{margin-bottom:.5em;padding-left:6px;padding-right:6px}
+.marqueex--list-style-type-control .marqueex--circle,.marqueex--list-style-type-control .marqueex--disk,.marqueex--list-style-type-control .marqueex--square{grid-template-columns:32px auto auto}.marqueex--list-style-type-control .marqueex--circle:before{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iIzAwMCIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTEuNiAxNGEyLjQgMi40IDAgMSAwIDQuOCAwIDIuNCAyLjQgMCAwIDAtNC44IDBtMi40LTRhNCA0IDAgMSAwIDAgOCA0IDQgMCAwIDAgMC04IiBjbGlwLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);line-height:normal;margin-top:2px}.marqueex--list-style-type-control .marqueex--disk:before{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgZmlsbD0ibm9uZSI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjEwIiB4PSI5IiB5PSI5IiBmaWxsPSIjMDAwIiByeD0iNSIvPjwvc3ZnPg==);line-height:normal;margin-top:2px}.marqueex--list-style-type-control .marqueex--square:before{content:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTkgOWgxMHYxMEg5eiIvPjwvc3ZnPg==);line-height:normal;margin-top:2px}
+.marqueex--margin-control .components-range-control{margin-bottom:.5em;padding-left:6px;padding-right:6px}.marqueex--margin-control .components-checkbox-control{margin-bottom:8px!important}.marqueex--margin-control .components-checkbox-control .components-checkbox-control__input-container{margin-right:6px}
+.marqueex--media-control small{margin-top:4px}.marqueex--media-control .block-editor-media-placeholder{margin-bottom:1em}.marqueex--media-control .marqueex--filename{font-family:monospace;margin-bottom:1em}.marqueex--media-control .components-placeholder__fieldset{position:relative}.marqueex--media-control .components-placeholder__fieldset .components-form-file-upload{position:absolute;right:0;top:0;width:-moz-fit-content;width:fit-content}.marqueex--media-control .components-placeholder__fieldset .components-form-file-upload .components-button{margin-bottom:0}.marqueex--media-control .components-placeholder__fieldset .components-button.is-tertiary{margin-right:0;width:-moz-fit-content;width:fit-content}
+.marqueex--padding-control .components-range-control{margin-bottom:.5em;padding-left:6px;padding-right:6px}
+.marqueex--position-control .marqueex--color-control{margin-bottom:1.5em;margin-top:1.5em}
+.marqueex--control-header-button{border:0;box-shadow:none;color:#a0aec0;font-size:18px;height:auto;margin-bottom:0;min-width:0;outline:0;padding:2px 4px;width:auto}.marqueex--control-header-button svg{box-sizing:border-box;height:1em;width:1em}.marqueex--control-header-button .dashicon{color:#a0aec0;font-size:15px;height:15px;width:15px}.marqueex--control-header-button.is-pressed,.marqueex--control-header-button.is-pressed .dashicon{background-color:var(--wp-admin-theme-color,#3858e9)}.marqueex--button-group,.marqueex--text-align-control>.components-button-group{border:1px solid #a0aec0;display:flex;width:100%}.marqueex--button-group .components-button,.marqueex--text-align-control>.components-button-group .components-button{align-items:center;border-radius:0;box-shadow:none;color:#a0aec0;display:flex;flex-grow:1;font-size:13px;justify-content:center;outline:none}.marqueex--button-group .components-button:focus,.marqueex--text-align-control>.components-button-group .components-button:focus{box-shadow:none;outline:none}.marqueex--button-group .components-button.is-pressed,.marqueex--text-align-control>.components-button-group .components-button.is-pressed{background-color:var(--wp-admin-theme-color,#3858e9);color:#fff}.marqueex--button-group .components-button.has-icon,.marqueex--text-align-control>.components-button-group .components-button.has-icon{font-size:24px}.marqueex--button-group .components-button>svg,.marqueex--text-align-control>.components-button-group .components-button>svg{height:28px;width:28px}
+.marqueex--control-header-button{border:0;box-shadow:none;color:#a0aec0;font-size:18px;height:auto;margin-bottom:0;min-width:0;outline:0;padding:2px 4px;width:auto}.marqueex--control-header-button svg{box-sizing:border-box;height:1em;width:1em}.marqueex--control-header-button .dashicon{color:#a0aec0;font-size:15px;height:15px;width:15px}.marqueex--control-header-button.is-pressed,.marqueex--control-header-button.is-pressed .dashicon{background-color:var(--wp-admin-theme-color,#3858e9)}.marqueex--button-group,.marqueex--vertical-align-control>.components-button-group{border:1px solid #a0aec0;display:flex;width:100%}.marqueex--button-group .components-button,.marqueex--vertical-align-control>.components-button-group .components-button{align-items:center;border-radius:0;box-shadow:none;color:#a0aec0;display:flex;flex-grow:1;font-size:13px;justify-content:center;outline:none}.marqueex--button-group .components-button:focus,.marqueex--vertical-align-control>.components-button-group .components-button:focus{box-shadow:none;outline:none}.marqueex--button-group .components-button.is-pressed,.marqueex--vertical-align-control>.components-button-group .components-button.is-pressed{background-color:var(--wp-admin-theme-color,#3858e9);color:#fff}.marqueex--button-group .components-button.has-icon,.marqueex--vertical-align-control>.components-button-group .components-button.has-icon{font-size:24px}.marqueex--button-group .components-button>svg,.marqueex--vertical-align-control>.components-button-group .components-button>svg{height:28px;width:28px}
+.marqueex--tabbed-control{border-top:1px solid #e0e0e0}.marqueex--tabbed-control .marqueex--tabbed-header{display:flex}.marqueex--tabbed-control .marqueex--tabbed-header .marqueex--tab{align-items:center;background-color:#e0e0e0;display:flex;flex:1 1 0;justify-content:center}.marqueex--tabbed-control .marqueex--tabbed-header .marqueex--tab .components-button{height:72px;justify-content:center;width:100%}.marqueex--tabbed-control .marqueex--tabbed-header .marqueex--tab .components-button svg{max-height:100%}.marqueex--tabbed-control .marqueex--tabbed-header .marqueex--tab .components-button .dashicon{font-size:16px}.marqueex--tabbed-control .marqueex--tabbed-header .marqueex--tab .components-button:focus:not(:disabled){box-shadow:none;outline:none}.marqueex--tabbed-control .marqueex--tabbed-header .marqueex--tab.marqueex--tab-active{background-color:#fff;box-shadow:inset 0 -3px 0 0 var(--wp-admin-theme-color,#3858e9)}
+.marqueex--width-height-control .components-range-control{margin-bottom:.5em;padding-left:6px;padding-right:6px}
+:root{--marqueex-dropdown-picker-toggle-padding:10px 12px;--marqueex-dropdown-picker-toggle-border:1px solid rgba(0,0,0,.15);--marqueex-dropdown-picker-toggle-border-radius:0;--marqueex-dropdown-picker-toggle-active-color:var(--wp-admin-theme-color);--marqueex-dropdown-picker-toggle-active-background-color:#f0f0f0}.marqueex-component-dropdown-picker-toggle{align-items:center;border:1px solid rgba(0,0,0,.15);border-radius:0;display:flex;height:auto;justify-content:space-between;margin-bottom:0;min-height:40px;padding:10px 12px;position:relative;width:100%}.marqueex-component-dropdown-picker-toggle.marqueex-component-dropdown-picker-toggle-active{background-color:#f0f0f0;color:var(--wp-admin-theme-color)}.marqueex-component-dropdown-picker-toggle .marqueex-component-dropdown-picker-toggle-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.marqueex-component-dropdown-picker__dropdown{display:block;width:100%}.marqueex-component-dropdown-picker__dropdown-content .components-popover__content{padding:16px;width:260px}.marqueex-component-dropdown-picker__dropdown-content .components-tab-panel__tabs{margin:-16px -16px 16px}
+/* Collection default theme */
+
+.ReactVirtualized__Collection {
+}
+
+.ReactVirtualized__Collection__innerScrollContainer {
+}
+
+/* Grid default theme */
+
+.ReactVirtualized__Grid {
+}
+
+.ReactVirtualized__Grid__innerScrollContainer {
+}
+
+/* Table default theme */
+
+.ReactVirtualized__Table {
+}
+
+.ReactVirtualized__Table__Grid {
+}
+
+.ReactVirtualized__Table__headerRow {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ReactVirtualized__Table__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ReactVirtualized__Table__headerTruncatedText {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.ReactVirtualized__Table__headerColumn,
+.ReactVirtualized__Table__rowColumn {
+  margin-right: 10px;
+  min-width: 0px;
+}
+.ReactVirtualized__Table__rowColumn {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ReactVirtualized__Table__headerColumn:first-of-type,
+.ReactVirtualized__Table__rowColumn:first-of-type {
+  margin-left: 10px;
+}
+.ReactVirtualized__Table__sortableHeaderColumn {
+  cursor: pointer;
+}
+
+.ReactVirtualized__Table__sortableHeaderIconContainer {
+  display: flex;
+  align-items: center;
+}
+.ReactVirtualized__Table__sortableHeaderIcon {
+  flex: 0 0 24px;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+
+/* List default theme */
+
+.ReactVirtualized__List {
+}
+.marqueex-component-image-picker,.marqueex-component-image-picker.marqueex-component-image-picker-2{--marqueex-component-image-picker-item-size:50%}.marqueex-component-image-picker.marqueex-component-image-picker-3{--marqueex-component-image-picker-item-size:33.33%}.marqueex-component-image-picker.marqueex-component-image-picker-4{--marqueex-component-image-picker-item-size:25%}.marqueex-component-image-picker.marqueex-component-image-picker-5{--marqueex-component-image-picker-item-size:20%}.marqueex-component-image-picker.marqueex-component-image-picker-6{--marqueex-component-image-picker-item-size:16.66%}.marqueex-component-image-picker .components-base-control__field{display:flex;flex-wrap:wrap;justify-content:space-between}.marqueex-component-image-picker .components-base-control__field>.components-base-control__label{min-width:100%}.marqueex-component-image-picker .marqueex-component-image-picker-item{align-items:center;background:none;border:none;border-radius:4px;color:inherit;cursor:pointer;display:flex;flex-direction:column;flex-shrink:0;justify-content:flex-start;margin:4px 0;overflow:hidden;padding:4px;width:calc(var(--marqueex-component-image-picker-item-size) - 4px)}.marqueex-component-image-picker .marqueex-component-image-picker-item:hover{background:#d3d3d3;color:#a9a9a9}.marqueex-component-image-picker .marqueex-component-image-picker-item.marqueex-component-image-picker-item-active{box-shadow:0 0 0 2px #a9a9a9;color:#a9a9a9;outline:2px solid transparent;outline-offset:-2px}.marqueex-component-image-picker .marqueex-component-image-picker-item:focus{box-shadow:0 0 0 2px #8a2be2;color:#a9a9a9;outline:2px solid transparent;outline-offset:-2px}.marqueex-component-image-picker .marqueex-component-image-picker-item img{border:1px solid hsla(0,0%,66%,.2);border-radius:4px;display:block;height:auto;outline:1px solid transparent;width:100%}.marqueex-component-image-picker .marqueex-component-image-picker-item svg{border:1px solid hsla(0,0%,66%,.2);border-radius:4px;display:block;fill:currentColor;height:45px;outline:1px solid transparent;width:100%}.marqueex-component-image-picker .marqueex-component-image-picker-item span{display:block;padding:4px 2px;text-align:center}
+.marqueex--base-controls>div{margin-bottom:1em}

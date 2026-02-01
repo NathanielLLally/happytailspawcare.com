@@ -1,0 +1,490 @@
+.sltk * {
+    box-sizing: border-box;
+}
+
+.sltk .wrap h1.wp-heading-inline {
+    color: black;
+}
+
+.sltk .subsubsub a.current,
+.sltk .wp-list-table a {
+    color: black;
+}
+
+
+#sltk_images_preview {
+    display: flex;               /* mostrar imágenes en fila */
+    flex-wrap: wrap;             /* permitir que pasen a la siguiente fila si no caben */
+    gap: 10px;                   /* espacio entre miniaturas */
+    margin-top: 15px;            /* separación del botón */
+    padding: 0;                  /* quitar padding por defecto */
+    list-style: none;            /* quitar bullets de lista */
+}
+
+#sltk_images_preview li {
+    position: relative;          /* para posicionar el botón eliminar */
+    width: 100px;                /* ancho de miniatura */
+    height: 100px;               /* alto de miniatura */
+    border: 1px solid #c9d1d9;  /* borde gris claro */
+    border-radius: 6px;          /* esquinas redondeadas */
+    overflow: hidden;            /* recortar la imagen dentro del li */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f1f1f1;  /* fondo neutro */
+}
+
+#sltk_images_preview li img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;           /* recortar imagen para que llene el contenedor */
+    display: block;
+}
+
+#sltk_images_preview li .delete_images_button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: #cc4444;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 2px 6px;
+    font-size: 10px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+#sltk_images_preview li .delete_images_button:hover {
+    opacity: 1;
+}
+
+.sltk .subsubsub a .count,
+.sltk .subsubsub a.current .count {
+    color: black;
+}
+
+.sltk .wp-core-ui p .button {
+    background-color: #f1f1f1; 
+    color: black;
+}
+
+.sltk .check-column label:hover {
+    background-color: #f1f1f1; 
+}
+
+.sltk .widefat thead tr th {
+    background-color: #f1f1f1; 
+    color: black;
+}
+
+.sltk .widefat tfoot tr th {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.sltk .widefat td {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.sltk #wpbody-content {
+    background-color: #f1f1f1; 
+}
+
+.sltk span {
+    color: black;
+}
+
+.sltk .auto-fold #wpcontent {
+    background-color: #f1f1f1;
+}
+
+.sltk #wpfooter,
+.sltk div#edit-slug-box {
+    display: none;
+}
+
+.sltk input[type=range] {
+    -webkit-appearance: none;
+    height: 8px;
+    background: transparent; 
+}
+
+.sltk input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: #000000; 
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.sltk .wp-core-ui .button,
+.sltk .wp-core-ui .button-secondary {
+     color: black !important; 
+}
+
+.sltk label {
+    color: black;
+}
+
+.sltk #the-list tr:last-child td {
+    background: none !important;
+}
+
+.sltk input#publish {
+    color: black;
+    border-radius: 5px;
+    background: #f1f1f1;
+}
+
+.sltk #minor-publishing-actions,
+.sltk #misc-publishing-actions,
+.sltk .handle-actions.hide-if-no-js {
+    display: none;
+}
+
+/* Add new */
+.sltk .postbox {
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    border-radius: 4px;
+}
+
+.sltk .postbox-header {
+    border-bottom: 1px solid #c3c4c7;
+    padding: 8px;
+}
+
+.sltk ul#custom_images_preview {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+    cursor: pointer;
+}
+
+.sltk #custom_images_preview li {
+    border: 0.5px solid gray;
+    margin: 5px;
+}
+
+.sltk .postbox-header {
+    border-bottom: none ;
+}
+
+.sltk .postbox {
+    box-shadow: none; 
+    margin-bottom: 0px;
+}
+
+.sltk #postbox-container-2 {
+    background-color: white;
+    border: 1px solid #c9d1d9;
+    padding-top: 10px;
+}
+
+.sltk #postbox-container-2 h2{
+    display: none;
+}
+
+.sltk ul#custom_images_preview img{
+    display: block;
+    height: 100px;
+    margin: 10px auto !important;
+}
+
+.sltk .divColor {
+    border: 1px solid #c9d1d9;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.sltk input#border-color,
+.sltk input#favcolor {
+    width: 40px;
+    padding: 0;
+    background: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.sltk label[for="borderColor"] {
+    display: inline-block;
+}
+
+.sltk input[type="color"]::-moz-color-swatch,
+.sltk input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.sltk input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border-radius: 0;
+}
+
+.sltk .search-box input[name="s"],
+.sltk input[readonly],
+.sltk .tablenav .actions select,
+.sltk .media-frame input[type=search],
+.sltk .meta-box-sortables input {
+    border: 1px solid #c9d1d9;
+    color: #000000;
+}
+
+.sltk input[type=number],
+.sltk input[type=text]{
+    width: 100px;
+}
+
+.sltk select#border-options {
+    border: 1px solid #c9d1d9 !important;
+}
+
+.sltk #titlediv #title {
+    padding: 10px 12px;
+    font-size: 1.6em;
+    line-height: 1.2;
+    height: auto;
+    width: 100%;
+    outline: none;
+    margin: 0 0 15px;
+    border: 1px solid #c9d1d9;
+    border-radius: 6px;
+    color: #000000;
+}
+
+.sltk input[type="text"] {
+    width: 50%;
+}
+
+.sltk .wrap .wp-heading-inline + .page-title-action {
+    background-color: #f1f1f1;
+    color: black;
+    border: 0.5px solid black;
+}
+
+.sltk .wp-core-ui .button-group.button-small .button,
+.sltk .wp-core-ui .button.button-small,
+.sltk button.button.media-button.button-primary.button-large.media-button-select {
+    background-color: #f1f1f1 !important;
+    color: black !important;
+    border: 1px solid black !important;
+}
+
+.sltk input#post-query-submit,
+.sltk input#doaction,
+.sltk input#search-submit,
+.sltk input#doaction2 {
+    background-color: #f1f1f1;
+    color: black;
+    border: 1px solid black;
+}
+
+.sltk button.delete_images_button {
+    font-size: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    line-height: 1.2;
+    height: auto;
+    background-color: #f1f1f1;
+    color: black;
+    border: 1px solid #c9d1d9;
+    border-radius: 6px;
+}
+
+.sltk button {
+    color: black;
+    border: 1px solid #c9d1d9;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    background: white;
+}
+
+.sltk button:hover{
+    background-color: #f3efef;
+}
+
+.sltk #meta-box-list {
+    text-align:center;
+}
+
+.sltk div#meta-box-list {
+    padding: 10px;
+    background: white;
+    border: 1px solid #d6dce5;
+}
+
+.sltk button#select_images_button {
+    color: black;
+    border: 1px solid #c9d1d9;
+    padding: 5px 10px;
+    background: white;
+}
+
+.sltk button.notice-dismiss {
+    display: none;
+}
+
+.sltk input#publish:hover {
+    border-radius: 6px;
+    background-color:#f1f1f1;
+    color:#000000;
+    border: 1px solid #c9d1d9;
+}
+
+.sltk button.media-modal-close {
+    background: none;
+}
+
+.sltk button.media-modal-close:hover {
+    background: none;
+}
+
+.sltk #major-publishing-actions {
+    background: none; 
+}
+
+.sltk .submitbox .submitdelete {
+    color: #cc4444;
+}
+
+.sltk #poststuff h2,
+.sltk #poststuff h3.hndle {
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+    color: black;
+}
+
+/* Select pictures */
+.sltk .attachments-browser.has-load-more .attachments-wrapper,
+.sltk .media-sidebar,
+.sltk .attachments-browser .media-toolbar,
+.sltk .media-frame-title h1 {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.sltk .media-router .active,
+.sltk .media-router .media-menu-item.active:last-child,
+.sltk .media-router .media-menu-item {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.sltk .media-frame select.attachment-filters:last-of-type,
+.sltk .media-frame.hide-menu .media-frame-router,
+.sltk .media-frame.hide-menu .media-frame-content,
+.sltk .media-frame-toolbar .media-toolbar,
+.sltk .media-frame {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.sltk h2.upload-instructions.drop-instructions {
+    color: black;
+}
+
+.sltk .attachment-info .filename {
+    color: black;
+}
+
+.sltk .wp-core-ui .notice.is-dismissible {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+.sltk .notice-success,
+.sltk div.updated {
+    border-left-color: black;
+}
+
+.sltk input[type="number"]::-webkit-inner-spin-button,
+.sltk input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.sltk img.emoji {
+    margin-top: 5px !important;
+    font-size: 15px;
+}
+
+.sltk .tooltiptext{
+    visibility: hidden;
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    border: 3px solid black;
+    background-color: white;
+    font-weight:500;
+    border-radius: 10px;
+}
+
+.sltk .tooltip:hover .tooltiptext{
+    visibility: visible; 
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.sltk .containerPictures{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#slt_change_media.postbox {
+    max-width: 100%;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+.postbox {
+    border: 1px solid #ffffff;
+}
+
+
+.sltk_admin_page #submitdiv {
+    display: block !important;
+}
+
+.sltk_admin_page #postbox-container-2 {
+    display: none;
+}
+
+.sltk #postbox-container-2 {
+   display: none;
+}
+
+#meta-box-list {
+    margin-bottom: 15px;
+}
+
+#meta-box-list button {
+    margin-right: 10px;
+    padding: 6px 12px;
+    border: 2px solid #c9d1d9;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#meta-box-list button:hover {
+    background: #f0f0f0;
+}

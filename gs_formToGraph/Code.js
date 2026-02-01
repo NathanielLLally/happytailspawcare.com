@@ -1,3 +1,5 @@
+//https://developers.google.com/chart/interactive/docs/gallery/controls
+
 "use strict";
 
 const MIN_TIME_UNIT = 1;
@@ -418,7 +420,7 @@ function funroll(nicheEnum, formLink) {
     "niche": nicheEnum,
     "short_name":"",
     "sub_niche": "",
-    "time": TIME_UNIT.WEEK,
+    "time": TIME_UNIT.MONTH,
     "time_longname": "",
     "model": "",
     "graph": {"fields": [] },

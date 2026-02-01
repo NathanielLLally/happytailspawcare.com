@@ -1,0 +1,1 @@
+!function(e,n){"use strict";e(n).on("elementor/frontend/init",()=>{elementorFrontend.hooks.addAction("frontend/element_ready/marqueex-text-marquee.default",handleMarqueeSpeed)})}(jQuery,window);

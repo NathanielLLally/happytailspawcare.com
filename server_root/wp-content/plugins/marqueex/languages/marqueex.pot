@@ -1,0 +1,140 @@
+# MarqueeX Translation Template
+# Copyright (C) 2025 WPXERO
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MarqueeX 0.0.3\n"
+"Report-Msgid-Bugs-To: https://wpxero.com/support\n"
+"Language-Team: WPXERO <support@wpxero.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WordPress\n"
+"X-Domain: marqueex\n"
+
+#: includes/meta-descriptions.php:96
+msgid "View our scrolling content for %s featuring MarqueeX smooth animations."
+msgstr ""
+
+#: includes/social-optimization.php:122
+msgid "Check out this page featuring MarqueeX scrolling content on %s."
+msgstr ""
+
+#: includes/admin-page.php:33
+#: includes/admin-page.php:34
+msgid "MarqueeX SEO"
+msgstr ""
+
+#: includes/admin-page.php:62
+msgid "MarqueeX SEO Features"
+msgstr ""
+
+#: includes/admin-page.php:66
+msgid "SEO Optimization"
+msgstr ""
+
+#: includes/admin-page.php:67
+msgid "MarqueeX includes several features to help your content rank better in search engines:"
+msgstr ""
+
+#: includes/admin-page.php:71
+msgid "Structured Data"
+msgstr ""
+
+#: includes/admin-page.php:72
+msgid "Automatically adds structured data to pages with MarqueeX blocks, helping search engines understand your content better."
+msgstr ""
+
+#: includes/admin-page.php:75
+msgid "Meta Descriptions"
+msgstr ""
+
+#: includes/admin-page.php:76
+msgid "Generates optimized meta descriptions for pages with MarqueeX content when no description is set."
+msgstr ""
+
+#: includes/admin-page.php:79
+msgid "Social Sharing Optimization"
+msgstr ""
+
+#: includes/admin-page.php:80
+msgid "Adds Open Graph and Twitter Card tags to improve how your content looks when shared on social media."
+msgstr ""
+
+#: includes/admin-page.php:83
+msgid "XML Sitemap"
+msgstr ""
+
+#: includes/admin-page.php:85
+msgid "Generates a dedicated XML sitemap for pages using MarqueeX blocks."
+msgstr ""
+
+#: includes/admin-page.php:87
+msgid "Your sitemap is available at: %s"
+msgstr ""
+
+#: includes/admin-page.php:91
+msgid "(Disabled because you are using another SEO plugin that handles sitemaps)"
+msgstr ""
+
+#: includes/admin-page.php:98
+msgid "SEO Best Practices for MarqueeX Content"
+msgstr ""
+
+#: includes/admin-page.php:99
+msgid "Follow these tips to make your MarqueeX content more SEO-friendly:"
+msgstr ""
+
+#: includes/admin-page.php:102
+msgid "Use descriptive, keyword-rich text in your marquee content."
+msgstr ""
+
+#: includes/admin-page.php:103
+msgid "Don't rely solely on marquee content - add regular static content with relevant keywords."
+msgstr ""
+
+#: includes/admin-page.php:104
+msgid "Set custom meta descriptions in your SEO plugin for pages with MarqueeX content."
+msgstr ""
+
+#: includes/admin-page.php:105
+msgid "Ensure your site loads quickly - MarqueeX is optimized for performance but check your overall site speed."
+msgstr ""
+
+#: includes/admin-page.php:106
+msgid "Make sure your content is mobile-friendly and works well on all devices."
+msgstr ""
+
+#: includes/admin-page.php:111
+msgid "Compatible SEO Plugins"
+msgstr ""
+
+#: includes/admin-page.php:112
+msgid "MarqueeX is compatible with these popular SEO plugins:"
+msgstr ""
+
+#: includes/admin-page.php:122
+msgid "When these plugins are detected, MarqueeX will automatically defer to their SEO features to avoid conflicts."
+msgstr ""
+
+#: includes/seo-improvements.php:143
+#: includes/seo-improvements.php:144
+msgid "Documentation for MarqueeX"
+msgstr ""
+
+#: includes/seo-improvements.php:143
+#: includes/seo-improvements.php:144
+msgid "Documentation"
+msgstr ""
+
+#: includes/seo-improvements.php:144
+#: includes/seo-improvements.php:145
+msgid "Support for MarqueeX"
+msgstr ""
+
+#: includes/seo-improvements.php:144
+#: includes/seo-improvements.php:145
+msgid "Support"
+msgstr ""

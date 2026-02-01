@@ -1,0 +1,770 @@
+[class~="error"],
+[class~="updated"],
+[class~="notice"],
+.ays-quiz-footer-review-box {
+    display: none !important;
+}
+
+.quiz-maker-steps-container iframe,
+.quiz-maker-steps-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Hero Section Styles */
+.quiz-maker-hero {
+    background-color: #ffffff;
+    padding: 64px 24px;
+    text-align: center;
+    border-radius: 12px 12px 0px 0px;
+}
+
+.quiz-maker-hero .quiz-maker-hero-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.quiz-maker-hero .quiz-maker-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 32px auto;
+    display: block;
+}
+
+.quiz-maker-hero .quiz-maker-hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.quiz-maker-hero .quiz-maker-hero-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    margin-bottom: 48px;
+    max-width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.quiz-maker-hero .quiz-maker-hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-maker-hero .quiz-maker-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 32px;
+    min-width: 180px;
+    width: 100%;
+    /* height: 44px; */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.quiz-maker-hero .quiz-maker-btn:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-maker-hero .quiz-maker-btn-primary {
+    background-color: rgb(59, 131, 246);
+    color: white;
+}
+
+.quiz-maker-hero .quiz-maker-btn-primary:hover {
+    background-color: #2474f5;
+}
+
+.quiz-maker-hero .quiz-maker-btn-secondary {
+    background-color: #ff8533;
+    color: white;
+}
+
+.quiz-maker-hero .quiz-maker-btn-secondary:hover {
+    background-color: #ff751a;
+}
+
+.quiz-maker-hero .quiz-maker-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Quick Start Steps Section Styles */
+.quiz-maker-steps {
+    padding: 64px 24px;
+    background-color: #f8fafc;
+}
+
+.quiz-maker-steps .quiz-maker-steps-container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.quiz-maker-steps .quiz-maker-steps-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 48px;
+}
+
+.quiz-maker-steps .quiz-maker-steps-sub-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #1f2937;
+    margin-bottom: 48px;
+}
+
+.quiz-maker-steps .quiz-maker-steps-content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.quiz-maker-steps .quiz-maker-steps-list {
+    max-width: 512px;
+    width: 100%;
+}
+
+.quiz-maker-steps .quiz-maker-ordered-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.quiz-maker-steps .quiz-maker-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.quiz-maker-steps .quiz-maker-step-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background-color: #3c83f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.quiz-maker-steps .quiz-maker-step-text {
+    padding-top: 4px;
+}
+
+.quiz-maker-steps .quiz-maker-step-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #1f2937;
+    margin: 0;
+}
+
+.quiz-maker-steps .quiz-maker-video-container {
+    width: 100%;
+    max-width: 512px;
+}
+
+.quiz-maker-steps .quiz-maker-video-wrapper {
+    width: 100%;
+    /* height: 0; */
+    /* padding-bottom: 56.25%; 16:9 aspect ratio */
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.quiz-maker-steps .quiz-maker-video-wrapper img {
+    width: 480px;
+    height: 265px;
+}
+
+.quiz-maker-steps .ays-quiz-youtube-placeholder {
+    width: 480px;
+    height: 265px;
+}
+
+.quiz-maker-steps .quiz-maker-video-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Video Resources Section Styles */
+.quiz-maker-video-resources {
+    padding: 80px 24px;
+    background-color: #ffffff;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-resources-container {
+    max-width: 1152px;
+    margin: 0 auto;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-resources-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-resources-title {
+    font-size: 30px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 16px;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-resources-subtitle {
+    font-size: 18px;
+    color: #6b7280;
+    max-width: 512px;
+    margin: 0 auto;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card {
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    padding: 24px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card-icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 133, 51, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+    flex-shrink: 0;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card:hover .quiz-maker-video-card-icon {
+    background-color: rgba(255, 133, 51, 0.2);
+}
+
+.quiz-maker-video-resources .quiz-maker-play-icon {
+    width: 24px;
+    height: 24px;
+    color: #ff8533;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card-text {
+    flex: 1;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    transition: color 0.2s ease;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card:hover .quiz-maker-video-card-title {
+    color: #3c83f6;
+}
+
+.quiz-maker-video-resources .quiz-maker-external-link {
+    width: 16px;
+    height: 16px;
+    color: #6b7280;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card:hover .quiz-maker-external-link {
+    color: #3c83f6;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-card-description {
+    color: #6b7280;
+    margin: 0 0 8px 0;
+    line-height: 1.5;
+}
+
+.quiz-maker-video-resources .quiz-maker-video-duration {
+    font-size: 14px;
+    color: #ff8533;
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .quiz-maker-hero .quiz-maker-hero-buttons {
+        flex-direction: row;
+    }
+
+    .quiz-maker-hero .quiz-maker-btn {
+        width: auto;
+    }
+}
+
+@media (min-width: 769px) {
+    .quiz-maker-hero .quiz-maker-hero-title {
+        font-size: 56px;
+    }
+
+    .quiz-maker-steps .quiz-maker-steps-content {
+        flex-direction: row;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .quiz-maker-steps .quiz-maker-steps-list {
+        flex: 1;
+    }
+
+    .quiz-maker-steps .quiz-maker-video-container {
+        flex: 1;
+        /* max-width: none; */
+    }
+
+    .quiz-maker-video-resources .quiz-maker-video-resources-title {
+        font-size: 36px;
+    }
+
+    .quiz-maker-video-resources .quiz-maker-video-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .quiz-maker-video-resources .quiz-maker-video-row {
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+    }
+
+    .quiz-maker-video-resources .quiz-maker-video-card {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1024px) {
+    .quiz-maker-hero .quiz-maker-hero-title {
+        font-size: 64px;
+    }
+
+    .quiz-maker-steps .quiz-maker-steps-content {
+        gap: 64px;
+    }
+
+    .quiz-maker-video-resources .quiz-maker-video-resources-title {
+        font-size: 40px;
+    }
+
+    .quiz-maker-video-resources .quiz-maker-video-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .quiz-maker-steps .quiz-maker-steps-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quiz-maker-steps .quiz-maker-video-wrapper img {
+        width: 512px;
+        height: 315px;
+        max-width: 100%;
+        object-fit: contain;
+    }
+}
+
+/* Quiz Demos Section Styles */
+.quiz-maker-help-demos-section {
+    padding: 4rem 0;
+    background-color: rgb(248, 250, 252);
+    /* border-radius: 0px 0px 12px 12px; */
+    padding-bottom: 10rem;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-max-width {
+    max-width: 1152px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-description {
+    color: #64748b;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Fox Review Section Styles */
+.quiz-maker-review-settings-section {
+    padding-bottom: 2rem;
+    background-color: rgb(248, 250, 252);
+    border-radius: 0px 0px 12px 12px;
+}
+
+/* Responsive grid */
+@media (min-width: 768px) {
+    .quiz-maker-help-demos-section .quiz-maker-help-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .quiz-maker-help-demos-section .quiz-maker-help-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .quiz-maker-help-demos-section .quiz-maker-help-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: transform 0.1s ease-in-out;
+    overflow: hidden;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-card-header {
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-icon-container {
+    width: 4rem;
+    height: 4rem;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-card:hover .quiz-maker-help-icon-container {
+    background-color: rgba(59, 130, 246, 0.2);
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-icon {
+    width: 2rem;
+    height: 2rem;
+    color: #3c83f6;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-card-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.4;
+    min-height: 50px;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-card-content {
+    padding: 1.5rem;
+    padding-top: 0;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-card-description {
+    font-size: 0.875rem;
+    color: #64748b;
+    text-align: center;
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+    min-height: 68px;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: 2.5rem;
+    padding: 0 1rem;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    color: rgb(40, 44, 52);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-button:hover {
+    background-color: #3c83f6;
+    color: #ffffff;
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.quiz-maker-help-demos-section .quiz-maker-help-button-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-left: 0.5rem;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 767px) {
+    .quiz-maker-help-demos-section {
+        padding: 2rem 0;
+    }
+
+    .quiz-maker-help-demos-section .quiz-maker-help-max-width {
+        gap: 2rem;
+    }
+
+    .quiz-maker-help-demos-section .quiz-maker-help-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* What's New Section Styles | Start */
+.quiz-maker-what-is-new-section {
+    background-color: #f8fafc;
+    padding: 60px 20px;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #3b83f6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-see-more-btn:hover {
+    color: #3730A3;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-btn-icon {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-see-more-btn:hover .quiz-maker-what-is-new-btn-icon {
+    transform: translateY(-2px);
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 10px 0;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-subtitle {
+    font-size: 16px;
+    color: #666666;
+    margin: 0;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-content {
+    margin-top: 30px;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-version-badge {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-feature-item {
+    padding: 12px 0;
+    font-size: 15px;
+    color: #333333;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-feature-item:before {
+    content: "•";
+    color: #2563eb;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    font-size: 18px;
+}
+
+.quiz-maker-what-is-new-section .quiz-maker-what-is-new-feature-item:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .quiz-maker-what-is-new-section {
+        padding: 40px 15px;
+    }
+    
+    .quiz-maker-what-is-new-section .quiz-maker-what-is-new-container {
+        padding: 30px 20px;
+        padding-top: 60px;
+    }
+    
+    .quiz-maker-what-is-new-section .quiz-maker-what-is-new-see-more-btn {
+        top: 20px;
+        right: 20px;
+        font-size: 13px;
+    }
+    
+    .quiz-maker-what-is-new-section .quiz-maker-what-is-new-title {
+        font-size: 26px;
+    }
+    
+    .quiz-maker-what-is-new-section .quiz-maker-what-is-new-subtitle {
+        font-size: 14px;
+    }
+}
+/* What's New Section Styles | End */

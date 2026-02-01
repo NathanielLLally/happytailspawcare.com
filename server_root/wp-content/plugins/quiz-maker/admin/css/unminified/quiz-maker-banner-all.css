@@ -1,0 +1,6334 @@
+@-webkit-keyframes bounceInRight_2022 {
+    0%, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+
+    0% {
+        -webkit-transform: translate3d(3000px, 0, 0);
+        opacity: 0;
+        transform: translate3d(3000px, 0, 0)
+    }
+
+    60% {
+        -webkit-transform: translate3d(-25px, 0, 0);
+        opacity: 1;
+        transform: translate3d(-25px, 0, 0)
+    }
+
+    75% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0)
+    }
+
+    90% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes bounceInRight_2022 {
+    0%, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+        animation-timing-function: cubic-bezier(.215, .61, .355, 1)
+    }
+
+    0% {
+        -webkit-transform: translate3d(3000px, 0, 0);
+        opacity: 0;
+        transform: translate3d(3000px, 0, 0)
+    }
+
+    60% {
+        -webkit-transform: translate3d(-25px, 0, 0);
+        opacity: 1;
+        transform: translate3d(-25px, 0, 0)
+    }
+
+    75% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0)
+    }
+
+    90% {
+        -webkit-transform: translate3d(-5px, 0, 0);
+        transform: translate3d(-5px, 0, 0)
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.bounceInRight_2022 {
+    -webkit-animation-name: bounceInRight_2022;
+    animation-name: bounceInRight_2022;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 30s;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+}
+
+div.error:not([class*="ays-quiz"]):not([class*="ays_quiz"]),
+.notice:not([class*="ays-quiz"]):not([class*="ays_quiz"]) {
+    display: none !important;
+}
+
+/*Quiz and Chart integration main page 2023 | Start */
+
+#ays-quiz-all-pages-popup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+}
+
+#ays-quiz-all-pages-popup-main {
+    width: 480px;
+    height: 300px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+    background-color: #7177EB;
+    background-image: url("../images/ays-quiz-and-chart-bg-image.webp");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.ays-quiz-all-pages-popup-fields-submit {
+    background-color: #6AF27C;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    padding: 13px 40px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    background-image: linear-gradient(180deg, #6AF27C 0%, #38B049 100%);
+    border-radius: 13.834px;
+}
+
+a.ays-quiz-all-pages-popup-fields-submit:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ays-quiz-all-pages-popup-layer {
+    text-align: center;
+}
+
+#ays-quiz-all-pages-popup-close-main {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#ays-quiz-all-pages-popup-close {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    background: #4F5178;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#ays-quiz-all-pages-popup-close > div {
+    line-height: 24px;
+    height: 28px;
+}
+
+.ays-quiz-all-pages-popup-dismiss-ad-button {
+    font-size: 12px;
+    color: #f3d7e5;
+}
+
+a.ays-quiz-all-pages-popup-dismiss-ad-button:hover {
+    color: #f3d7e5;
+    text-decoration: none;
+}
+
+div#ays-quiz-all-pages-popup-heading {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.ays-quiz-all-pages-popup-heading-center {
+    width: 100%;
+}
+
+.ays-quiz-all-pages-popup-heading-center a {
+    display: inline-block;
+}
+
+.ays-quiz-all-pages-popup-heading-title {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #fff;
+    letter-spacing: 7px;
+    font-weight: bolder;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+div#ays-quiz-all-pages-popup-content {
+    padding: 20px 15px;
+}
+
+.ays-quiz-all-pages-popup-content-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.2em;
+    color: #98FBA6;
+    text-transform: uppercase;
+}
+
+.ays-quiz-all-pages-popup-content-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    #ays-quiz-all-pages-popup {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #ays-quiz-all-pages-popup-main {
+        max-width: 100%;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #ays-quiz-all-pages-popup-close-main {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+/* Quiz and Chart integration main page 2023 | End */
+
+/* Quiz and Fox LMS integration main page 2025 | Start */
+
+#ays-quiz-fox-lms-all-pages-popup {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100000;
+}
+
+#ays-quiz-fox-lms-all-pages-popup-main {
+    width: 480px;
+    height: 350px;
+    font-size: 20px;
+    color: white;
+    position: relative;
+
+    background: #FFFFFF;
+    border: 1px solid #9E9E9E;
+    box-shadow: 0px 4px 18px rgba(167, 167, 167, 0.4);
+    border-radius: 16px;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-fields-submit {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    border: 0;
+    outline: none;
+    padding: 14px 10px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    background-color: #FF5004;
+    box-shadow: 0px 2px 4px rgba(101, 101, 101, 0.25);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+a.ays-quiz-fox-lms-all-pages-popup-fields-submit:focus,
+a.ays-quiz-fox-lms-all-pages-popup-fields-submit:hover {
+    color: #ffffff;
+    background-color: #FF783D;
+    text-decoration: none;
+    box-shadow: 0px 2px 4px rgba(101, 101, 101, 0.25);
+}
+
+a.ays-quiz-fox-lms-all-pages-popup-fields-submit:active {
+    color: #ffffff;
+    background-color: #D64202;
+    text-decoration: none;
+    box-shadow: 0px 2px 4px rgba(101, 101, 101, 0.25);
+}
+
+.ays-quiz-fox-lms-all-pages-popup-layer {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: inherit;
+    gap: 20px;
+}
+
+#ays-quiz-fox-lms-all-pages-popup-close-main {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#ays-quiz-fox-lms-all-pages-popup-close {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    background: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#ays-quiz-fox-lms-all-pages-popup-close > div {
+    line-height: 24px;
+    color: #323232;
+    font-size: 32px;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-dismiss-ad-button {
+    font-size: 12px;
+    color: #f3d7e5;
+}
+
+a.ays-quiz-fox-lms-all-pages-popup-dismiss-ad-button:hover {
+    color: #f3d7e5;
+    text-decoration: none;
+}
+
+div#ays-quiz-fox-lms-all-pages-popup-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-heading-center {
+    position: relative;
+}
+
+#ays-quiz-fox-lms-all-pages-popup .ays-quiz-fox-lms-all-pages-popup-heading-center img.ays-quiz-fox-lms-all-pages-icon {
+    position: absolute;
+    bottom: -30px;
+    right: 0px;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-heading-center {
+    width: 100%;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-heading-center a {
+    display: inline-block;
+}
+
+#ays-quiz-fox-lms-all-pages-popup-heading-title {
+    margin-top: 10px;
+}
+
+#ays-quiz-fox-lms-all-pages-popup-heading-title a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #323232;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-heading-title {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    color: #fff;
+    letter-spacing: 7px;
+    font-weight: bolder;
+    font-style: normal;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+div#ays-quiz-fox-lms-all-pages-popup-content {
+    padding: 0 20px 15px;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-content-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    color: #98FBA6;
+    text-transform: uppercase;
+}
+
+.ays-quiz-fox-lms-all-pages-popup-content-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #494949;
+    letter-spacing: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #ays-quiz-fox-lms-all-pages-popup {
+        max-width: 100%;
+    }
+
+    #ays-quiz-fox-lms-all-pages-popup .ays-quiz-fox-lms-all-pages-popup-heading-center img{
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #ays-quiz-fox-lms-all-pages-popup-main {
+        max-width: 100%;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #ays-quiz-fox-lms-all-pages-popup-close-main {
+        left: 0px;
+        top: 0px;
+    }
+}
+
+/* Quiz and Fox LMS integration main page 2025 | End */
+
+/* Sale Banner  Spring Bundle | Start */
+
+/* div#ays-quiz-dicount-month-main.ays_quiz_dicount_info {
+    /*background-image: linear-gradient(45deg, #dbdbdb, transparent); COMMENT THIS LATER AFTER OPEN AGAIN
+    background-image: url(../images/mega_bundle_logo_background.jpg);
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*background-color: #191919; COMMENT THIS LATER AFTER OPEN AGAIN
+}
+
+#ays-quiz-dicount-month-main .ays_quiz_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-sale-banner-link img {
+    width: 80px;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box {
+    font-size:14px;
+    /* padding:12px; COMMENT THIS LATER AFTER OPEN AGAIN
+    text-align: center;
+    width: 50%;
+    color: #009688;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-dicount-month-main .ays-button{
+    /* margin: 0 auto !important; COMMENT THIS LATER AFTER OPEN AGAIN
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    padding: 5px 35px;
+    background-color: #5561a3;
+    border-color: #5561a3;
+    font-size: 16px;
+    border-radius: 41px 150px 128px 140px / 75px 53px 38px 42px;
+}
+
+#ays-quiz-dicount-month-main #ays-quiz-button-top-buy-now:hover {
+    background-color: #5561a3;
+    border-color: #5561a3;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-color {
+    color: #5561a3;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-countdown-main-container .ays-quiz-countdown-container {
+    color: #fff;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-btn-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info button {
+    color: #5561a3;
+}
+
+#ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+
+#ays-quiz-countdown-main-container #ays-quiz-countdown {
+    font-weight: 600;
+}
+
+#ays-quiz-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-quiz-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+#ays-quiz-countdown-main-container li span {
+    display: block;
+    font-size: 40px;
+    line-height: 1.4em;
+    height: 56px;
+}
+
+#ays-quiz-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-countdown-main-container .emoji span {
+    font-size: 50px;
+    padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-dicount-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-dicount-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-dicount-month-main img{
+        width: 100px;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box {
+        width: 100%;
+        /* text-align: center; COMMENT THIS LATER AFTER OPEN AGAIN
+    }
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box > p{
+        margin: 0 !important;
+    }
+
+    #ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-countdown-main-container ul {
+        font-weight: 500;
+        color: #009688;
+    }
+
+    div#ays-quiz-countdown-main-container li span {
+        font-size: 20px;
+        height: 28px;
+    }
+
+    #ays-quiz-dicount-month-main .ays-button{
+        margin: 5px auto !important;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-image: url(../images/mega_bundle_logo_background_responsive.jpg);
+        /* background-size: auto; COMMENT THIS LATER AFTER OPEN AGAIN
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+        font-weight: bolder;
+    }
+
+    div#ays-quiz-dicount-month-main #ays-quiz-button-top-buy-now {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .comparison a.price-buy{
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-button{
+        font-size: 12px;
+        /* border-radius: 5px;
+        padding: 0 10px; COMMENT THIS LATER AFTER OPEN AGAIN
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-sale-banner-link {
+        display: none;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box {
+        margin-top: 12px;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box p {
+        margin: 0 auto;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info button {
+        font-size: 14px;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-button {
+        padding: 2px 25px;
+    }
+} */
+
+/* Sale Banner | End */
+
+/* Sale buttom banner | Start */
+
+/*.ays-quiz-general-bundle-container {
+    padding: 20px 20px;
+    color: #000;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 !important;
+    background-image: url(../images/winter-backround-bundle.png); // comment letter
+    background-position: center center;
+    background-size: cover;
+     background-color: #191919;  // comment letter
+    background-repeat: no-repeat;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-row {
+    text-align: center;
+    margin-right: 95px;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-image-row img {
+    height: 130px;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-color {
+    color: #971821;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-text {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-text > span{
+    color: #971821;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-sale-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #971821;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-row p {
+    font-weight: 500;
+    color: #fff;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-button {
+    background-color: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    color: #fff !important;
+    text-decoration: none !important;
+    text-shadow: none;
+    font-weight: 900;
+
+    line-height: 2.15384615;
+    min-height: 30px;
+    margin: 0;
+    cursor: pointer;
+    border-width: 1px;
+    border-style: solid;
+    -webkit-appearance: none;
+    border-radius: 3px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-link-color {
+    color: #971821 !important;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-sale-text {
+    text-decoration: underline;
+}
+
+.ays-quiz-general-bundle-container .ays-quiz-general-bundle-button:hover {
+    background-color: #7d161d;
+    border-color: #971821;
+}
+
+@media screen and (max-width: 1400px) {
+    div.ays-quiz-general-bundle-container {
+        background-image: url(../images/spring_bundle_logo_background_responsive.svg); // comment letter
+        background-position: top center;
+        background-size: cover;
+    }
+
+    div.ays-quiz-general-bundle-container .ays-quiz-general-bundle-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    div#ays-quiz-dicount-month-main .btn-link {
+         color: #009688 !important;  // comment letter
+         padding: 0 !important; 
+    }
+
+    div.ays-quiz-general-bundle-row div.ays-quiz-general-bundle-text{
+        font-size: 20px;
+    }
+
+    div.ays-quiz-general-bundle-container .ays-quiz-general-bundle-button {
+        font-size: 13px;
+    }
+
+    div.ays-quiz-general-bundle-container .ays-quiz-general-bundle-sale-text {
+        font-size: 19px;
+    }
+
+    .ays-quiz-general-bundle-container .ays-quiz-general-bundle-row p{
+        margin: 0;
+    }
+
+    #ays-quiz-countdown-main-container form button:first-child{
+        margin-right: 20px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+    .ays-quiz-general-bundle-container .ays-quiz-general-bundle-row {
+        margin: 10px 0;
+    }
+    
+    div.ays-quiz-general-bundle-container {
+        background-image: url(../images/mega_bundle_logo_background_responsive.jpg);
+    }
+}*/
+
+/* Sale buttom banner | End */
+/*div#ays-quiz-dicount-month-main {
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    border-radius: 6px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 5%);
+    position: relative;
+    z-index: 1;
+    min-height: 137px;
+}
+
+div#ays-quiz-dicount-month-main div#ays-quiz-dicount-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-dicount-month-main .btn-link {
+    font-weight: 400;
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}*/
+
+/* Sale Banner Spring Bundle | End */
+
+/* Sale Banner Quiz | Start */
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info {
+    background-image: url(../images/black_friday_greate_bundle.png); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: linear-gradient(45deg, #dbdbdb, transparent);
+}
+
+#ays-quiz-dicount-month-main .ays_quiz_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ays-quiz-dicount-month-main .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+    width: 50%;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box .ays-button,
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-dicount-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #969393b0;
+
+}
+
+#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-dicount-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-maker-countdown-main-container .ays-quiz-maker-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-quiz-maker-countdown-main-container li,
+#ays-quiz-maker-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-quiz-maker-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: uppercase;
+}
+
+#ays-quiz-maker-countdown-main-container li span {
+    display: block;
+    font-size: 40px;
+    min-height: 60px;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-dicount-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-dicount-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    #ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-maker-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-maker-countdown-main-container li span {
+        font-size: 20px;
+    }
+
+    #ays-quiz-dicount-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-quiz-dicount-month-main .ays-quiz-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .comparison a.price-buy{
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1305px) and (min-width: 768px){
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+        font-size: 15px;
+    }
+
+    #ays-quiz-maker-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-quiz-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+/* Sale Banner Quiz | End */
+
+
+
+
+/* Helloween bundle start  */
+/*#ays-quiz-dicount-month-main-helloween{
+    background-image: url(../images/halloween_banner_plugins.png);
+    height: 222px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#ays-quiz-dicount-month-main-helloween.notice-success, 
+#ays-quiz-dicount-month-main-helloween.notice-success{
+    border-left: unset;
+}
+
+div.ays-quiz-helloween-bundle-buy-now-timer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#ays-quiz-dicount-month-helloween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 170px;
+    width: 65%;
+    max-width: 100%;
+}
+
+.ays-quiz-countdown-main-container-helloween #ays-quiz-countdown {
+    font-weight: 600;
+}
+
+.ays-quiz-countdown-main-container-helloween ul {
+    margin: 0;
+} 
+
+.ays-quiz-countdown-main-container-helloween li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 7px;
+}
+
+.ays-quiz-countdown-main-container-helloween li span:first-child  {
+    display: block;
+    font-size: 40px;
+    line-height: 1.4em;
+    text-align: center;
+}
+.ays-quiz-countdown-main-container-helloween li > p > span:nth-child(2){
+    margin-left: 7px;
+}
+.ays-quiz-countdown-main-container-helloween .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+.ays-quiz-countdown-main-container-helloween .emoji span {
+    font-size: 50px;
+    padding: 0 .5rem;
+}   
+
+.ays-quiz-dicount-wrap-box.ays-buy-now-button-box-helloween > a.ays-buy-now-button-helloween{
+    background-image: linear-gradient(#7fc700, #409901);
+    border: none;
+    outline: none;
+    padding: 8px 40px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+div#ays-quiz-dismiss-buttons-content-helloween > button.ays-button-helloween {
+    color: #d7a5da;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.ays-quiz-dicount-wrap-box-helloween-limited {
+    color: #fff;
+}
+
+.ays-quiz-dicount-wrap-box-helloween-limited > p {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+#ays-quiz-dicount-month-main-helloween button.notice-dismiss{
+    background-color: #720092;
+    border-radius: 50%;
+    margin: 7px;
+}
+#ays-quiz-dicount-month-main-helloween button.notice-dismiss:before{
+    content: "\X";
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: sans-serif;
+} 
+
+.ays-quiz-dicount-wrap-box.ays-buy-now-button-box-helloween > a.ays-buy-now-button-helloween:focus,
+.ays-quiz-dicount-wrap-box.ays-buy-now-button-box-helloween > a.ays-buy-now-button-helloween:active {
+    outline: unset;
+    border: unset;
+    box-shadow: none;
+}
+
+.ays-quiz-dicount-wrap-box-helloween-timer{
+    margin-right: 25px;
+}
+
+@media screen and (max-width: 760px){
+    #ays-quiz-dicount-month-main-helloween{
+        background-color: #720092;
+        background-image: unset;
+        height: 350px;
+    }
+
+    div#ays-quiz-dicount-month-helloween{
+        flex-direction: column;
+        width: 83%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
+    }
+
+    div.ays-quiz-helloween-bundle-buy-now-timer{
+        flex-direction: column;
+    }
+    .ays-quiz-helloween-bundle{
+        display: inherit !important;
+    }
+
+    .ays-quiz-dicount-wrap-box-helloween-limited > p{
+        font-size: 16px;
+        line-height: unset;
+        text-align: center;
+    }
+
+    .ays-quiz-countdown-main-container-helloween #ays-quiz-countdown{
+        font-weight: normal;
+    }
+
+    div.ays-quiz-countdown-main-container-helloween ul {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    
+    .ays-quiz-countdown-main-container-helloween li{
+        padding: 0;
+        margin-left: 5px;
+        text-align: center;
+    }
+
+    .ays-quiz-dicount-wrap-box.ays-buy-now-button-box-helloween > a.ays-buy-now-button-helloween{
+        padding: 0px 40px;
+        font-size: 16px;
+        border-radius: 16px;
+    }
+
+    div#ays-quiz-dismiss-buttons-content-helloween > button.ays-button-helloween{
+        font-size: 14px;
+    }
+
+    div.ays-quiz-dismiss-buttons-container-for-form-helloween{
+        position: absolute;
+        left: 50% !important;
+        transform: translate(-50%, -50%);
+        bottom: 0 !important;
+        right: unset !important;
+    }
+
+    .ays-quiz-countdown-main-container-helloween li span{
+        font-size: 18px !important;
+    }
+
+    .ays-quiz-countdown-main-container-helloween li p{
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    div#ays-quiz-dicount-month-helloween{
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
+    }
+
+    .ays-quiz-helloween-bundle{
+        display: inherit !important;
+    }
+
+    .ays-quiz-dicount-wrap-box-helloween-limited > p{
+        font-size: 16px;
+        line-height: unset;
+        text-align: center;
+    }
+
+    .ays-quiz-countdown-main-container-helloween #ays-quiz-countdown{
+        font-weight: normal;
+    }
+    
+    .ays-quiz-countdown-main-container-helloween li{
+        padding: 0;
+        margin-left: 5px;
+        text-align: center;
+    }
+
+    .ays-quiz-dicount-wrap-box.ays-buy-now-button-box-helloween > a.ays-buy-now-button-helloween{
+        padding: 0px 40px;
+        font-size: 16px;
+        border-radius: 16px;
+    }
+
+    div#ays-quiz-dismiss-buttons-content-helloween > button.ays-button-helloween{
+        font-size: 11px;
+    }
+
+    div.ays-quiz-dicount-wrap-box-helloween-timer{
+        margin: 10px 17px !important;
+    }
+
+    .ays-quiz-countdown-main-container-helloween li span:first-child{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 1700px) {
+    div#ays-quiz-dicount-month-helloween{
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
+    }
+
+    .ays-quiz-countdown-main-container-helloween #ays-quiz-countdown{
+        font-weight: normal;
+    }
+    
+    .ays-quiz-countdown-main-container-helloween li{
+        padding: 0;
+        margin-left: 5px;
+        text-align: center;
+    }
+
+    .ays-quiz-dicount-wrap-box.ays-buy-now-button-box-helloween > a.ays-buy-now-button-helloween{
+        font-size: 18px;
+        border-radius: 16px;
+    }
+
+    div.ays-quiz-dicount-wrap-box-helloween-timer{
+        margin: 0 50px;
+    }
+}
+
+@media screen and (max-width: 520px){
+    #ays-survey-dicount-month-main-helloween{
+        height: 450px;
+    }
+}*/
+
+/* Helloween bundle end */
+
+
+/* Christmas banner main page | Start */
+
+
+/*div#ays-quiz-dicount-christmas-month-main * {
+    color: #fff;
+}
+
+div#ays-quiz-dicount-christmas-month-main div#ays-quiz-dicount-christmas-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-dicount-christmas-month-main .btn-link {
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+}
+
+div#ays-quiz-dicount-christmas-month-main.ays_quiz_dicount_info  {
+    background-image: linear-gradient(45deg, #C41824, #C41824);
+    padding: unset;
+    border: unset;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays_quiz_dicount_month {
+    position: relative;
+    background-image: url(../images/christmas_banner_plugins.webp);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 140px;
+    display: flex;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-sale {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #00D76B;}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-sale.ays-quiz-dicount-christmas-button-block {
+    margin-right: 10px;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+    width: 30%;
+    white-space: nowrap;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box .ays-button,
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-dicount-christmas-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-dicount-christmas-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #969393b0;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-countdown-main-container .ays-quiz-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-quiz-countdown-main-container li,
+#ays-quiz-countdown-main-container ul {
+    margin: 0;
+    font-weight: 600;
+}
+
+#ays-quiz-countdown-main-container li {
+    display: inline-block;
+    font-size: 10px;
+    list-style-type: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+#ays-quiz-countdown-main-container li span {
+    display: block;
+    font-size: 22px;
+}
+
+#ays-quiz-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-countdown-main-container .emoji span {
+    font-size: 25px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-title-row {
+    text-align: center;
+    padding-right: 50px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-buy-now {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(180deg, #01CD5D 0%, #01946E 100%);
+    border-radius: 16px;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-text-row {
+    text-transform: uppercase;
+    text-shadow: -1.5px 0 #dd0bef, 0 1.5px #dd0bef, 1.5px 0 #dd0bef, 0 -1.5px #dd0bef;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-text-box {
+    position: absolute;
+    width: 25%;
+    top: 10px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+div#ays-quiz-dicount-christmas-month-main button.notice-dismiss:before{
+    color: #fff;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-title-row {
+        font-size: 15px;    
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-text-row {
+        font-size: 27px; 
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-box {
+        width: 100%;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-buy-now {
+        font-size: 13px;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    div#ays-quiz-dicount-christmas-month-main .ays_quiz_dicount_month{
+        background: unset;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-title-row {
+        font-size: 25px;    
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-text-row {
+        font-size: 30px; 
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-box {
+        width: 100%;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-buy-now {
+        font-size: 15px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-sale.ays-quiz-dicount-christmas-button-block {
+        display: block;
+        font-size: 20px;
+        margin-bottom: 2px;
+    }
+}
+
+@media all and (max-width: 1200px) and (min-width: 1000px) {
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-title-row {
+        font-size: 15px;    
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-buy-now {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    div#ays-quiz-countdown-main-container li {
+        font-size: 8px;
+    }
+
+    div#ays-quiz-countdown-main-container li span{
+        font-size: 20px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-buy-now {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box-80{
+        width: 80% !important;
+    }
+}
+
+@media all and (max-width: 995px) {
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-box {
+        flex-direction: column;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-title-row{
+        font-size: 23px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box {
+        white-space: unset;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays_quiz_dicount_month {
+        padding: 20px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-dicount-christmas-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+        height: unset;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main div.ays-quiz-dicount-christmas-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main #ays-quiz-countdown-main-container ul,
+    #ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-title-row {
+        padding: 0;
+    }
+
+    div#ays-quiz-countdown-main-container li {
+        font-size: 15px;
+    }
+
+    div#ays-quiz-countdown-main-container li span {
+        font-size: 25px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main div.ays-quiz-dicount-christmas-wrap-text-box {
+        position: unset;
+    }
+
+    #ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-countdown-main-container li span {
+        font-size: 20px;
+    }
+
+    #ays-quiz-dicount-christmas-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-buy-now {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+
+    div#ays-quiz-dicount-christmas-month-main .ays-quiz-dicount-christmas-button-sale.ays-quiz-dicount-christmas-button-block {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+}*/
+
+/* Christmas banner main page | End */
+
+/*Chart Builder banner | start*/
+/*
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_chart_bulider_container {
+    background-image: url("../images/quiz-maker-and-chart-banner.webp"); 
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #7177EC;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-sale-banner-link{
+    height: 80px;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-dicount-wrap-box strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-dicount-wrap-box {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    width: 40%;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-sale-banner-link {
+    width: 250px;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container #ays-quiz-dismiss-buttons-content .ays-button {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_chart_bulider_container {
+    padding: 10px 38px 10px 10px;
+}
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_chart_bulider_container #ays-button-top-buy-now {
+    border: 0;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 19px;
+    padding: 22px 45px;
+    background: linear-gradient(180deg, #6AF27C 0%, #38B049 100%);
+    border-radius: 15px;
+
+    transition: 0.3s;
+}
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_chart_bulider_container #ays-button-top-buy-now:hover {
+    background-color: #026c4c;
+    border-color: #026c4c;
+}
+
+@media all and (max-width: 1200px) {
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_chart_bulider_container {
+        background-image: unset;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-sale-banner-link {
+        display: none;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-dicount-wrap-box {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-dicount-wrap-box {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-dicount-wrap-box strong a {
+        font-size: 22px;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_chart_bulider_container {
+        padding: 0;
+        background-image: unset;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays-quiz-sale-banner-link {
+        display: none;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_chart_bulider_container .ays_quiz_dicount_month {
+        padding: 20px;
+    }
+} */
+/*Chart Builder banner | end*/
+
+
+/* New Mega Bundle Banner Quiz | Start */
+
+div#ays-quiz-new-mega-bundle-dicount-month-main {
+    border: 0;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: unset;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+}
+div#ays-quiz-new-mega-bundle-dicount-month-main.ays_quiz_dicount_info button {
+    display: flex;
+    align-items: center;
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main div#ays-quiz-dicount-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main .btn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main.ays_quiz_dicount_info {
+    background-image: url("../images/new-mega-bundle-logo-background.svg"); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #5551FF;
+    padding: 1px 38px 1px 12px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays_quiz_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     color: #fff; 
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays_quiz_dicount_month img {
+    width: 60px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+    text-align: left;
+    /*width: 32%;*/
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;  
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-quiz-dicount-logo-box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-title {
+    color: #FDFDFD;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-title-icon-row {
+    display: inline-block;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-desc {
+    display: inline-block;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-button,
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #ffffff;
+
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-maker-countdown-main-container .ays-quiz-maker-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-quiz-maker-countdown-main-container li,
+#ays-quiz-maker-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-quiz-maker-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: lowercase;
+}
+
+#ays-quiz-maker-countdown-main-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    min-height: 62px;
+    min-width: 62px;
+    border-radius: 4.273px;
+    border: 0.534px solid #F4F4F4;
+    background: #9896ED;
+    color: #fff;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li {
+    position: relative;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span:after {
+    content: ":";
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    font-size: 40px;
+
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span#ays-quiz-countdown-seconds:after {
+    content: unset;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main  #ays-button-top-buy-now {
+    display: flex;
+    align-items: center;
+    border-radius: 6.409px;
+    background: #F66123;
+    padding: 12px 32px;
+    color: #FFF;
+    font-size:15px;
+    font-style: normal;
+    line-height: normal;
+    margin: 0 !important;
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main button.notice-dismiss:before{
+    color: #fff;
+    content: "\f00d";
+    font-family: fontawesome;
+    font-size: 22px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-new-mega-bundle-guaranteeicon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-one-time-text {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-new-mega-bundle-dicount-month-main.ays_quiz_dicount_info.notice {
+        display: none !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-maker-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-maker-countdown-main-container li span {
+        font-size: 35px;
+        min-height: 57px;
+        min-width: 55px;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li {
+        padding: 10px;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-new-mega-bundle-mobile-image-display-none {
+        display: none !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-new-mega-bundle-mobile-image-display-block {
+        display: block !important;
+        margin-top: 5px;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 100% !important;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span:after {
+        top: unset;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 32px;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button {
+        padding-left: unset !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .ays-quiz-features-wrap .comparison a.price-buy{
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1350px) and (min-width: 768px){
+    div#ays-quiz-new-mega-bundle-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+        font-size: 15px;
+    }
+
+    #ays-quiz-maker-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    #ays-quiz-maker-countdown-main-container li span{
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width: 1680px) and (min-width: 1551px){
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 29%;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1410px){
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-coupon-row{
+        width: 150px
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1400px){
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        /*width: 31%;*/
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1250px){
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 40%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width: 1274px){
+    div#ays-quiz-maker-countdown-main-container li span{
+        font-size: 25px;
+        min-height: 40px;
+        min-width: 40px;
+    
+    }   
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-title{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box{
+        margin-bottom: 16px;
+    }
+
+    #ays-quiz-maker-countdown-main-container ul {
+        padding-left: 0;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        /* width: 100%; */
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-coupon-row{
+        width: 120px;
+        font-size: 18px;
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main #ays-button-top-buy-now{
+        padding: 12px 20px;
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box{
+        font-size: 12px;
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-desc {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 1076px) and (min-width: 769px){
+    #ays-quiz-maker-countdown-main-container li{
+        padding: 10px;
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-coupon-row{
+        width: 100px;
+        font-size: 16px;
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box{
+        margin-bottom: 16px;
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main #ays-button-top-buy-now{
+        padding: 12px 15px;
+    }
+    #ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box{
+        font-size: 11px;
+        padding: 12px 0;
+    }
+}
+
+@media screen and (max-width: 1250px) and (min-width: 769px){
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 45%;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+} 
+
+/* New Mega Bundle Banner Quiz | End */
+
+
+/* Quiz Result Popup Box banner | start*/
+
+.ays-quiz-popup-box-main-conatiner {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: transparent;
+    z-index: 999999;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: rgba(0,0,0,.4);
+    cursor: default;
+    margin: 0 auto;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-conatiner {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    max-width: 100%;
+    padding: 40px 1.25em;
+    border-radius: 0.3125em;
+    background: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-image: url("../images/banner/ays-quiz-popup-banner-bg-dots.webp"), url("../images/banner/ays-quiz-popup-banner-bg-bubbles.webp");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top center, bottom center;
+    box-shadow: 0px 4px 9px 0px rgba(24, 49, 131, 0.20);
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-header-close-button {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    transition: color .1s ease-out;
+    border: none;
+    border-radius: 0;
+    background: 0 0;
+    color: #ccc;
+    font-family: serif;
+    font-size: 2.5em;
+    line-height: 1.2;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-header-close-button img {
+    width: 16px;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-header-title {
+    color: #1B1754;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: center;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-header-desc {
+    color: rgba(27, 23, 84, 0.90);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-header-desc-span {
+    color: #554BD4;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-header-img-row {
+    justify-content: center;
+    width: 5em;
+    height: 5em;
+    margin: 1.25em auto 1.875em;
+    border: 0.25em solid transparent;
+    line-height: 5em;
+    cursor: default;
+    box-sizing: content-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-content-option-list {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-content-option-list-ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-left: 30px;
+    padding: 0;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-content-option-list-ul-li{
+    flex-basis: 50%;
+    margin-bottom: 10px;
+    list-style-image: url("../images/banner/ays-quiz-popup-banner-ellipse.svg");
+    list-style-position: inside;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-action-button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-action-button {
+    border-radius: 6.409px;
+    background-color: #554BD4;
+    padding: 12px 32px;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-action-button:hover {
+    background-color: #493ed2;
+}
+
+@media screen and (max-width: 640px) {
+    div.ays-quiz-popup-box-main-conatiner{
+        align-items: flex-end;
+    }
+
+    div.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-content-option-list-ul {
+        display: block;
+        margin-left: 70px;
+    }
+}
+
+@media all and (orientation:landscape) {
+    div.ays-quiz-popup-box-main-conatiner .ays-quiz-popup-box-conatiner {
+        margin-top: 100px;
+    }
+}
+
+/* Quiz Result Popup Box banner | End */
+
+
+/* Black friday banner start */
+/* div#ays-quiz-dicount-black-friday-month-main * {
+    color: #fff;
+}
+
+div#ays-quiz-dicount-black-friday-month-main div#ays-quiz-dicount-black-friday-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-dicount-black-friday-month-main .btn-link {
+    font-weight: 400;
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+div#ays-quiz-dicount-black-friday-month-main.ays_quiz_dicount_info  {
+    background-image: linear-gradient(45deg, #1E101D, #C60AF4);
+    padding: unset;    
+    border-left-color: unset;
+    border-left: 0;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month {
+    position: relative;
+    background-image: url("../images/black-friday-plugins-background-image.webp"); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-sale {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #B2FF00;
+    text-transform: uppercase;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+    width: 50%;
+    white-space: nowrap;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-button,
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-dicount-black-friday-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-dicount-black-friday-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #969393b0;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-countdown-main-container .ays-quiz-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+
+#ays-quiz-countdown-main-container li,
+#ays-quiz-countdown-main-container ul {
+    margin: 0;
+    font-weight: 600;
+}
+
+#ays-quiz-countdown-main-container li {
+    display: inline-block;
+    font-size: 10px;
+    list-style-type: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#ays-quiz-countdown-main-container li span {
+    display: block;
+    font-size: 22px;
+}
+
+#ays-quiz-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-countdown-main-container .emoji span {
+    font-size: 25px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+    text-align: center;
+    padding-right: 50px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(180deg, #DD0BEF 0%, #82008D 100%);
+    border-radius: 16px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-text-row {
+    text-transform: uppercase;
+    text-shadow: -1.5px 0 #dd0bef, 0 1.5px #dd0bef, 1.5px 0 #dd0bef, 0 -1.5px #dd0bef;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-text-box {
+    position: absolute;
+    width: 25%;
+    top: 10px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+#ays-quiz-countdown ul {
+    padding: 0;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+        font-size: 15px;    
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-text-row {
+        font-size: 27px; 
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+        width: 100%;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        font-size: 13px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box-80{
+        width: 80% !important;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    div#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month{
+        background: unset;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-text-row {
+        font-size: 30px; 
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+        width: 100%;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        font-size: 15px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box-80{
+        width: 80% !important;
+    }
+}
+
+@media all and (max-width: 1200px) and (min-width: 1150px) {
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+        font-size: 15px;    
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 1150px) {
+    div#ays-quiz-countdown-main-container li {
+        font-size: 8px;
+    }
+
+    div#ays-quiz-countdown-main-container li span{
+        font-size: 20px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box-80{
+        width: 80% !important;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+        flex-direction: column;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month {
+        padding: 20px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main div.ays-quiz-dicount-black-friday-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main #ays-quiz-countdown-main-container ul,
+    #ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+        padding: 0;
+        font-size: 13px;
+    }
+
+    #ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-sale{
+        font-size: 15px;
+    }
+
+    div#ays-quiz-countdown-main-container li {
+        font-size: 15px;
+    }
+
+    div#ays-quiz-countdown-main-container li span {
+        font-size: 25px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main div.ays-quiz-dicount-black-friday-wrap-text-box {
+        position: unset;
+    }
+
+    #ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-countdown-main-container li span {
+        font-size: 20px;
+    }
+
+    #ays-quiz-dicount-black-friday-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(45deg, #1E101D, #C60AF4);
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+}
+*/
+
+/* New Mega Bundle Banner quiz by Emma | Start */
+
+/*div#ays-quiz-new-mega-bundle-dicount-month-main-2024 {
+    border: 0;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: unset;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+}
+div#ays-quiz-new-mega-bundle-dicount-month-main-2024.ays_quiz_dicount_info button {
+    display: flex;
+    align-items: center;
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main-2024 div#ays-quiz-dicount-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .btn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main-2024.ays_quiz_dicount_info {
+    background-color: #fff6df;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays_quiz_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box {
+    font-size:14px;
+    padding: 4px;
+    text-align: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+    color: #30499B;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box span{
+    font-size: 10px;
+    color: #30499B;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-quiz-dicount-wrap-text-box-texts {
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-quiz-dicount-wrap-text-box-texts a:hover span,
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-quiz-dicount-wrap-text-box-texts a:hover {
+    text-decoration: underline;   
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-new-mega-bundle-limited-text {
+    background-image: url(../images/icons/rectangle-bundle-2024.png);
+    background-size: 100% 100%;
+    width: auto;
+    display: inline-block;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-discount-box-sale-image {
+    background-image: url(../images/50-sale-2024.png);
+    background-size: contain;
+    width: 290px;
+    display: inline-block;
+    height: auto;
+    background-repeat: no-repeat;
+    height: 117px;
+    background-position: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-button,
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #ffffff;
+
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-maker-countdown-main-container .ays-quiz-maker-countdown-container {
+    color:#30499B;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-quiz-maker-countdown-main-container li,
+#ays-quiz-maker-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-quiz-maker-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: capitalize;
+    text-align: center;
+    margin: auto;
+}
+
+#ays-quiz-maker-countdown-main-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    height: 56px;
+    width: 53px;
+    border-radius: 8px;
+    border: 0.534px solid #F4F4F4;
+    background: #30499B;
+    color: #fff;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box li {
+    position: relative;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box li span:after {
+    content: ":";
+    color: #30499B;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    font-size: 40px;
+
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box li span#ays-quiz-countdown-seconds:after {
+    content: unset;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 #ays-button-top-buy-now {
+    display: flex;
+    align-items: center;
+    border-radius: 64px;
+    padding: 12px 32px;
+    background: #30499B;
+    color: #FFF;
+    font-size: 12.818px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0 !important;
+}
+
+#ays-quiz-new-mega-bundle-dicount-month-main-2024 .button.ays-button{
+    margin: 0;
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main-2024 button.notice-dismiss:before{
+    color: #30499B;
+}
+
+div#ays-quiz-new-mega-bundle-dicount-month-main-2024 button.notice-dismiss:before{
+    color: #30499B;
+    content: "\f00d";
+    font-family: fontawesome;
+    font-size: 19px;
+}
+
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 {
+        padding-right: 0;
+    }
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    #ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-maker-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-maker-countdown-main-container li span {
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 100%;
+        text-align: center;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024.ays_quiz_dicount_info.notice {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main-2024 #ays-quiz-dismiss-buttons-content .ays-button {
+        padding-left: unset !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .comparison a.price-buy{
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-quiz-dicount-wrap-text-box-texts{
+        height: 64px;
+    }        
+    
+    #ays-quiz-maker-countdown-main-container .ays-quiz-maker-countdown-container #ays-quiz-countdown > ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box li span:after {
+        top: unset;
+    }
+
+    #ays-quiz-maker-countdown-main-container li{
+        font-size: 12px;
+        padding: 12px;
+    }
+    
+    #ays-quiz-maker-countdown-main-container li span{
+        font-size: 26px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+
+    #ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1305px) and (min-width: 768px){
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-quiz-dicount-wrap-text-box-texts {
+        font-size: 15px;
+    }
+
+    #ays-quiz-maker-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 436px){
+    #ays-quiz-new-mega-bundle-dicount-month-main-2024 .ays-quiz-dicount-wrap-box .ays-quiz-dicount-wrap-text-box-texts{
+        height: 110px;
+        margin-bottom: 25px;
+    }
+}*/
+/* New Mega Bundle Banner quiz by Emma | End */
+
+/* 2024 | Black Friday top banner | Start */
+
+/*div#ays-quiz-black-friday-bundle-dicount-month-main {
+    border: 0;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: unset;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+}
+div#ays-quiz-black-friday-bundle-dicount-month-main.ays_quiz_dicount_info button {
+    display: flex;
+    align-items: center;
+}
+
+div#ays-quiz-black-friday-bundle-dicount-month-main div#ays-quiz-dicount-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-black-friday-bundle-dicount-month-main .btn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}
+
+div#ays-quiz-black-friday-bundle-dicount-month-main.ays_quiz_dicount_info {
+    background-image: url("../images/ays-quiz-popup-banner-black-friday-bg-image.svg"); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #161616;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays_quiz_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     color: #fff; 
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+    text-align: left;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    text-align: center; 
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-black-friday-bundle-title {
+    display: inline-block;
+    color: #FDFDFD;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-black-friday-bundle-title .ays-quiz-black-friday-bundle-title-link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: #161616;
+    text-shadow: -1px 1px 0 #fff, 1px 1px 0 #fff, 1px -1px 0 #fff, -1px -1px 0 #fff;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-black-friday-bundle-desc {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.13em;
+    color: #161616;
+    text-shadow: -1px 1px 0 #FF7F66, 1px 1px 0 #FF7F66, 1px -1px 0 #FF7F66, -1px -1px 0 #FF7F66;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-black-friday-bundle-coupon-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    background: #161616;
+    border: 2px dotted #FF7F66;
+    border-radius: 25px;
+    margin-bottom: 5px;
+}
+
+
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-button,
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #ffffff;
+
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-maker-countdown-main-container .ays-quiz-maker-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-quiz-maker-countdown-main-container li,
+#ays-quiz-maker-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-quiz-maker-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: lowercase;
+}
+
+#ays-quiz-maker-countdown-main-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    min-height: 50px;
+    min-width: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #FF7F66;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px #FF7F66;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li {
+    position: relative;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span:after {
+    content: ":";
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    font-size: 40px;
+
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span#ays-quiz-countdown-seconds:after {
+    content: unset;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main  #ays-button-top-buy-now {
+    display: flex;
+    align-items: center;
+    padding: 12px 32px;
+    color: #FFF;
+    font-size:15px;
+    font-style: normal;
+    line-height: normal;
+    margin: 0 !important;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #FF7F66;
+    box-shadow: 0px 0px 4px #FF7F66;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main  #ays-button-top-buy-now:hover {
+    background-color: #FF7F66;
+    border: 1px solid #fff;
+}
+
+div#ays-quiz-black-friday-bundle-dicount-month-main button.notice-dismiss:before{
+    color: #fff;
+    content: "\f00d";
+    font-family: fontawesome;
+    font-size: 22px;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-black-friday-bundle-guaranteeicon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-one-time-text {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-black-friday-bundle-coupon-row {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-maker-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-maker-countdown-main-container li span {
+        font-size: 35px;
+        min-height: 57px;
+        min-width: 55px;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li {
+        padding: 10px;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-black-friday-bundle-mobile-image-display-none {
+        display: none !important;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-black-friday-bundle-mobile-image-display-block {
+        display: block !important;
+        margin-top: 5px;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 100% !important;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span:after {
+        top: unset;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ays-quiz-black-friday-bundle-dicount-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    #ays-quiz-black-friday-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button {
+        padding-left: unset !important;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .ays-quiz-features-wrap .comparison a.price-buy{
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1305px) and (min-width: 768px){
+    div#ays-quiz-black-friday-bundle-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+        font-size: 15px;
+    }
+
+    #ays-quiz-maker-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1680px) and (min-width: 1551px){
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 29%;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1400px){
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 31%;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 40%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px){
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 45%;
+    }
+
+    div#ays-quiz-black-friday-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}*/
+/* 2024 | Black Friday top banner | End */
+
+
+/* 2024 | Christmas top banner | Start 
+
+/*div#ays-quiz-christmas-top-bundle-dicount-month-main {
+    border: 0;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: unset;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+}
+div#ays-quiz-christmas-top-bundle-dicount-month-main.ays_quiz_dicount_info button {
+    display: flex;
+    align-items: center;
+}
+
+div#ays-quiz-christmas-top-bundle-dicount-month-main div#ays-quiz-dicount-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-christmas-top-bundle-dicount-month-main .btn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}
+
+div#ays-quiz-christmas-top-bundle-dicount-month-main.ays_quiz_dicount_info {
+    background-image: url("../images/ays-quiz-popup-banner-christmas-bg-image.svg"); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #F6ECE3;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays_quiz_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #A42F29; 
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+    text-align: left;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; 
+    text-align: center; 
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-christmas-top-bundle-title {
+    display: inline-block;
+    color: #FDFDFD;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-christmas-top-bundle-title .ays-quiz-christmas-top-bundle-title-link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+    color: #A42F29;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-christmas-top-bundle-desc {
+    display: inline-block;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: normal;
+    text-align: center;
+    letter-spacing: 0.13em;
+    color: #A42F29;
+    text-transform: uppercase;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-christmas-top-bundle-coupon-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 22px;
+    background: #FCFAF8;
+    border: 2px dotted #A42F29;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-christmas-top-bundle-text-row {
+    font-weight: 500;
+}
+
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-button,
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #A42F29;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-maker-countdown-main-container .ays-quiz-maker-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 500;
+}
+
+#ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-quiz-maker-countdown-main-container li,
+#ays-quiz-maker-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-quiz-maker-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: lowercase;
+}
+
+#ays-quiz-maker-countdown-main-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    min-height: 50px;
+    min-width: 50px;
+    background: #FFFFFF;
+    border: 1px solid #A42F29;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px #A42F29;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li {
+    position: relative;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span:after {
+    content: ":";
+    color: #A42F29;
+    position: absolute;
+    top: 10px;
+    right: -5px;
+    font-size: 40px;
+
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span#ays-quiz-countdown-seconds:after {
+    content: unset;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main  #ays-button-top-buy-now {
+    display: flex;
+    align-items: center;
+    padding: 12px 32px;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    line-height: normal;
+    margin: 0 !important;
+    background: #A42F29;
+    border: 1px solid #A42F29;
+    box-shadow: 0px 0px 4px #A42F29;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main  #ays-button-top-buy-now:hover {
+    background-color: #FF7F66;
+    border: 1px solid #fff;
+}
+
+div#ays-quiz-christmas-top-bundle-dicount-month-main button.notice-dismiss:before{
+    color: #A42F29;
+    content: "\f00d";
+    font-family: fontawesome;
+    font-size: 22px;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-christmas-top-bundle-guaranteeicon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-one-time-text {
+    color: #A42F29;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-christmas-top-bundle-coupon-row {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-maker-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-maker-countdown-main-container li span {
+        font-size: 35px;
+        min-height: 57px;
+        min-width: 55px;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li {
+        padding: 10px;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-christmas-top-bundle-mobile-image-display-none {
+        display: none !important;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-christmas-top-bundle-mobile-image-display-block {
+        display: block !important;
+        margin-top: 5px;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 100% !important;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box li span:after {
+        top: unset;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ays-quiz-christmas-top-bundle-dicount-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+
+    #ays-quiz-christmas-top-bundle-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button {
+        padding-left: unset !important;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .ays-quiz-features-wrap .comparison a.price-buy{
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1305px) and (min-width: 768px){
+    div#ays-quiz-christmas-top-bundle-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+        font-size: 15px;
+    }
+
+    #ays-quiz-maker-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1680px) and (min-width: 1551px){
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 29%;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1400px){
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 31%;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 40%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px){
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 45%;
+    }
+
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (max-width: 1200px){
+    div#ays-quiz-christmas-top-bundle-dicount-month-main .ays_quiz_dicount_month {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}*/
+/* 2024 | Christmas top banner | End */
+
+/* New Mega Bundle 2025 Banner Quiz | Start */
+/*
+div#ays-quiz-new-mega-bundle-2025-dicount-month-main {
+    border: 0;
+    background: #FFF;
+    border-radius: 20px;
+    box-shadow: unset;
+    position: relative;
+    z-index: 1;
+    min-height: 80px;
+    background-color: #6998DD;
+}
+div#ays-quiz-new-mega-bundle-2025-dicount-month-main.ays_quiz_dicount_info button {
+    display: flex;
+    align-items: center;
+}
+
+div#ays-quiz-new-mega-bundle-2025-dicount-month-main div#ays-quiz-dicount-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-new-mega-bundle-2025-dicount-month-main .btn-link {
+    font-weight: 400;
+    color: #007bff;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem
+}
+
+div#ays-quiz-new-mega-bundle-2025-dicount-month-main.ays_quiz_dicount_info {
+
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays_quiz_dicount_month {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     color: #fff; 
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+    text-align: left;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+    width: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-button-box {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-2025-title {
+    color: #FDFDFD;
+    font-size: 16.8px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-2025-title-icon-row {
+    display: inline-block;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box .ays-quiz-new-mega-bundle-2025-desc {
+    display: inline-block;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box .ays-button,
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #ffffff;
+
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-maker-countdown-main-container .ays-quiz-maker-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+#ays-quiz-maker-countdown-main-container li,
+#ays-quiz-maker-countdown-main-container ul {
+    margin: 0;
+}
+
+#ays-quiz-maker-countdown-main-container li {
+    display: inline-block;
+    font-size: 14px;
+    list-style-type: none;
+    padding: 14px;
+    text-transform: capitalize;
+}
+
+#ays-quiz-maker-countdown-main-container li span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    min-height: 62px;
+    min-width: 62px;
+    border-radius: 4.273px;
+    background: transparent;
+    border: unset;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-maker-countdown-main-container .emoji span {
+    font-size: 30px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box li {
+    position: relative;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box li span#ays-quiz-countdown-seconds:after {
+    content: unset;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main #ays-button-top-buy-now {
+    display: flex;
+    align-items: center;
+    border-radius: 6.409px;
+    background: #F56123;
+    padding: 12px 32px;
+    color: #FFF;
+    font-size:15px;
+    font-style: normal;
+    line-height: normal;
+    margin: 0 !important;
+    border-color: #F56123;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main #ays-button-top-buy-now:hover {
+    background: #FF8653;
+    border-color: #FF8653;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main #ays-button-top-buy-now:active {
+    background: #BD4B1C;
+    border-color: #BD4B1C;
+}
+
+div#ays-quiz-new-mega-bundle-2025-dicount-month-main button.notice-dismiss:before {
+    color: #fff;
+    content: "\f00d";
+    font-family: fontawesome;
+    font-size: 22px;
+    transition: all 0.2s ease-out;
+}
+
+div#ays-quiz-new-mega-bundle-2025-dicount-month-main button.notice-dismiss:hover:before {
+    color: #EDC9B8;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-new-mega-bundle-2025-guaranteeicon {
+    width: 30px;
+    margin-right: 5px;
+}
+
+#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-one-time-text {
+    color: #FFF;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    #ays-quiz-maker-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-maker-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-maker-countdown-main-container li span {
+        font-size: 35px;
+        min-height: 57px;
+        min-width: 55px;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li {
+        padding: 10px;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-new-mega-bundle-2025-mobile-image-display-none {
+        display: none !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-new-mega-bundle-2025-mobile-image-display-block {
+        display: block !important;
+        margin-top: 5px;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 100% !important;
+        text-align: center;
+        flex-direction: column;
+        margin-top: 20px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box li span:after {
+        top: unset;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 32px;
+    }
+
+    #ays-quiz-new-mega-bundle-2025-dicount-month-main #ays-quiz-dismiss-buttons-content .ays-button {
+        padding-left: unset !important;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-buy-now-opacity-button {
+        display: none;
+    }
+
+    #ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dismiss-buttons-container-for-form{
+        position: static !important;
+    }
+
+    .comparison .product img {
+        width: 70px;
+    }
+
+    .ays-quiz-features-wrap .comparison a.price-buy{
+        padding: 8px 5px;
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 1305px) and (min-width: 768px){
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box strong {
+        font-size: 15px;
+    }
+
+    #ays-quiz-maker-countdown-main-container li {
+        font-size: 11px;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-opacity-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1680px) and (min-width: 1551px){
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 29%;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 1550px) and (min-width: 1400px){
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 31%;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 40%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 769px){
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-countdown-box {
+        width: 45%;
+    }
+
+    div#ays-quiz-new-mega-bundle-2025-dicount-month-main .ays-quiz-dicount-wrap-box.ays-quiz-dicount-wrap-text-box {
+        width: 35%;
+    }
+
+    div#ays-quiz-maker-countdown-main-container li span {
+        font-size: 30px;
+        min-height: 50px;
+        min-width: 50px;
+    }
+}
+ */
+/* New Mega Bundle 2025 Banner Quiz | End */
+
+/*Fox LMS Integration banner | start*/
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container {
+    background-image: url("../images/quiz-maker-and-fox-lms.svg");
+    background-color: rgb(0, 22, 205);
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 10px;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-sale-banner-link{
+    height: 80px;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-dicount-wrap-box strong {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-dicount-wrap-box {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+    width: 38%;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-sale-banner-link {
+    width: 250px;
+    box-shadow: unset;
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container #ays-quiz-dismiss-buttons-content .ays-button {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .notice-dismiss:before {
+    color: #fff;
+}
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container {
+    padding: 10px 38px 10px 10px;
+    max-height: 125px;
+}
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container #ays-button-top-buy-now {
+    border: 0;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 19px;
+    padding: 22px 45px;
+    background-color: #FF5104;
+    border-radius: 80px;
+
+    transition: 0.3s;
+}
+
+div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container #ays-button-top-buy-now:hover {
+    background-color: #d74606;
+    border-color: #d74606;
+}
+
+@media all and (max-width: 1400px) {
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container .ays_quiz_dicount_month {
+        justify-content: flex-end;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container .ays-quiz-sale-banner-link {
+        display: none;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-dicount-wrap-box {
+        padding: 0;
+    }
+}
+
+@media all and (max-width: 1200px) {
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container {
+        background-image: unset;
+        padding: 14px 38px 14px 14px;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-sale-banner-link {
+        display: none;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-dicount-wrap-box {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container {
+        max-height: unset;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-dicount-wrap-box {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-dicount-wrap-box strong a {
+        font-size: 22px;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_dicount_info.ays_quiz_fox_lms_container {
+        padding: 0;
+        background-image: unset;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays-quiz-sale-banner-link {
+        display: none;
+    }
+
+    div#ays-quiz-dicount-month-main.ays_quiz_fox_lms_container .ays_quiz_dicount_month {
+        padding: 20px;
+    }
+} 
+/*Chart Builder banner | end*/
+
+/* Checklist guide styles | Start */
+#ays-quiz-checklist-container.ays-quiz-checklist-panel {
+    max-width: 100%;
+    background: #fff;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    margin: 0 auto;
+    color: rgb(12, 13, 14);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 5px 8px 0px, rgba(0, 0, 0, 0.12) 0px 1px 14px 0px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 360px;
+    bottom: 40px;
+    inset-inline-end: 40px;
+    z-index: 99999;
+    max-height: 730px;
+    overflow-y: auto;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-header {
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: sticky;
+    z-index: 1100;
+    top: 0px;
+    left: auto;
+    right: 0px;
+    color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(255, 255, 255);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 16px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-header-row {
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    display: flex;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    -webkit-box-pack: start;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    min-width: 0px;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 0;
+    color: rgb(12, 13, 14);
+    outline: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 0;
+    text-decoration: none;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-header h3 {
+    box-sizing: content-box;
+    display: inline;
+    height: auto;
+    padding: 0;
+    width: auto;
+    text-transform: none;
+    margin: 0px;
+    font-weight: 600;
+    line-height: 1.3;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.00938em;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-minimize-btn,
+#ays-quiz-checklist-container .ays-quiz-checklist-close-btn {
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+    outline: unset;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 4px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-minimize-btn:hover,
+#ays-quiz-checklist-container .ays-quiz-checklist-close-btn:hover {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-progress {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-progress-bar {
+    flex: 1;
+    background: #eee;
+    height: 6px;
+    border-radius: 4px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-progress-bar span {
+    display: block;
+    height: 100%;
+    background: #00a0d2;
+    transition: width 0.3s ease-in-out;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-progress-text {
+    font-size: 13px;
+    min-width: 30px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step {
+    padding: 12px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step:hover {
+    background-color: #f9f9f9;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step.completed label span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step-title {
+    margin: 0px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.01071em;
+    display: block;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step-content {
+    display: none;
+    margin-top: 12px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step-content img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 0;
+    height: 180px;
+    object-fit: contain;
+}
+
+#wpwrap #wpfooter #ays-quiz-checklist-container .ays-quiz-checklist-step-content p {
+    margin: 0;
+    font-size: 13px;
+    padding: 16px 0;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-step-content a:not(.ays-quiz-checklist-primary-action) {
+    color: #0073aa;
+    text-decoration: underline;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-actions {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    padding-bottom: 12px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-actions button {
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-mark-done {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    color: rgb(81, 89, 98);
+    box-shadow: none;
+    outline: 0px;
+    border: 0;
+    margin: 0px;
+    text-decoration: none;
+    padding: 4px 10px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-mark-done:hover {
+    color: rgb(81, 89, 98);
+    text-decoration: none;
+    background-color: rgba(81, 89, 98, 0.04);
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-primary-action {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-transform: none;
+    font-family: Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.8125rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    color: rgb(12, 13, 14);
+    color: #fff;
+    background-color: rgb(240, 171, 252);
+    background-color: #00a0d2;
+    box-shadow: none;
+    outline: 0px;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    margin: 0px;
+    text-decoration: none;
+    padding: 4px 10px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 4px;
+    white-space: nowrap;
+    margin-left: 8px;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-toggle-step {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.2s ease;
+}
+
+#ays-quiz-checklist-container .ays-quiz-checklist-toggle-step.open {
+    transform: rotate(180deg);
+}
+
+#ays-quiz-checklist-container.ays-quiz-checklist-panel.ays-quiz-checklist-minimized .ays-quiz-checklist-items {
+    display: none;
+}
+
+.ays-quiz-launch-icon::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #d179f2;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ays-quiz-checklist-open-icon {
+    position: absolute;
+    bottom: 36px;
+    right: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 1280px) {
+    div#ays-quiz-checklist-container.ays-quiz-checklist-panel {
+        max-height: 580px;
+        width: 300px;
+        bottom: 20px;
+        inset-inline-end: 20px;
+    }
+
+    div#ays-quiz-checklist-container .ays-quiz-checklist-step-content img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 782px) {
+    .ays-quiz-checklist-open-icon,
+    #ays-quiz-checklist-container.ays-quiz-checklist-panel {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    #ays-quiz-checklist-container.ays-quiz-checklist-panel {
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    #ays-quiz-checklist-container .ays-quiz-checklist-header h3 {
+        font-size: 16px;
+    }
+
+    #ays-quiz-checklist-container .ays-quiz-checklist-step-content p {
+        font-size: 13px;
+    }
+
+    #ays-quiz-checklist-container .ays-quiz-checklist-actions {
+        flex-direction: column;
+    }
+}
+
+/* Checklist guide styles | End */
+
+
+/* Black friday banner 2025 | Start */
+/*div#ays-quiz-dicount-black-friday-month-main * {
+    color: #fff;
+}
+
+div#ays-quiz-dicount-black-friday-month-main div#ays-quiz-dicount-black-friday-month a.ays-quiz-sale-banner-link:focus {
+    outline: none;
+    box-shadow: 0;
+}
+
+div#ays-quiz-dicount-black-friday-month-main .btn-link {
+    font-weight: 400;
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+div#ays-quiz-dicount-black-friday-month-main.ays_quiz_dicount_info  {
+    background-image: linear-gradient(45deg, #1E101D, #C60AF4);
+    padding: unset;    
+    border-left-color: unset;
+    border-left: 0;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month {
+    position: relative;
+    background-image: url("/images/black-friday-plugins-background-image.webp"); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month img {
+    width: 80px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-sale-banner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-sale {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+    color: #B2FF00;
+    text-transform: uppercase;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box {
+    font-size:14px;
+    padding:12px;
+    text-align: center;
+    width: 50%;
+    white-space: nowrap;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box strong {
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.80px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-color {
+    color: #971821;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-text-decoration {
+    text-decoration: underline;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box.ays-buy-now-button-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box.ays-buy-now-button-box {
+    width: 30%;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-button,
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button {
+    align-items: center;
+    font-weight: 500;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button {
+    background: #971821;
+    border-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button:hover {
+    background: #7d161d;
+    border-color: #971821;
+}
+
+#ays-quiz-dicount-black-friday-month-main #ays-quiz-dismiss-buttons-content{
+    display: flex;
+    justify-content: center;
+}
+
+#ays-quiz-dicount-black-friday-month-main #ays-quiz-dismiss-buttons-content .ays-button{
+    margin: 0 !important;
+    font-size: 13px;
+    font-size: 13px;
+    color: #969393b0;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-opacity-box {
+    width: 19%;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-buy-now-opacity-button {
+    padding: 40px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+#ays-quiz-countdown-main-container .ays-quiz-countdown-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+    font-weight: normal;
+    letter-spacing: .125rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+    padding: 9px 0 4px 0;
+    line-height: 1.3;
+}
+
+#ays-quiz-countdown-main-container li,
+#ays-quiz-countdown-main-container ul {
+    margin: 0;
+    font-weight: 600;
+}
+
+#ays-quiz-countdown-main-container li {
+    display: inline-block;
+    font-size: 10px;
+    list-style-type: none;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+#ays-quiz-countdown-main-container li span {
+    display: block;
+    font-size: 22px;
+    min-height: 33px;
+}
+
+#ays-quiz-countdown-main-container .emoji {
+    display: none;
+    padding: 1rem;
+}
+
+#ays-quiz-countdown-main-container .emoji span {
+    font-size: 25px;
+    padding: 0 .5rem;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+    text-align: center;
+    padding-right: 50px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 19px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(180deg, #DD0BEF 0%, #82008D 100%);
+    border-radius: 16px;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-text-row {
+    text-transform: uppercase;
+    text-shadow: -1.5px 0 #dd0bef, 0 1.5px #dd0bef, 1.5px 0 #dd0bef, 0 -1.5px #dd0bef;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-text-box {
+    position: absolute;
+    width: 25%;
+    top: 10px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+#ays-quiz-countdown ul {
+    padding: 0;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-banner-2025-coupon-box {
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    padding: 0px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    backdrop-filter: blur(10px);
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-banner-2025-coupon-box:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: translateY(-1px);
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-discount-black-friday-banner-2025-coupon-text {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: monospace;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-discount-black-friday-banner-2025-copy-icon {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+#ays-quiz-dicount-black-friday-month-main .ays-quiz-discount-black-friday-banner-banner-2025-coupon-box:hover .ays-quiz-discount-black-friday-banner-2025-copy-icon {
+    opacity: 1;
+}
+
+.ays-quiz-discount-black-friday-banner-2025-copy-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ays-quiz-discount-black-friday-banner-2025-copy-notification.show {
+    opacity: 1;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+        font-size: 15px;    
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-text-row {
+        font-size: 27px; 
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+        width: 100%;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        font-size: 13px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box-80{
+        width: 80% !important;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    div#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month{
+        background: unset;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-text-row {
+        font-size: 30px; 
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+        width: 100%;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        font-size: 15px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box-80{
+        width: 80% !important;
+    }
+}
+
+@media all and (max-width: 1200px) and (min-width: 1150px) {
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+        font-size: 15px;    
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        font-size: 10px;
+    }
+}
+
+@media all and (max-width: 1150px) {
+    div#ays-quiz-countdown-main-container li {
+        font-size: 8px;
+    }
+
+    div#ays-quiz-countdown-main-container li span{
+        font-size: 20px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        padding: 10px 18px;
+        font-size: 12px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box-80{
+        width: 80% !important;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-box {
+        flex-direction: column;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month {
+        padding: 20px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main {
+        padding-right: 0;
+    }
+    div#ays-quiz-dicount-black-friday-month-main .ays_quiz_dicount_month{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main div.ays-quiz-dicount-black-friday-wrap-box {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main #ays-quiz-countdown-main-container ul,
+    #ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-title-row {
+        padding: 0;
+        font-size: 13px;
+    }
+
+    #ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-sale{
+        font-size: 15px;
+    }
+
+    div#ays-quiz-countdown-main-container li {
+        font-size: 15px;
+    }
+
+    div#ays-quiz-countdown-main-container li span {
+        font-size: 25px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main div.ays-quiz-dicount-black-friday-wrap-text-box {
+        position: unset;
+    }
+
+    #ays-quiz-countdown-main-container #ays-quiz-countdown-headline {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    #ays-quiz-countdown-main-container ul {
+        font-weight: 500;
+    }
+
+    #ays-quiz-countdown-main-container li span {
+        font-size: 20px;
+    }
+
+    #ays-quiz-dicount-black-friday-month-main .ays-button{
+        margin: 0 auto !important;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main.ays_quiz_dicount_info.notice {
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(45deg, #1E101D, #C60AF4);
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box.ays-buy-now-button-box {
+        justify-content: center;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-wrap-box .ays-buy-now-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    div#ays-quiz-dicount-black-friday-month-main .ays-quiz-dicount-black-friday-button-buy-now {
+        padding: 10px 18px;
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #ays-quiz-dicount-black-friday-month-main {
+        display: none !important;
+    }
+}*/
+
+/* Black friday banner 2025 | End */
+
+
+/* Mega Bundle Popup Black friday 2025 | Start */
+
+/* Main overlay */
+
+/* 
+.ays-quiz-black-friday-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.ays-quiz-black-friday-popup-overlay.ays-quiz-black-friday-popup-active {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-dialog {
+  position: relative;
+  max-width: 470px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+
+.ays-quiz-black-friday-popup-overlay.ays-quiz-black-friday-popup-active .ays-quiz-black-friday-popup-dialog {
+  transform: scale(1);
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-content {
+  position: relative;
+  width: 470px;
+  height: 410px;
+  background: linear-gradient(to right bottom, rgb(192, 86, 245), rgb(240, 66, 240), rgb(125, 125, 232));
+  overflow: hidden;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-background-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.07;
+  pointer-events: none;
+  transform: rotate(-12deg) translateY(32px);
+  overflow: hidden;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-pattern-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-pattern-text {
+  color: white;
+  font-weight: 900;
+  font-size: 96px;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 9999;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s ease;
+  line-height: 0;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-close:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  width: 96px;
+  height: 96px;
+  background-color: #d4fc79;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  animation: ays-quiz-black-friday-popup-float 3s ease-in-out infinite;
+}
+
+@keyframes ays-quiz-black-friday-popup-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-content {
+  text-align: center;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-sm {
+  color: #1a1a1a;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-lg {
+  color: #1a1a1a;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1;
+  margin-top: 4px;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-md {
+  color: #1a1a1a;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-main-content {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 48px;
+  text-align: center;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-hashtag {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 16px;
+  letter-spacing: 0.1em;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-title-mega {
+  color: white;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1;
+  margin: 0 0 12px 0;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-title-bundle {
+  color: white;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1;
+  margin: 0 0 24px 0;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-offer-label {
+  background-color: #000000;
+  padding: 12px 32px;
+  margin-bottom: 24px;
+  display: inline-block;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-offer-text {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-description {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 32px 0 !important;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background-color: white;
+  color: #a855f7;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  padding: 0 40px;
+  cursor: pointer;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-cta-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: scale(1.05);
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-learn-more {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  padding: 8px;
+  margin-top: 16px;
+  transition: color 0.2s ease;
+}
+
+.ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-learn-more:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+@media (max-width: 768px) {
+  .ays-quiz-black-friday-popup-overlay {
+    display: none !important;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-content {
+    width: 90vw;
+    max-width: 400px;
+    height: 380px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-main-content {
+    padding: 0 32px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge {
+    width: 80px;
+    height: 80px;
+    top: 24px;
+    right: 24px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-sm {
+    font-size: 20px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-lg {
+    font-size: 26px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-md {
+    font-size: 18px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-title-mega,
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-title-bundle {
+    font-size: 48px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-offer-text {
+    font-size: 18px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-description {
+    font-size: 16px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-pattern-text {
+    font-size: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-content {
+    width: 95vw;
+    max-width: 340px;
+    height: 360px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-main-content {
+    padding: 0 24px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge {
+    width: 70px;
+    height: 70px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-sm {
+    font-size: 16px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-lg {
+    font-size: 22px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-badge-text-md {
+    font-size: 14px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-hashtag {
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-title-mega,
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-title-bundle {
+    font-size: 40px;
+    margin-bottom: 8px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-offer-label {
+    padding: 10px 24px;
+    margin-bottom: 20px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-offer-text {
+    font-size: 16px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-description {
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-cta-btn {
+    font-size: 16px;
+    height: 44px;
+    padding: 0 32px;
+  }
+
+  .ays-quiz-black-friday-popup-overlay .ays-quiz-black-friday-popup-pattern-text {
+    font-size: 60px;
+  }
+}*/
+/* Mega Bundle Popup Black friday 2025 | End */

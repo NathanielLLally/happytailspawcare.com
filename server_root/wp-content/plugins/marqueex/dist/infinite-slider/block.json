@@ -1,0 +1,78 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "marqueex/infinite-slider",
+  "version": "0.0.2",
+  "title": "Infinite Slider",
+  "category": "marqueex",
+  "description": "Create smooth scrolling marquee content with customizable speed and direction. Perfect for news tickers, announcements, and promotional banners.",
+  "keywords": [
+    "marquee",
+    "slider",
+    "scroll",
+    "ticker",
+    "animation",
+    "infinite",
+    "carousel",
+    "news",
+    "banner"
+  ],
+  "example": {
+    "attributes": {
+      "style": {
+        "color": {
+          "text": "#333333"
+        }
+      }
+    },
+    "innerBlocks": [
+      {
+        "name": "marqueex/infinite-slider-item",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "🌟 Welcome to our amazing website! Check out our latest news and updates."
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "attributes": {
+    "blockId": {
+      "type": "string"
+    },
+    "slider": {
+      "type": "array",
+      "default": []
+    },
+    "navigation": {
+      "type": "object"
+    },
+    "options": {
+      "type": "object",
+      "default": {}
+    },
+    "style": {
+      "type": "object",
+      "default": {}
+    },
+    "itemStyle": {
+      "type": "object",
+      "default": {},
+      "selector": ".wp-block-marqueex-infinite-slider-item"
+    }
+  },
+  "textdomain": "marqueex",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "viewScript": "file:./view.js",
+  "supports": {
+    "className": true,
+    "html": false,
+    "align": true
+  }
+}

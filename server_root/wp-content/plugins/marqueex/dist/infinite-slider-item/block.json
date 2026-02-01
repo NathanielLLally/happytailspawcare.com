@@ -1,0 +1,44 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "marqueex/infinite-slider-item",
+  "version": "0.0.2",
+  "title": "Slide Item",
+  "category": "marqueex",
+  "description": "Individual slide item for the MarqueeX infinite slider. Add any content block inside for scrolling display.",
+  "keywords": [
+    "slide",
+    "item",
+    "content",
+    "marquee",
+    "scroll"
+  ],
+  "parent": [
+    "marqueex/infinite-slider"
+  ],
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "📢 Your scrolling content goes here!"
+        }
+      }
+    ]
+  },
+  "attributes": {
+    "blockId": {
+      "type": "string"
+    }
+  },
+  "textdomain": "marqueex",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css",
+  "supports": {
+    "inserter": false,
+    "className": true,
+    "html": false,
+    "align": true
+  }
+}

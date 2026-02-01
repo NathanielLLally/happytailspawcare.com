@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "core/iEmbed",
+	"title": "iEmbed",
+	"category": "widgets",
+	"description": "Insert _______-",
+	"textdomain": "default",
+	"attributes": {
+		"text": {
+			"type": "string",
+			"source": "raw",
+			"role": "content"
+		}
+	},
+	"supports": {
+		"className": false,
+		"customClassName": false,
+		"html": false
+	},
+	"editorStyle": "wp-block-iEmbed-editor"
+}

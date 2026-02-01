@@ -1,0 +1,55 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-copyright-date-block {
+	background-color: #21759b;
+	color: #fff;
+	padding: 2px;
+}
+
+
+button.slt_editButton{
+	padding: 15px;
+	background-color: white;
+	cursor: pointer;
+	border:1px solid rgb(92, 92, 92)
+}
+
+select.slt_selectValue{
+	font-size: 14px;
+	width: 150px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+label.slt_selectSlider{
+	font-size: 14px;
+	margin-left: 10px;
+	padding: 10px;
+	font-weight:500;
+}
+
+.sltk_selectSlider img{
+	width: 20px;
+	margin-right: 5px;
+}
+
+.sltk_containerSelect{
+	margin-left: 10px;
+	display: flex;
+	flex-direction: row;
+	border:1px solid rgb(92, 92, 92)
+}
+
+.sltk_containerBlock {
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	background-color: white;
+	border:1px solid black;
+  }

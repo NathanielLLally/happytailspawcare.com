@@ -1,0 +1,46 @@
+{
+  "name": "bitapps/assist",
+  "description": "A Communication plugin for wordpress",
+  "license": "gpl-2",
+  "scripts": {
+    "lint": "./vendor/bin/php-cs-fixer fix",
+    "compat": "./vendor/bin/phpcs -p ./backend --standard=PHPCompatibilityWP --runtime-set testVersion 7.4-",
+    "test:unit": "./vendor/bin/phpunit"
+  },
+  "require": {
+    "php": ">=7.4",
+    "bitapps/wp-kit": "^1.2",
+    "bitapps/wp-database": "^1",
+    "bitapps/wp-validator": "^1",
+    "bitapps/wp-telemetry": "^0.0.9",
+    "typisttech/imposter-plugin": "^0.6.2"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.10",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+    "phpunit/phpunit": "^9",
+    "yoast/phpunit-polyfills": "^1.0",
+    "phpcompatibility/phpcompatibility-wp": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "BitApps\\Assist\\": "./backend/app"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BitApps\\Assist\\Fixers\\": "./custom-fixers"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "typisttech/imposter-plugin": true
+    }
+  },
+  "extra": {
+    "imposter": {
+      "namespace": "BitApps\\Assist\\Deps\\"
+    }
+  }
+}

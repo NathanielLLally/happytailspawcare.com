@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Business Growth Chart</title>
+
+    <!-- Load Google Charts -->
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script>
+      google.charts.load('current', { packages: ['corechart'] });
+      google.charts.setOnLoadCallback(drawGrowthChart);
+
+      function drawGrowthChart() {
+        const data = new google.visualization.DataTable();
+
+        // Columns
+        data.addColumn('string', 'Month');
+        data.addColumn('number', 'New Clients');
+        data.addColumn('number', 'Churned Clients');
+        data.addColumn('number', 'Active Clients');
+        data.addColumn('number', 'Revenue');
+        data.addColumn('number', 'ROAS');
+
+        // ---- Model Assumptions ----
+        const retentionRate = 0.92;
+        const arpa = 300; // average revenue per active client
+        let activeClients = 0;
+
+        const monthlyAdSpend = (month) => {
+          if (month <= 6) return 2000;
+          if (month <= 12) return 3000;
+          return 5000;
+        };
+
+        const newClientsByMonth = (month) => {
+          if (month <= 6) return 10;
+          if (month <= 12) return 15;
+          return 25;
+        };
+
+        // ---- Build Rows ----
+        for (let month = 1; month <= 24; month++) {
+          const newClients = newClientsByMonth(month);
+          const churnedClients = -(activeClients * (1 - retentionRate));
+
+          activeClients =
+            activeClients * retentionRate + newClients;
+
+          const revenue = activeClients * arpa;
+          const adSpend = monthlyAdSpend(month);
+          const roas = revenue / adSpend;
+
+          data.addRow([
+            `Month ${month}`,
+            Math.round(newClients),
+            Math.round(churnedClients * 10) / 10,
+            Math.round(activeClients * 10) / 10,
+            Math.round(revenue),
+            Math.round(roas * 100) / 100
+          ]);
+        }
+
+        // ---- Chart Options ----
+        const options = {
+          title: 'Business Growth Model (Retention-Driven)',
+          height: 500,
+          legend: { position: 'top' },
+
+          seriesType: 'bars',
+
+          series: {
+            0: { type: 'bars', targetAxisIndex: 0 }, // New Clients
+            1: { type: 'bars', targetAxisIndex: 0 }, // Churned Clients
+            2: { type: 'line', targetAxisIndex: 0 }, // Active Clients
+            3: { type: 'line', targetAxisIndex: 1 }, // Revenue
+            4: { type: 'line', targetAxisIndex: 1 }  // ROAS
+          },
+
+          vAxes: {
+            0: {
+              title: 'Clients',
+              viewWindow: { min: -10 }
+            },
+            1: {
+              title: 'Revenue / ROAS',
+              format: 'short'
+            }
+          },
+
+          focusTarget: 'category',
+          tooltip: { isHtml: true }
+        };
+
+        const chart = new google.visualization.ComboChart(
+          document.getElementById('growth_chart')
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <h2>Growth Dashboard</h2>
+    <div id="growth_chart"></div>
+  </body>
+</html>

@@ -1,0 +1,1184 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+:root {
+  --marqueex-brand-color: #e455df;
+  --marqueex-brand-darken-color: #bb56df;
+  --marqueex-brand-color-2: #4376ec;
+  --marqueex-error-color: #e74f4f;
+  --marqueex-error-light-color: #faf4f4;
+}
+
+.toplevel_page_marqueex .components-button.is-primary {
+  background: linear-gradient(to right, var(--marqueex-primary), var(--marqueex-primary-dark));
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(124, 58, 237, 0.2);
+}
+
+.toplevel_page_marqueex .components-button.is-primary:hover {
+  background: linear-gradient(to right, var(--marqueex-primary-dark), var(--marqueex-primary));
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(var(--marqueex-primary), 0.25);
+}
+
+.toplevel_page_marqueex .components-button.is-primary:hover:not(:disabled) {
+  background-color: var(--marqueex-primary-dark);
+  box-shadow: 0 2px 5px rgba(107, 70, 193, 0.25);
+}
+
+.toplevel_page_marqueex .components-button.is-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.toplevel_page_marqueex .components-button.is-tertiary {
+  background: transparent;
+  color: var(--marqueex-primary);
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.toplevel_page_marqueex .components-button.is-tertiary:hover {
+  background: transparent;
+  color: var(--marqueex-primary-dark);
+}
+
+.toplevel_page_marqueex .components-button.is-tertiary.active {
+  background: transparent;
+  color: var(--marqueex-primary-dark);
+}
+
+.toplevel_page_marqueex .components-button.is-tertiary:focus {
+  background: transparent;
+  color: var(--marqueex-primary-dark);
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 1px solid transparent;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.toplevel_page_marqueex .components-button.is-tertiary:disabled {
+  background: transparent;
+  color: var(--marqueex-primary);
+  border: none !important;
+}
+
+:root {
+  --marqueex-admin-page-offset: 15px;
+  --marqueex-primary: #4a6cf7;
+  --marqueex-primary-dark: #3151d3;
+  --marqueex-secondary: #f9fafb;
+  --marqueex-accent: #00d4ff;
+  --marqueex-border-radius: 8px;
+}
+
+.toplevel_page_marqueexe {
+  background: #f9fafb;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.toplevel_page_marqueexe #wpcontent {
+  padding-left: 0;
+}
+
+.toplevel_page_marqueexe #wpbody-content {
+  padding-bottom: 0;
+}
+
+.toplevel_page_marqueexe #wpfooter {
+  display: none;
+}
+
+#marqueex-admin-page {
+  position: relative;
+  margin: 0;
+}
+
+.marqueex-admin-header {
+  position: relative;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  overflow: visible;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.marqueex-admin-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--marqueex-primary) 0%, var(--marqueex-primary-dark) 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: -1;
+}
+
+.marqueex-admin-header-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width=%27100%27 height=%27100%27 viewBox=%270 0 100 100%27 xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath d=%27M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z%27 fill=%27%23ffffff%27 fill-opacity=%270.05%27 fill-rule=%27evenodd%27/%3E%3C/svg%3E") repeat;
+  opacity: 0.6;
+}
+
+.marqueex-admin-header-bg::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, transparent 0%, var(--marqueex-accent) 50%, transparent 100%);
+  opacity: 0.5;
+}
+
+.marqueex-admin-header .header-content {
+  position: relative;
+}
+
+.marqueex-admin-header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.marqueex-admin-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marqueex-admin-header-logo .logo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.marqueex-admin-header-logo .logo-icon svg {
+  color: #fff;
+}
+
+.marqueex-admin-header-logo .logo-icon:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.marqueex-admin-header-logo h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.marqueex-admin-header-logo span {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-left: 10px;
+}
+
+.marqueex-admin-header-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.marqueex-admin-header-nav a {
+  padding: 10px 18px;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  border-radius: var(--marqueex-border-radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.marqueex-admin-header-nav a:hover, .marqueex-admin-header-nav a:focus {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(-1px);
+}
+
+.marqueex-admin-header-nav a.active {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove any conflicting styles */
+
+.gradient-header {
+  display: none;
+}
+
+/* Ensure navigation links are clickable */
+
+.marqueex-admin-header-nav a {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.marqueex-admin-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  will-change: opacity, transform;
+  position: relative;
+}
+
+.marqueex-admin-content-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.marqueex-admin-content-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.marqueex-admin-content-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.marqueex-admin-content-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1e1e1e;
+  margin: 0 0 10px 0;
+}
+
+.marqueex-admin-content-header p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.marqueex-admin-footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #666;
+  font-size: 13px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.marqueex-admin-footer a {
+  color: var(--marqueex-primary);
+  text-decoration: none;
+}
+
+.marqueex-admin-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 782px) {
+  .marqueex-admin-header {
+    padding: 15px 0;
+  }
+  .marqueex-admin-header-wrap {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+  }
+  .marqueex-admin-header-nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .marqueex-admin-header-nav a {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    padding: 12px 16px;
+  }
+  .marqueex-admin-header-logo {
+    justify-content: center;
+  }
+  .marqueex-admin-content {
+    padding: 0 20px;
+  }
+  .marqueex-admin-content-card {
+    padding: 25px 20px;
+  }
+  .marqueex-admin-footer {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 783px) and (max-width: 1200px) {
+  .marqueex-admin-header-wrap {
+    padding: 0 30px;
+  }
+  .marqueex-admin-content {
+    padding: 0 30px;
+  }
+}
+
+.marqueex-notification {
+  background-color: #fff;
+  border-left: 4px solid var(--marqueex-primary);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.marqueex-notification::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--marqueex-primary);
+  border-radius: 8px 0 0 8px;
+}
+
+.marqueex-notification.is-success {
+  border-left-color: #4ac29a;
+}
+
+.marqueex-notification.is-success::before {
+  background: #4ac29a;
+}
+
+.marqueex-notification.is-warning {
+  border-left-color: #f7b731;
+}
+
+.marqueex-notification.is-warning::before {
+  background: #f7b731;
+}
+
+.marqueex-notification.is-error {
+  border-left-color: #e74c3c;
+}
+
+.marqueex-notification.is-error::before {
+  background: #e74c3c;
+}
+
+.marqueex-notification h3 {
+  margin: 0 0 8px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e1e1e;
+}
+
+.marqueex-notification p {
+  margin: 0;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.marqueex-form-row {
+  margin-bottom: 20px;
+}
+
+.marqueex-button {
+  background: var(--marqueex-primary);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(74, 108, 247, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+}
+
+.marqueex-button:hover, .marqueex-button:focus {
+  background: var(--marqueex-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(74, 108, 247, 0.35);
+}
+
+.marqueex-button:active {
+  transform: translateY(0);
+}
+
+.marqueex-button.is-secondary {
+  background: #f5f7fa;
+  color: #4c5a67;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.marqueex-button.is-secondary:hover, .marqueex-button.is-secondary:focus {
+  background: #edf1f5;
+  color: #3a4551;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.marqueex-button.is-link {
+  background: transparent;
+  color: var(--marqueex-primary);
+  padding: 0;
+  box-shadow: none;
+}
+
+.marqueex-button.is-link:hover, .marqueex-button.is-link:focus {
+  color: var(--marqueex-primary-dark);
+  text-decoration: underline;
+  box-shadow: none;
+  transform: none;
+}
+
+.marqueex-button.is-small {
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+.marqueex-button.is-large {
+  padding: 14px 24px;
+  font-size: 15px;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms ease-in, transform 200ms ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease-in, transform 200ms ease-out;
+}
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/page-settings/style.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+.marqueex-admin-settings {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.marqueex-admin-settings .ant-tabs .ant-tabs-tab {
+  font-weight: 500;
+}
+.marqueex-admin-settings .ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--marqueex-primary, #1890ff);
+}
+.marqueex-admin-settings .ant-tabs .ant-tabs-ink-bar {
+  background: var(--marqueex-primary, #1890ff);
+}
+.marqueex-admin-settings .ant-tabs .ant-tabs-content-holder {
+  padding: 24px 0;
+}
+.marqueex-admin-settings .marqueex-builder-card {
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active {
+  border-color: #52c41a;
+  box-shadow: 0 2px 8px rgba(82, 196, 26, 0.15);
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-inactive {
+  border-color: #d9d9d9;
+}
+.marqueex-admin-settings .marqueex-builder-card .ant-card-head {
+  border-bottom: 1px solid #f0f0f0;
+}
+.marqueex-admin-settings .marqueex-builder-card .ant-collapse {
+  margin-top: 16px;
+}
+.marqueex-admin-settings .marqueex-builder-card .ant-collapse .ant-collapse-item {
+  border-bottom: 1px solid #f0f0f0;
+}
+.marqueex-admin-settings .marqueex-builder-card .ant-collapse .ant-collapse-item:last-child {
+  border-bottom: none;
+}
+.marqueex-admin-settings .ant-modal .ant-modal-header {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 16px 24px;
+}
+.marqueex-admin-settings .ant-modal .ant-modal-body {
+  padding: 0px 24px;
+}
+.marqueex-admin-settings .ant-alert {
+  border-radius: 8px;
+}
+.marqueex-admin-settings .ant-alert.ant-alert-info {
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+}
+.marqueex-admin-settings .ant-form-item {
+  margin-bottom: 16px;
+}
+.marqueex-admin-settings .ant-btn {
+  border-radius: 6px;
+  font-weight: 500;
+}
+.marqueex-admin-settings .ant-btn.ant-btn-primary {
+  background-color: var(--marqueex-primary, #1890ff);
+  border-color: var(--marqueex-primary, #1890ff);
+}
+.marqueex-admin-settings .ant-btn.ant-btn-primary:hover, .marqueex-admin-settings .ant-btn.ant-btn-primary:focus {
+  background-color: var(--marqueex-primary-dark, #40a9ff);
+  border-color: var(--marqueex-primary-dark, #40a9ff);
+}
+.marqueex-admin-settings .ant-switch.ant-switch-checked {
+  background-color: var(--marqueex-primary, #1890ff);
+}
+.marqueex-admin-settings .ant-input-number {
+  border-radius: 6px;
+}
+.marqueex-admin-settings .ant-input-number:hover, .marqueex-admin-settings .ant-input-number:focus {
+  border-color: var(--marqueex-primary, #1890ff);
+}
+.marqueex-admin-settings .marqueex-settings-header {
+  margin-bottom: 30px;
+  text-align: center;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.marqueex-admin-settings .marqueex-settings-header h2 {
+  margin: 0 0 10px 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #1d2327;
+}
+.marqueex-admin-settings .marqueex-settings-header .marqueex-settings-subtitle {
+  margin: 0;
+  color: #646970;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.marqueex-admin-settings .marqueex-settings-content {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs {
+  background: #f6f7f7;
+  border-bottom: 1px solid #dcdcde;
+  padding: 0 20px;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item {
+  padding: 15px 20px;
+  border: none;
+  background: transparent;
+  color: #646970;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item:hover {
+  background: #fff;
+  color: #1d2327;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item.active-tab {
+  background: #fff;
+  color: #2271b1;
+  border-bottom: 2px solid #2271b1;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item.active-tab::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #2271b1;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item svg {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .marqueex-tab-content {
+  padding: 30px;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-info-card {
+  background: #f8f9fa;
+  border: 1px solid #dcdcde;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.marqueex-admin-settings .marqueex-settings-content .marqueex-info-card .components-card__body {
+  padding: 20px;
+  color: #646970;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.marqueex-admin-settings .marqueex-builder-card {
+  margin-bottom: 20px;
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active {
+  border-color: #2271b1;
+  box-shadow: 0 4px 12px rgba(34, 113, 177, 0.15);
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active .components-card__header {
+  background: linear-gradient(135deg, #2271b1 0%, #1e5a8a 100%);
+  color: #fff;
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active .components-card__header .marqueex-builder-title {
+  color: #fff;
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active .components-card__header .marqueex-builder-description {
+  color: rgba(255, 255, 255, 0.8);
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active .components-card__header .marqueex-builder-icon {
+  filter: brightness(0) invert(1);
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-inactive {
+  opacity: 0.7;
+}
+.marqueex-admin-settings .marqueex-builder-card.marqueex-builder-inactive:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__header {
+  padding: 20px;
+  background: #f6f7f7;
+  border-bottom: 1px solid #dcdcde;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__header .components-flex {
+  align-items: center;
+  gap: 16px;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__header .components-flex .marqueex-builder-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__header .components-flex .marqueex-builder-title {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d2327;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__header .components-flex .marqueex-builder-description {
+  margin: 0;
+  color: #646970;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__header .components-flex .marqueex-builder-toggle {
+  margin-left: auto;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body {
+  padding: 20px;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel__body {
+  border: 1px solid #dcdcde;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel__body:last-child {
+  margin-bottom: 0;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel__body .components-panel__body-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d2327;
+  padding: 12px 16px;
+  background: #f6f7f7;
+  border-bottom: 1px solid #dcdcde;
+  margin: 0;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel__body .components-panel__body-toggle {
+  background: #fff;
+  padding: 16px;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row {
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f1;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row:last-child {
+  border-bottom: none;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row .components-checkbox-control {
+  margin: 0;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row .components-checkbox-control .components-checkbox-control__label {
+  font-weight: 500;
+  color: #1d2327;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row .components-checkbox-control .components-checkbox-control__help {
+  color: #646970;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .marqueex-test-button {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 20px;
+  background: #2271b1;
+  border-color: #2271b1;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .marqueex-test-button:hover {
+  background: #1e5a8a;
+  border-color: #1e5a8a;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .marqueex-test-button:disabled {
+  background: #f0f0f1;
+  border-color: #dcdcde;
+  color: #646970;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .marqueex-test-button .components-spinner {
+  margin-right: 8px;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-notice {
+  margin: 16px 0 0 0;
+  border-radius: 4px;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-notice.is-success {
+  background: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+}
+.marqueex-admin-settings .marqueex-builder-card .components-card__body .components-notice.is-error {
+  background: #f8d7da;
+  border-color: #f5c2c7;
+  color: #721c24;
+}
+.marqueex-admin-settings .marqueex-settings-card {
+  border: 1px solid #dcdcde;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__header {
+  padding: 20px;
+  background: #f6f7f7;
+  border-bottom: 1px solid #dcdcde;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__header .components-flex {
+  align-items: center;
+  gap: 16px;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__header .components-flex .marqueex-section-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__header .components-flex h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1d2327;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body {
+  padding: 20px;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row {
+  padding: 16px 0;
+  border-bottom: 1px solid #f0f0f1;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row:last-child {
+  border-bottom: none;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-toggle-control {
+  margin: 0;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-toggle-control .components-toggle-control__label {
+  font-weight: 500;
+  color: #1d2327;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-toggle-control .components-toggle-control__help {
+  color: #646970;
+  font-size: 13px;
+  margin-top: 4px;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-text-control {
+  margin: 0;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-text-control .components-text-control__label {
+  font-weight: 500;
+  color: #1d2327;
+  margin-bottom: 8px;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-text-control .components-text-control__input {
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+.marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-text-control .components-text-control__input:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+}
+.marqueex-admin-settings .marqueex-settings-footer {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex {
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button {
+  min-width: 140px;
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button.is-primary {
+  background: #2271b1;
+  border-color: #2271b1;
+  color: #fff;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button.is-primary:hover {
+  background: #1e5a8a;
+  border-color: #1e5a8a;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button.is-primary:disabled {
+  background: #f0f0f1;
+  border-color: #dcdcde;
+  color: #646970;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button.is-secondary {
+  background: #fff;
+  border-color: #dcdcde;
+  color: #1d2327;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button.is-secondary:hover {
+  background: #f6f7f7;
+  border-color: #c3c4c7;
+}
+.marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button .marqueex-loading-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  vertical-align: middle;
+  animation: spin 1s linear infinite;
+}
+.marqueex-admin-settings .marqueex-settings-footer .marqueex-error-notice {
+  margin: 0;
+  border-radius: 4px;
+  background: #f8d7da;
+  border-color: #f5c2c7;
+  color: #721c24;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.marqueex-welcome-modal .components-modal__content {
+  max-width: 600px;
+  padding: 30px;
+}
+.marqueex-welcome-modal .components-modal__content .marqueex-welcome-content h3 {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d2327;
+  text-align: center;
+}
+.marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-step {
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 4px solid #2271b1;
+}
+.marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-step h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d2327;
+}
+.marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-step p {
+  margin: 0;
+  color: #646970;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-actions {
+  margin-top: 30px;
+  justify-content: center;
+}
+.marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-actions .components-button {
+  min-width: 120px;
+  padding: 12px 24px;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .marqueex-admin-settings {
+    padding: 15px;
+  }
+  .marqueex-admin-settings .marqueex-settings-header {
+    padding: 20px;
+  }
+  .marqueex-admin-settings .marqueex-settings-header h2 {
+    font-size: 24px;
+  }
+  .marqueex-admin-settings .marqueex-settings-header .marqueex-settings-subtitle {
+    font-size: 14px;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs {
+    padding: 0 10px;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item {
+    padding: 12px 15px;
+    font-size: 14px;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item svg {
+    width: 16px;
+    height: 16px;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .marqueex-tab-content {
+    padding: 20px;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__header {
+    padding: 15px;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__header .components-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__header .components-flex .marqueex-builder-toggle {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body {
+    padding: 15px;
+  }
+  .marqueex-admin-settings .marqueex-settings-footer {
+    padding: 20px;
+  }
+  .marqueex-admin-settings .marqueex-settings-footer .components-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .marqueex-admin-settings .marqueex-settings-footer .components-flex .components-button {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .marqueex-admin-settings {
+    background: #1e1e1e;
+  }
+  .marqueex-admin-settings .marqueex-settings-header {
+    background: #2c3338;
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-header h2 {
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-settings-header .marqueex-settings-subtitle {
+    color: #a7aaad;
+  }
+  .marqueex-admin-settings .marqueex-settings-content {
+    background: #2c3338;
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs {
+    background: #1e1e1e;
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item {
+    color: #a7aaad;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item:hover {
+    background: #2c3338;
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item.active-tab {
+    background: #2c3338;
+    color: #72aee6;
+    border-color: #72aee6;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-settings-tabs .components-tab-panel__tabs .components-tab-panel__tabs-item.active-tab::after {
+    background: #72aee6;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-info-card {
+    background: #1e1e1e;
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-content .marqueex-info-card .components-card__body {
+    color: #a7aaad;
+  }
+  .marqueex-admin-settings .marqueex-builder-card {
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active {
+    border-color: #72aee6;
+    box-shadow: 0 4px 12px rgba(114, 174, 230, 0.15);
+  }
+  .marqueex-admin-settings .marqueex-builder-card.marqueex-builder-active .components-card__header {
+    background: linear-gradient(135deg, #72aee6 0%, #2271b1 100%);
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__header {
+    background: #1e1e1e;
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__header .marqueex-builder-title {
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__header .marqueex-builder-description {
+    color: #a7aaad;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body {
+    background: #2c3338;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel__body {
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel__body .components-panel__body-title {
+    background: #1e1e1e;
+    border-color: #3c434a;
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel__body .components-panel__body-toggle {
+    background: #2c3338;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row {
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row .components-checkbox-control__label {
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-builder-card .components-card__body .components-panel-row .components-checkbox-control__help {
+    color: #a7aaad;
+  }
+  .marqueex-admin-settings .marqueex-settings-card {
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__header {
+    background: #1e1e1e;
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__header h4 {
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__body {
+    background: #2c3338;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row {
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-toggle-control__label {
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-toggle-control__help {
+    color: #a7aaad;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-text-control__label {
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-text-control__input {
+    background: #1e1e1e;
+    border-color: #3c434a;
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-settings-card .components-card__body .components-panel-row .components-text-control__input:focus {
+    border-color: #72aee6;
+    box-shadow: 0 0 0 1px #72aee6;
+  }
+  .marqueex-admin-settings .marqueex-settings-footer {
+    background: #2c3338;
+    border-color: #3c434a;
+  }
+  .marqueex-admin-settings .marqueex-settings-footer .components-button.is-secondary {
+    background: #1e1e1e;
+    border-color: #3c434a;
+    color: #f0f0f1;
+  }
+  .marqueex-admin-settings .marqueex-settings-footer .components-button.is-secondary:hover {
+    background: #2c3338;
+    border-color: #4a4a4a;
+  }
+  .marqueex-welcome-modal .components-modal__content {
+    background: #2c3338;
+    border-color: #3c434a;
+  }
+  .marqueex-welcome-modal .components-modal__content .marqueex-welcome-content h3 {
+    color: #f0f0f1;
+  }
+  .marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-step {
+    background: #1e1e1e;
+    border-color: #72aee6;
+  }
+  .marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-step h4 {
+    color: #f0f0f1;
+  }
+  .marqueex-welcome-modal .components-modal__content .marqueex-welcome-content .marqueex-welcome-step p {
+    color: #a7aaad;
+  }
+}
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../../node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!../../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!../../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+
+
+/*# sourceMappingURL=style-marqueex.css.map*/
