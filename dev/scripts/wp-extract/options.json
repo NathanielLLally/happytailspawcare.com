@@ -1,0 +1,13 @@
+{
+  "siteurl": "https://happytailspawcare.com",
+  "blogname": "Happy Tails Paw Care",
+  "blogdescription": null,
+  "admin_email": "hello@happytailspawcare.com",
+  "date_format": "F j, Y",
+  "time_format": "g:i a",
+  "template": "spectra-one",
+  "stylesheet": "spectra-one",
+  "show_on_front": "page",
+  "page_for_posts": "368",
+  "page_on_front": "0"
+}

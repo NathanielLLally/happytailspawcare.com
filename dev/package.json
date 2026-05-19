@@ -1,0 +1,42 @@
+{
+  "name": "htpc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "generate:types": "cross-env NODE_OPTIONS=--no-deprecation payload generate:types",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "import:wp": "cross-env NODE_OPTIONS=--no-deprecation tsx scripts/import-wp.ts",
+    "seed:home": "cross-env NODE_OPTIONS=--no-deprecation tsx scripts/seed-home-from-live.ts",
+    "scrape:live": "cross-env NODE_OPTIONS=--no-deprecation tsx scripts/scrape-live-pages.ts"
+  },
+  "dependencies": {
+    "@payloadcms/db-sqlite": "3.84.1",
+    "@payloadcms/next": "3.84.1",
+    "@payloadcms/richtext-lexical": "3.84.1",
+    "@payloadcms/ui": "3.84.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^17.4.2",
+    "graphql": "^16.9.0",
+    "html-entities": "^2.5.2",
+    "next": "15.4.11",
+    "payload": "3.84.1",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "sharp": "0.33.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.10.0",
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": "^18.20.2 || >=20.9.0"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "block_navigations": [
+    {
+      "wpId": 15,
+      "title": "Mobile Menu",
+      "slug": "menu",
+      "items": [
+        {
+          "label": "About",
+          "href": "https://happytailspawcare.com/about/"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        }
+      ]
+    },
+    {
+      "wpId": 63,
+      "title": "Menu 2",
+      "slug": "menu-2",
+      "items": [
+        {
+          "label": "Home",
+          "href": "#"
+        },
+        {
+          "label": "About",
+          "href": "#"
+        },
+        {
+          "label": "Blog",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "wpId": 64,
+      "title": "Menu",
+      "slug": "menu-3",
+      "items": [
+        {
+          "label": "Services",
+          "href": "/services"
+        },
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
+        }
+      ]
+    },
+    {
+      "wpId": 65,
+      "title": "Menu 4",
+      "slug": "menu-4",
+      "items": [
+        {
+          "label": "Home",
+          "href": "#"
+        },
+        {
+          "label": "About",
+          "href": "#"
+        },
+        {
+          "label": "Blog",
+          "href": "#"
+        },
+        {
+          "label": "Contact",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "wpId": 175,
+      "title": "Header menu",
+      "slug": "header-menu",
+      "items": []
+    },
+    {
+      "wpId": 631,
+      "title": "Footer menu",
+      "slug": "footer-menu",
+      "items": [
+        {
+          "label": "Products List",
+          "href": "#"
+        },
+        {
+          "label": "Plans & Pricing",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "wpId": 632,
+      "title": "Footer menu 2",
+      "slug": "footer-menu-2",
+      "items": [
+        {
+          "label": "About Us",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "wpId": 633,
+      "title": "Footer menu 3",
+      "slug": "footer-menu-3",
+      "items": []
+    },
+    {
+      "wpId": 634,
+      "title": "Footer menu 4",
+      "slug": "footer-menu-4",
+      "items": [
+        {
+          "label": "Knowledge Base",
+          "href": "#"
+        }
+      ]
+    }
+  ],
+  "classic_menus": [],
+  "classic_items": []
+}

@@ -1,0 +1,404 @@
+/* Imported Spectra (UAGB) + WordPress block styles, fetched from
+   happytailspawcare.com during initial mirror. These power the look of the
+   raw Gutenberg/Spectra HTML stored in Pages.rawHtml.
+   See scripts/extract-wp.py / scripts/import-wp.ts for the full pipeline. */
+
+@import url('/spectra-assets/style.min.css');
+@import url('/spectra-assets/gutenberg.min.css');
+@import url('/spectra-assets/spectra-block-positioning.min.css');
+@import url('/spectra-assets/custom-style-blocks.css');
+
+/* /services — bevelled service-card border + soft drop shadow.
+   Each service card on the Services page is a `.wp-block-group.has-border-color`
+   nested inside a `wp-block-uagb-container`. Override Spectra's flat 1px border
+   with a two-tone bevel (light on top/left, darker on bottom/right) and add a
+   light shadow. Constrained to /services so other pages with similar markup
+   stay untouched. */
+.page--services .wp-block-group.has-border-color {
+  border-style: solid !important;
+  border-width: 2px !important;
+  border-top-color: rgba(255, 255, 255, 0.95) !important;
+  border-left-color: rgba(255, 255, 255, 0.85) !important;
+  border-right-color: rgba(0, 0, 0, 0.10) !important;
+  border-bottom-color: rgba(0, 0, 0, 0.18) !important;
+  background-image: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.06),
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 6px 16px -6px rgba(15, 23, 42, 0.14);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.page--services .wp-block-group.has-border-color:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.06),
+    0 2px 4px rgba(15, 23, 42, 0.06),
+    0 14px 28px -8px rgba(15, 23, 42, 0.20);
+}
+
+/* /home — turn the four service teaser cards into click-through tiles to
+   /services. The body <p> copy is stripped server-side; we replace it with
+   an SVG arrow-in-ring icon and a "View services" cue, both of which
+   animate on hover. */
+.page--home .home-svc-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+
+.page--home .home-svc-card-link .wp-block-group.has-outline-border-color {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.page--home .home-svc-card-link .wp-block-group.has-outline-border-color::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: 0 0 0 0 rgba(36, 142, 175, 0);
+  transition: box-shadow 220ms ease;
+}
+
+.page--home .home-svc-card-link:hover .wp-block-group.has-outline-border-color {
+  transform: translateY(-4px);
+  box-shadow:
+    0 2px 4px rgba(15, 23, 42, 0.04),
+    0 18px 32px -10px rgba(15, 23, 42, 0.22);
+  border-color: var(--wp--preset--color--custom-seven-paws-logo-blue, #248eaf) !important;
+}
+
+.page--home .home-svc-card-link:hover .wp-block-group.has-outline-border-color::after {
+  box-shadow: 0 0 0 3px rgba(36, 142, 175, 0.18);
+}
+
+.page--home .home-svc-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem auto 0;
+  color: var(--wp--preset--color--neutral, #6E7787);
+  transition: color 220ms ease, transform 220ms ease;
+}
+
+.page--home .home-svc-card__icon svg {
+  display: block;
+  overflow: visible;
+}
+
+.page--home .home-svc-card__ring {
+  transform-origin: 32px 32px;
+  transition: stroke 220ms ease, transform 400ms ease, stroke-dashoffset 600ms ease;
+}
+
+.page--home .home-svc-card__arrow-line,
+.page--home .home-svc-card__arrow-head {
+  transition: transform 220ms ease, stroke 220ms ease;
+  transform-origin: 32px 32px;
+}
+
+.page--home .home-svc-card-link:hover .home-svc-card__icon {
+  color: var(--wp--preset--color--custom-seven-paws-logo-blue, #248eaf);
+  transform: scale(1.06);
+}
+
+.page--home .home-svc-card-link:hover .home-svc-card__ring {
+  transform: rotate(90deg);
+}
+
+.page--home .home-svc-card-link:hover .home-svc-card__arrow-line,
+.page--home .home-svc-card-link:hover .home-svc-card__arrow-head {
+  transform: translateX(3px);
+}
+
+.page--home .home-svc-card__cta {
+  display: block;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--wp--preset--color--neutral, #6E7787);
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 220ms ease, transform 220ms ease, color 220ms ease;
+  margin-top: auto;
+}
+
+.page--home .home-svc-card-link:hover .home-svc-card__cta {
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--wp--preset--color--custom-seven-paws-logo-blue, #248eaf);
+}
+
+.page--home .home-svc-card-link h4 {
+  text-align: center;
+}
+
+/* "Brought to you by" trust strip → continuous stock-ticker. The original
+   Swiper paginated carousel is disabled in transform-home.ts; here we lay
+   out the wrapper as a flex row, animate translateX from 0 → -50% (slides
+   are duplicated server-side so this wraps seamlessly), and add edge masks
+   for the classic ticker fade-in/out. */
+.htpc-ticker {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 0.5rem 0;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+.htpc-ticker .swiper-wrapper {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  width: max-content;
+  align-items: center;
+  gap: 0;
+  /* Animation must NOT be coupled with `transform: ... !important` — an
+     !important declaration outranks animation values in the cascade and
+     would freeze the marquee. Swiper is disabled in transform-home.ts, so
+     nothing else is setting transform on this element. */
+  animation: htpc-ticker-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.htpc-ticker:hover .swiper-wrapper {
+  animation-play-state: paused;
+}
+
+.htpc-ticker .swiper-slide {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  margin: 0 2.5rem;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 72px;
+  opacity: 0.78;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.htpc-ticker .swiper-slide:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.htpc-ticker .alcb__logo-image,
+.htpc-ticker .alcb__logo-image img {
+  height: 100%;
+  width: auto;
+  max-height: 64px;
+  display: block;
+}
+
+.htpc-ticker .alcb__logo-image img {
+  filter: grayscale(0.55);
+  transition: filter 220ms ease;
+}
+
+.htpc-ticker .swiper-slide:hover .alcb__logo-image img {
+  filter: grayscale(0);
+}
+
+/* Pagination dots + prev/next arrows make no sense for a ticker. */
+.wp-block-lcb-logo-carousel .alcb__pag,
+.wp-block-lcb-logo-carousel .navigation,
+.wp-block-lcb-logo-carousel .swiper-button-prev,
+.wp-block-lcb-logo-carousel .swiper-button-next,
+.wp-block-lcb-logo-carousel .swiper-pagination {
+  display: none !important;
+}
+
+@keyframes htpc-ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .htpc-ticker .swiper-wrapper { animation: none; }
+}
+
+/* /learn-more lead capture form. Visual cues borrowed from Forminator's
+   "material" design — labels above inputs, underline focus, capped width. */
+.lead-form-wrap {
+  max-width: 640px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.lead-form {
+  background: #fff;
+  border: 1px solid var(--color-border, #e6e6e6);
+  border-radius: 14px;
+  padding: 1.75rem 1.75rem 1.5rem;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 10px 24px -8px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.lead-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lead-form__field label {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-fg, #1a1a1a);
+}
+
+.lead-form__field label .req {
+  color: var(--color-accent, #d8742e);
+  margin-left: 2px;
+}
+
+.lead-form__field input[type='text'],
+.lead-form__field input[type='email'],
+.lead-form__field input[type='tel'],
+.lead-form__field textarea {
+  border: 1px solid var(--color-border, #e6e6e6);
+  border-radius: 8px;
+  padding: 0.65rem 0.85rem;
+  font: inherit;
+  background: #fff;
+  color: inherit;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.lead-form__field input:focus,
+.lead-form__field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent, #d8742e);
+  box-shadow: 0 0 0 3px rgba(216, 116, 46, 0.18);
+}
+
+.lead-form__field--checkbox label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--color-muted, #6b6b6b);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.lead-form__field--checkbox input[type='checkbox'] {
+  margin-top: 0.2rem;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-accent, #d8742e);
+}
+
+.lead-form__hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.lead-form__error {
+  background: #fdecea;
+  border: 1px solid #f1b4ad;
+  color: #9b1c1c;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.92rem;
+}
+
+.lead-form__submit {
+  align-self: flex-start;
+  appearance: none;
+  border: 0;
+  background: var(--color-accent, #d8742e);
+  color: #fff;
+  padding: 0.7rem 1.6rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow:
+    0 2px 6px rgba(216, 116, 46, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+}
+
+.lead-form__submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #c66422;
+  box-shadow:
+    0 6px 14px rgba(216, 116, 46, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.lead-form__submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.lead-form__legal {
+  margin: 0;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--color-muted, #6b6b6b);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lead-form--success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+}
+
+.lead-form--success h3 { margin-top: 0; }
+
+/* Light frontend tweaks on top of the imported Spectra styles. */
+.page-content :where(.wp-block-uagb-container.uagb-is-root-container) {
+  max-width: var(--max-width, 1180px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-content :where(figure.wp-block-uagb-image) { margin: 0 0 1rem; }
+.page-content :where(.wp-block-button__link) {
+  background: var(--color-accent);
+  color: #fff;
+  display: inline-block;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.page-content :where(.wp-block-button__link:hover) { text-decoration: none; opacity: 0.92; }
