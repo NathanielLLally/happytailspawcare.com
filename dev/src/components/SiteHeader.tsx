@@ -4,20 +4,38 @@ type NavItem = { label: string; href: string; id?: string }
 
 export function SiteHeader({
   siteName,
+  logoUrl,
   navItems,
 }: {
   siteName: string
+  logoUrl?: string
   navItems: NavItem[]
 }) {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link href="/" className="site-header__brand">
-          {siteName}
+        <Link href="/" className="site-header__brand" aria-label={siteName}>
+          {logoUrl ? (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img
+              src={logoUrl}
+              alt={siteName}
+              className="site-header__logo"
+              width={300}
+              height={300}
+              decoding="async"
+            />
+          ) : (
+            <span>{siteName}</span>
+          )}
         </Link>
         <nav className="site-nav" aria-label="Primary">
           {navItems.map((item) => (
-            <Link key={item.id ?? `${item.label}-${item.href}`} href={item.href}>
+            <Link
+              key={item.id ?? `${item.label}-${item.href}`}
+              href={item.href}
+              className="nav-pill"
+            >
               {item.label}
             </Link>
           ))}

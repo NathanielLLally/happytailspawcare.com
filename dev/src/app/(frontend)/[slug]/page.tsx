@@ -4,6 +4,7 @@ import config from '@payload-config'
 import { HtmlContent } from '@/components/HtmlContent'
 import { LeadForm } from '@/components/LeadForm'
 import { stripForminator } from '@/lib/transform-learn-more'
+import { PageBlocks } from '@/components/blocks'
 
 export const dynamic = 'force-dynamic'
 
@@ -36,9 +37,13 @@ export default async function PageBySlug({ params }: { params: Promise<Params> }
   const page = result.docs[0] as any
   if (!page) notFound()
 
-  // Replace the imported Forminator form with our React lead form.
+  // Layout blocks take precedence over the legacy rawHtml field. When
+  // both are absent, fall back to just the title.
+  const hasBlocks = Array.isArray(page.layout) && page.layout.length > 0
   let renderedBody: React.ReactNode
-  if (page.rawHtml && slug === 'learn-more') {
+  if (hasBlocks) {
+    renderedBody = <PageBlocks blocks={page.layout} sourcePage={`/${slug}`} />
+  } else if (page.rawHtml && slug === 'learn-more') {
     const { before, after } = stripForminator(page.rawHtml)
     renderedBody = (
       <>

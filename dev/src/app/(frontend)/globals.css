@@ -1,10 +1,13 @@
 :root {
   --color-bg: #ffffff;
-  --color-fg: #1a1a1a;
-  --color-muted: #6b6b6b;
-  --color-accent: #d8742e;
-  --color-accent-soft: #f6e3cf;
-  --color-border: #e6e6e6;
+  --color-fg: #102a43;
+  --color-muted: #5b6b80;
+  --color-accent: #248eaf;        /* logo / brand blue */
+  --color-accent-strong: #1c7591; /* hover / pressed */
+  --color-accent-soft: #e2f1f7;
+  --color-cta: #286df6;           /* deeper "leads" CTA blue */
+  --color-cta-strong: #1f56c4;
+  --color-border: #e1e6ee;
   --max-width: 1180px;
   --radius: 12px;
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -53,42 +56,87 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 }
 
 .site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-fg);
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--color-fg);
+  text-decoration: none;
 }
+
+.site-header__logo {
+  /* Native source is 300×300 (happy_tails_logo_blue_round_300x300-1.png).
+     Render it at its full intrinsic size so retina screens get crisp output;
+     CSS only constrains so it doesn't blow past the nav bar. */
+  width: 350px;
+  height: 100px;
+  max-height: 100px;
+  min-width: 350px;
+  min-height: 100px;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Give the sticky header a bit more vertical room so a 96px logo fits
+   without overlapping content below. */
+.site-header__inner { min-height: 110px; }
 
 .site-nav {
   display: flex;
-  gap: 1.25rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.site-nav a {
-  color: var(--color-fg);
-  font-weight: 500;
+.site-nav a { text-decoration: none; }
+
+/* Default nav items rendered as outlined blue pill buttons. */
+.site-nav .nav-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--color-accent);
+  color: var(--color-accent);
+  background: #fff;
+  font-weight: 600;
+  font-size: 0.94rem;
+  line-height: 1.2;
+  transition: background 150ms ease, color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
 }
 
-.site-nav a:hover { color: var(--color-accent); text-decoration: none; }
+.site-nav .nav-pill:hover,
+.site-nav .nav-pill[aria-current='page'] {
+  background: var(--color-accent);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(36, 142, 175, 0.30);
+}
 
+/* Leads CTA — filled blue, deeper hue than the outlined links. */
 .site-nav .nav-cta {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem 1.05rem;
-  background: var(--color-accent);
+  padding: 0.5rem 1.1rem;
+  background: var(--color-cta);
   color: #fff !important;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
-  box-shadow: 0 2px 6px rgba(216, 116, 46, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  box-shadow:
+    0 2px 6px rgba(40, 109, 246, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.30);
   transition: transform 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
 }
 
 .site-nav .nav-cta:hover {
   transform: translateY(-1px);
-  background: #c66422;
-  box-shadow: 0 6px 14px rgba(216, 116, 46, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background: var(--color-cta-strong);
+  box-shadow:
+    0 6px 14px rgba(40, 109, 246, 0.40),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
   text-decoration: none;
 }
 
@@ -164,7 +212,7 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
   background: var(--color-accent);
   border-color: var(--color-accent);
   transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(216, 116, 46, 0.32);
+  box-shadow: 0 6px 14px rgba(36, 142, 175, 0.32);
   text-decoration: none;
 }
 

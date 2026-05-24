@@ -39,6 +39,18 @@
     0 14px 28px -8px rgba(15, 23, 42, 0.20);
 }
 
+/* /home — tighten the gap between the sticky navbar and the hero. The
+   imported Spectra hero has an inline `margin-top: var(--wp--preset--spacing--xx-large)`
+   (~5rem) that leaves a big white band below the header at scroll=0. Both the
+   desktop hero (.swt-hide-tablet.swt-hide-mobile) and its mobile twin
+   (.swt-hide-desktop) carry the gradient background and that spacing, so we
+   match on the gradient to flatten both with one rule. We also shave the
+   internal padding-top a bit so the heading sits visibly close to the nav. */
+.page--home .htpc-rawhtml > .wp-block-group.alignwide[style*="gradient--primary"] {
+  margin-top: 0 !important;
+  padding-top: var(--wp--preset--spacing--medium, 2rem) !important;
+}
+
 /* /home — turn the four service teaser cards into click-through tiles to
    /services. The body <p> copy is stripped server-side; we replace it with
    an SVG arrow-in-ring icon and a "View services" cue, both of which
@@ -145,6 +157,45 @@
 
 .page--home .home-svc-card-link h4 {
   text-align: center;
+}
+
+/* Pin the four service-teaser cards into a single equal-width row instead
+   of Spectra's default 2×2 wrap. The cards sit as siblings inside a
+   `.uagb-container-inner-blocks-wrap`; :has() lets us target just the
+   wrapper that holds these specific cards without touching other Spectra
+   layouts on the page. */
+.page--home .uagb-container-inner-blocks-wrap:has(> .wp-block-uagb-container .home-svc-card-link) {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.page--home .uagb-container-inner-blocks-wrap:has(> .wp-block-uagb-container .home-svc-card-link)
+  > .wp-block-uagb-container {
+  flex: 1 1 0 !important;
+  width: auto !important;
+  min-width: 0;        /* allow flex children to shrink below their content width */
+  max-width: none !important;
+}
+
+/* On narrow viewports a four-up row gets cramped — let it wrap to 2×2. */
+@media (max-width: 720px) {
+  .page--home .uagb-container-inner-blocks-wrap:has(> .wp-block-uagb-container .home-svc-card-link) {
+    flex-wrap: wrap !important;
+  }
+  .page--home .uagb-container-inner-blocks-wrap:has(> .wp-block-uagb-container .home-svc-card-link)
+    > .wp-block-uagb-container {
+    flex: 1 1 calc(50% - 0.5rem) !important;
+  }
+}
+
+@media (max-width: 460px) {
+  .page--home .uagb-container-inner-blocks-wrap:has(> .wp-block-uagb-container .home-svc-card-link)
+    > .wp-block-uagb-container {
+    flex: 1 1 100% !important;
+  }
 }
 
 /* "Brought to you by" trust strip → continuous stock-ticker. The original
@@ -277,7 +328,7 @@
 }
 
 .lead-form__field label .req {
-  color: var(--color-accent, #d8742e);
+  color: var(--color-accent, #248eaf);
   margin-left: 2px;
 }
 
@@ -297,8 +348,8 @@
 .lead-form__field input:focus,
 .lead-form__field textarea:focus {
   outline: none;
-  border-color: var(--color-accent, #d8742e);
-  box-shadow: 0 0 0 3px rgba(216, 116, 46, 0.18);
+  border-color: var(--color-accent, #248eaf);
+  box-shadow: 0 0 0 3px rgba(36, 142, 175, 0.18);
 }
 
 .lead-form__field--checkbox label {
@@ -316,7 +367,7 @@
   margin-top: 0.2rem;
   width: 18px;
   height: 18px;
-  accent-color: var(--color-accent, #d8742e);
+  accent-color: var(--color-accent, #248eaf);
 }
 
 .lead-form__hp {
@@ -340,7 +391,7 @@
   align-self: flex-start;
   appearance: none;
   border: 0;
-  background: var(--color-accent, #d8742e);
+  background: var(--color-accent, #248eaf);
   color: #fff;
   padding: 0.7rem 1.6rem;
   border-radius: 999px;
@@ -348,16 +399,16 @@
   font-size: 1rem;
   cursor: pointer;
   box-shadow:
-    0 2px 6px rgba(216, 116, 46, 0.30),
+    0 2px 6px rgba(36, 142, 175, 0.30),
     inset 0 1px 0 rgba(255, 255, 255, 0.35);
   transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
 }
 
 .lead-form__submit:hover:not(:disabled) {
   transform: translateY(-1px);
-  background: #c66422;
+  background: #1c7591;
   box-shadow:
-    0 6px 14px rgba(216, 116, 46, 0.38),
+    0 6px 14px rgba(36, 142, 175, 0.38),
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 

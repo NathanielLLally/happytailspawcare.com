@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { pageBlocks } from '../blocks'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -23,13 +24,23 @@ export const Pages: CollectionConfig = {
       admin: { description: 'URL path segment, e.g. "about". Use "home" for the front page.' },
     },
     {
+      name: 'layout',
+      type: 'blocks',
+      labels: { singular: 'Block', plural: 'Layout blocks' },
+      blocks: pageBlocks,
+      admin: {
+        description:
+          'Compose the page from typed blocks. If any blocks are present, they render INSTEAD of the legacy rawHtml/inlineStyles below.',
+      },
+    },
+    {
       name: 'rawHtml',
       type: 'textarea',
       maxLength: 1_000_000,
       admin: {
         rows: 20,
         description:
-          'Gutenberg / Spectra HTML imported from WordPress. Rendered as-is on the public site.',
+          'Legacy: Gutenberg / Spectra HTML imported from WordPress. Used as a fallback when no layout blocks are present.',
       },
     },
     {

@@ -3,6 +3,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { HtmlContent } from '@/components/HtmlContent'
 import { transformHomeHtml } from '@/lib/transform-home'
+import { PageBlocks } from '@/components/blocks'
 
 export const dynamic = 'force-dynamic'
 
@@ -25,11 +26,16 @@ export default async function HomePage() {
     limit: 20,
   })
 
-  const hasHomeContent = home?.rawHtml && home.rawHtml.trim().length > 0
+  const hasBlocks = Array.isArray(home?.layout) && home.layout.length > 0
+  const hasHomeContent = !hasBlocks && home?.rawHtml && home.rawHtml.trim().length > 0
 
   return (
     <div className="container">
-      {hasHomeContent ? (
+      {hasBlocks ? (
+        <article className="page-content page--home">
+          <PageBlocks blocks={home.layout} sourcePage="/" />
+        </article>
+      ) : hasHomeContent ? (
         <>
           {home.inlineStyles ? (
             <style dangerouslySetInnerHTML={{ __html: home.inlineStyles }} />

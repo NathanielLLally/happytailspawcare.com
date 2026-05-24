@@ -1,0 +1,232 @@
+/* Styles for the Payload `blocks` field renderers. Kept in their own
+   file so they're easy to find and don't tangle with the imported
+   Spectra fallback styles. */
+
+.block-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease, color 150ms ease;
+}
+
+.block-cta--primary {
+  background: var(--color-accent, #248eaf);
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(36, 142, 175, 0.30), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.block-cta--primary:hover {
+  transform: translateY(-1px);
+  background: #1c7591;
+  box-shadow: 0 6px 14px rgba(36, 142, 175, 0.40), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.block-cta--secondary {
+  background: transparent;
+  color: var(--color-accent, #248eaf);
+  border: 2px solid var(--color-accent, #248eaf);
+}
+.block-cta--secondary:hover {
+  background: var(--color-accent, #248eaf);
+  color: #fff;
+}
+
+/* Hero ---------------------------------------------------------------- */
+.block-hero {
+  padding: clamp(3rem, 8vw, 6rem) 0;
+  background: var(--color-bg, #fff);
+  background-size: cover;
+  background-position: center;
+}
+.block-hero--has-bg { color: #fff; }
+.block-hero--has-bg .block-hero__heading,
+.block-hero--has-bg .block-hero__sub { color: #fff; }
+
+.block-hero__inner { max-width: 880px; }
+.block-hero--center .block-hero__inner { margin-inline: auto; text-align: center; }
+
+.block-hero__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  color: var(--color-accent, #248eaf);
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+}
+
+.block-hero__heading {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.08;
+  margin: 0 0 1rem;
+}
+
+.block-hero__sub {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: var(--color-muted, #6b6b6b);
+  margin: 0 0 1.5rem;
+  max-width: 56ch;
+}
+.block-hero--center .block-hero__sub { margin-inline: auto; }
+.block-hero--has-bg .block-hero__sub { color: rgba(255,255,255,0.92); }
+
+.block-hero__ctas { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.block-hero--center .block-hero__ctas { justify-content: center; }
+
+/* Rich text ----------------------------------------------------------- */
+.block-richtext { padding: 2.5rem 0; }
+.block-richtext--center { text-align: center; }
+.block-richtext--normal .container { max-width: 760px; }
+.block-richtext--wide .container { max-width: 1080px; }
+.block-richtext--full .container { max-width: none; }
+
+.block-richtext h1, .block-richtext h2, .block-richtext h3 { line-height: 1.18; }
+.block-richtext p { line-height: 1.7; }
+.block-richtext a { color: var(--color-accent, #248eaf); }
+
+/* Media + text -------------------------------------------------------- */
+.block-mediatext { padding: 3rem 0; }
+.block-mediatext__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 760px) {
+  .block-mediatext__inner { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .block-mediatext--image-right .block-mediatext__media { order: 2; }
+}
+.block-mediatext__media img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 10px 24px -8px rgba(15, 23, 42, 0.14);
+}
+.block-mediatext__text h2 { margin-top: 0; }
+.block-mediatext__text .block-cta { margin-top: 0.5rem; }
+
+/* Feature grid -------------------------------------------------------- */
+.block-featuregrid { padding: 3rem 0; }
+.block-featuregrid__heading { text-align: center; margin: 0 0 0.5rem; }
+.block-featuregrid__intro {
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 60ch;
+  color: var(--color-muted, #6b6b6b);
+}
+.block-featuregrid__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+.block-featuregrid__grid.cols-2 { grid-template-columns: 1fr; }
+.block-featuregrid__grid.cols-3 { grid-template-columns: 1fr; }
+.block-featuregrid__grid.cols-4 { grid-template-columns: 1fr; }
+@media (min-width: 720px) {
+  .block-featuregrid__grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .block-featuregrid__grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  .block-featuregrid__grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .block-featuregrid__grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .block-featuregrid__grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+.block-featuregrid__card {
+  background: #fff;
+  border: 1px solid var(--color-border, #e6e6e6);
+  border-radius: 14px;
+  padding: 1.5rem 1.4rem;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.block-featuregrid__card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent, #248eaf);
+  box-shadow: 0 12px 22px -8px rgba(15, 23, 42, 0.18);
+}
+.block-featuregrid__card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.block-featuregrid__icon { color: var(--color-accent, #248eaf); margin-bottom: 0.6rem; }
+.block-featuregrid__card h3 { margin: 0.2rem 0 0.5rem; font-size: 1.15rem; }
+.block-featuregrid__card p { margin: 0 0 0.6rem; color: var(--color-muted, #6b6b6b); line-height: 1.55; }
+.block-featuregrid__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-accent, #248eaf);
+  font-weight: 600;
+}
+
+/* Logo ticker (block-driven) ------------------------------------------ */
+.block-logoticker { padding: 2rem 0; }
+.block-logoticker__eyebrow {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--color-muted, #6b6b6b);
+  margin: 0 0 1rem;
+}
+/* The .htpc-ticker rules in spectra.css already animate the swiper-wrapper.
+   For the block-driven ticker we just expose `animation-duration` via inline
+   style — the swiper-wrapper class is reused for the same CSS to apply. */
+.block-logoticker .swiper-slide img {
+  max-height: 56px;
+  width: auto;
+  filter: grayscale(0.55);
+  transition: filter 220ms ease;
+}
+.block-logoticker .swiper-slide:hover img { filter: grayscale(0); }
+
+/* CTA section --------------------------------------------------------- */
+.block-cta-section { padding: 3rem 0; }
+.block-cta-section--light { background: #f7f7f9; }
+.block-cta-section--dark { background: #111827; color: #fff; }
+.block-cta-section--dark h2 { color: #fff; }
+.block-cta-section--accent {
+  background: linear-gradient(135deg, #248eaf 0%, #56b7d4 100%);
+  color: #fff;
+}
+.block-cta-section--accent h2 { color: #fff; }
+.block-cta-section--accent .block-cta--primary {
+  background: #fff;
+  color: #248eaf;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+.block-cta-section--accent .block-cta--primary:hover { background: #111827; color: #fff; }
+
+.block-cta-section__inner {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+}
+@media (min-width: 720px) {
+  .block-cta-section__inner { grid-template-columns: 1fr auto; }
+}
+.block-cta-section h2 { margin: 0 0 0.5rem; }
+.block-cta-section p { margin: 0; max-width: 50ch; }
+
+.block-cta-section__buttons { display: flex; gap: 0.7rem; flex-wrap: wrap; }
+
+/* Lead form block ----------------------------------------------------- */
+.block-leadform { padding: 2.5rem 0; }
+.block-leadform__heading { text-align: center; margin: 0 0 0.4rem; }
+.block-leadform__intro {
+  text-align: center;
+  max-width: 56ch;
+  margin: 0 auto 1.5rem;
+  color: var(--color-muted, #6b6b6b);
+}
+
+/* Raw HTML block ------------------------------------------------------ */
+.block-html { padding: 2rem 0; }
