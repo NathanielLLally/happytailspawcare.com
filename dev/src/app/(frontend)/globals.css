@@ -120,6 +120,70 @@ img, svg, video { max-width: 100%; height: auto; display: block; }
 .site-footer a { color: var(--color-muted); }
 .site-footer a:hover { color: var(--color-accent); }
 
+.site-footer__inner {
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .site-footer__inner {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+.site-footer__brand { line-height: 1.45; }
+.site-footer__tagline { font-weight: 600; color: var(--color-fg); }
+
+.site-footer__socials {
+  list-style: none;
+  display: flex;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-footer__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  transition: color 150ms ease, background 150ms ease, border-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
+}
+
+.site-footer__social:hover {
+  color: #fff;
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(216, 116, 46, 0.32);
+  text-decoration: none;
+}
+
+/* Optional per-platform brand colors on hover. */
+.site-footer__social--facebook:hover  { background: #1877f2; border-color: #1877f2; box-shadow: 0 6px 14px rgba(24, 119, 242, 0.35); }
+.site-footer__social--linkedin:hover  { background: #0a66c2; border-color: #0a66c2; box-shadow: 0 6px 14px rgba(10, 102, 194, 0.35); }
+.site-footer__social--instagram:hover { background: #e1306c; border-color: #e1306c; box-shadow: 0 6px 14px rgba(225, 48, 108, 0.35); }
+.site-footer__social--youtube:hover   { background: #ff0000; border-color: #ff0000; box-shadow: 0 6px 14px rgba(255, 0, 0, 0.32); }
+.site-footer__social--twitter:hover   { background: #111; border-color: #111; box-shadow: 0 6px 14px rgba(0, 0, 0, 0.32); }
+.site-footer__social--tiktok:hover    { background: #111; border-color: #111; box-shadow: 0 6px 14px rgba(0, 0, 0, 0.32); }
+.site-footer__social--github:hover    { background: #24292f; border-color: #24292f; box-shadow: 0 6px 14px rgba(36, 41, 47, 0.35); }
+
+.site-footer__nav {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .post-list {
   list-style: none;
   padding: 0;

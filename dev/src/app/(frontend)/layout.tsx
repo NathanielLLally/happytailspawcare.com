@@ -34,6 +34,7 @@ export default async function FrontendLayout({ children }: { children: ReactNode
           tagline={(footer as any)?.tagline}
           copyright={(footer as any)?.copyright}
           navItems={(footer as any)?.navItems || []}
+          socialLinks={(footer as any)?.socialLinks || []}
         />
       </body>
     </html>
