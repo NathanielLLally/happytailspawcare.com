@@ -6,6 +6,12 @@ export const Pages: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', '_status', 'updatedAt'],
+    livePreview: {
+      url: ({ data }) => {
+        const base = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+        return `${base}/preview/pages/${data?.slug || ''}`
+      },
+    },
   },
   access: {
     read: () => true,

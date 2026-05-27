@@ -3,6 +3,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { HtmlContent } from '@/components/HtmlContent'
 import { LeadForm } from '@/components/LeadForm'
+import { BusinessModelForm } from '@/components/BusinessModelForm'
 import { stripForminator } from '@/lib/transform-learn-more'
 import { PageBlocks } from '@/components/blocks'
 
@@ -41,21 +42,31 @@ export default async function PageBySlug({ params }: { params: Promise<Params> }
   // both are absent, fall back to just the title.
   const hasBlocks = Array.isArray(page.layout) && page.layout.length > 0
   let renderedBody: React.ReactNode
+
   if (hasBlocks) {
     renderedBody = <PageBlocks blocks={page.layout} sourcePage={`/${slug}`} />
-  } else if (page.rawHtml && slug === 'learn-more') {
-    const { before, after } = stripForminator(page.rawHtml)
-    renderedBody = (
-      <>
-        <HtmlContent head={page.headExtras || ''} html={before} />
-        <div className="lead-form-wrap container">
-          <LeadForm sourcePage="/learn-more" />
-        </div>
-        {after ? <HtmlContent html={after} /> : null}
-      </>
-    )
   } else if (page.rawHtml) {
-    renderedBody = <HtmlContent head={page.headExtras || ''} html={page.rawHtml} />
+    const isBusinessForm = page.rawHtml.includes('id="421"')
+    const isLeadForm = page.rawHtml.includes('id="420"') || page.rawHtml.includes('forminator-ui')
+
+    if (isBusinessForm || isLeadForm) {
+      const { before, after } = stripForminator(page.rawHtml)
+      renderedBody = (
+        <>
+          <HtmlContent head={page.headExtras || ''} html={before} />
+          <div className="lead-form-wrap container">
+            {isBusinessForm ? (
+              <BusinessModelForm sourcePage={`/${slug}`} />
+            ) : (
+              <LeadForm sourcePage={`/${slug}`} />
+            )}
+          </div>
+          {after ? <HtmlContent html={after} /> : null}
+        </>
+      )
+    } else {
+      renderedBody = <HtmlContent head={page.headExtras || ''} html={page.rawHtml} />
+    }
   } else {
     renderedBody = (
       <div className="container">
@@ -63,6 +74,7 @@ export default async function PageBySlug({ params }: { params: Promise<Params> }
       </div>
     )
   }
+
 
   return (
     <>

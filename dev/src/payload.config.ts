@@ -26,6 +26,14 @@ export default buildConfig({
     meta: {
       titleSuffix: '— Happy Tails Paw Care',
     },
+    livePreview: {
+      breakpoints: [
+        { label: 'Mobile', name: 'mobile', width: 375, height: 667 },
+        { label: 'Tablet', name: 'tablet', width: 768, height: 1024 },
+        { label: 'Desktop', name: 'desktop', width: 1280, height: 900 },
+      ],
+      collections: ['pages', 'posts'],
+    },
   },
   collections: [Users, Media, Pages, Posts, Categories, Tags, Leads],
   globals: [SiteSettings, Header, Footer],

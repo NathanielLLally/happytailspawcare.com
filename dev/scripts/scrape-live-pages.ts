@@ -65,6 +65,8 @@ function extractHeadExtras(html: string): string {
     /\/wp-login\//i,
     /\/wp-includes\/js\/wp-emoji-release/i,
     /admin-ajax\.php/i,
+    /forminator/i,
+    /wp-google-maps/i,
   ]
 
   const linkRe = /<link\s+([^>]*?)\/?>/g

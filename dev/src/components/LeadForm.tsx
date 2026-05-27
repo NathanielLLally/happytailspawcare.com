@@ -1,12 +1,15 @@
 'use client'
 
 import { useState, type FormEvent } from 'react'
+import Script from 'next/script'
 
 type State =
   | { kind: 'idle' }
   | { kind: 'submitting' }
   | { kind: 'success' }
   | { kind: 'error'; message: string }
+
+const RECAPTCHA_SITE_KEY = '6LeCETssAAAAAATdYsv2aKBxCGwFeOKwmutOj1zr'
 
 export function LeadForm({ sourcePage = '/learn-more' }: { sourcePage?: string }) {
   const [state, setState] = useState<State>({ kind: 'idle' })
@@ -22,13 +25,14 @@ export function LeadForm({ sourcePage = '/learn-more' }: { sourcePage?: string }
       return
     }
 
-    const payload = {
+    const payload: any = {
       name: String(data.get('name') || '').trim(),
       phone: String(data.get('phone') || '').trim(),
       email: String(data.get('email') || '').trim(),
       message: String(data.get('message') || '').trim(),
       smsOptIn: Boolean(data.get('smsOptIn')),
       meta: { sourcePage },
+      captchaToken: '',
     }
 
     if (!payload.name || !payload.email) {
@@ -37,7 +41,15 @@ export function LeadForm({ sourcePage = '/learn-more' }: { sourcePage?: string }
     }
 
     setState({ kind: 'submitting' })
+
     try {
+      // Get reCAPTCHA token
+      if (typeof (window as any).grecaptcha !== 'undefined') {
+        payload.captchaToken = await (window as any).grecaptcha.execute(RECAPTCHA_SITE_KEY, {
+          action: 'submit',
+        })
+      }
+
       const res = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -70,77 +82,83 @@ export function LeadForm({ sourcePage = '/learn-more' }: { sourcePage?: string }
   const disabled = state.kind === 'submitting'
 
   return (
-    <form className="lead-form" onSubmit={onSubmit} noValidate>
-      <div className="lead-form__field">
-        <label htmlFor="lead-name">
-          <span aria-hidden>👤</span> First Name <span className="req">*</span>
-        </label>
-        <input id="lead-name" name="name" type="text" autoComplete="given-name" required disabled={disabled} />
-      </div>
-
-      <div className="lead-form__field">
-        <label htmlFor="lead-phone">
-          <span aria-hidden>📞</span> Phone Number
-        </label>
-        <input
-          id="lead-phone"
-          name="phone"
-          type="tel"
-          autoComplete="tel"
-          inputMode="tel"
-          disabled={disabled}
-        />
-      </div>
-
-      <div className="lead-form__field">
-        <label htmlFor="lead-email">
-          <span aria-hidden>✉️</span> Email Address <span className="req">*</span>
-        </label>
-        <input
-          id="lead-email"
-          name="email"
-          type="email"
-          autoComplete="email"
-          inputMode="email"
-          required
-          disabled={disabled}
-        />
-      </div>
-
-      <div className="lead-form__field">
-        <label htmlFor="lead-msg">Tell us about your business</label>
-        <textarea id="lead-msg" name="message" rows={5} disabled={disabled} />
-      </div>
-
-      <div className="lead-form__field lead-form__field--checkbox">
-        <label htmlFor="lead-opt">
-          <input id="lead-opt" name="smsOptIn" type="checkbox" disabled={disabled} />
-          <span>
-            Check this box to receive messages from our sales team. Message frequency
-            varies, and data rates may apply.
-          </span>
-        </label>
-      </div>
-
-      {/* Honeypot — keep visually hidden + outside the tab order. */}
-      <div className="lead-form__hp" aria-hidden="true">
-        <label>
-          Leave this empty
-          <input type="text" name="company_website" tabIndex={-1} autoComplete="off" />
-        </label>
-      </div>
-
-      {state.kind === 'error' ? (
-        <div className="lead-form__error" role="alert">
-          {state.message}
+    <>
+      <Script
+        src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}
+        strategy="afterInteractive"
+      />
+      <form className="lead-form" onSubmit={onSubmit} noValidate>
+        <div className="lead-form__field">
+          <label htmlFor="lead-name">
+            <span aria-hidden>👤</span> First Name <span className="req">*</span>
+          </label>
+          <input id="lead-name" name="name" type="text" autoComplete="given-name" required disabled={disabled} />
         </div>
-      ) : null}
 
-      <button type="submit" className="lead-form__submit" disabled={disabled}>
-        {disabled ? 'Sending…' : 'Submit'}
-      </button>
+        <div className="lead-form__field">
+          <label htmlFor="lead-phone">
+            <span aria-hidden>📞</span> Phone Number
+          </label>
+          <input
+            id="lead-phone"
+            name="phone"
+            type="tel"
+            autoComplete="tel"
+            inputMode="tel"
+            disabled={disabled}
+          />
+        </div>
 
-      <p className="lead-form__legal">GDPR | CAN-Spam compliant</p>
-    </form>
+        <div className="lead-form__field">
+          <label htmlFor="lead-email">
+            <span aria-hidden>✉️</span> Email Address <span className="req">*</span>
+          </label>
+          <input
+            id="lead-email"
+            name="email"
+            type="email"
+            autoComplete="email"
+            inputMode="email"
+            required
+            disabled={disabled}
+          />
+        </div>
+
+        <div className="lead-form__field">
+          <label htmlFor="lead-msg">Tell us about your business</label>
+          <textarea id="lead-msg" name="message" rows={5} disabled={disabled} />
+        </div>
+
+        <div className="lead-form__field lead-form__field--checkbox">
+          <label htmlFor="lead-opt">
+            <input id="lead-opt" name="smsOptIn" type="checkbox" disabled={disabled} />
+            <span>
+              Check this box to receive messages from our sales team. Message frequency
+              varies, and data rates may apply.
+            </span>
+          </label>
+        </div>
+
+        {/* Honeypot — keep visually hidden + outside the tab order. */}
+        <div className="lead-form__hp" aria-hidden="true">
+          <label>
+            Leave this empty
+            <input type="text" name="company_website" tabIndex={-1} autoComplete="off" />
+          </label>
+        </div>
+
+        {state.kind === 'error' ? (
+          <div className="lead-form__error" role="alert">
+            {state.message}
+          </div>
+        ) : null}
+
+        <button type="submit" className="lead-form__submit" disabled={disabled}>
+          {disabled ? 'Sending…' : 'Submit'}
+        </button>
+
+        <p className="lead-form__legal">GDPR | CAN-Spam compliant</p>
+      </form>
+    </>
   )
 }

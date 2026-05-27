@@ -5,6 +5,12 @@ export const Posts: CollectionConfig = {
   admin: {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'publishedAt', '_status'],
+    livePreview: {
+      url: ({ data }) => {
+        const base = process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+        return `${base}/preview/posts/${data?.slug || ''}`
+      },
+    },
   },
   access: { read: () => true },
   versions: { drafts: { autosave: false } },

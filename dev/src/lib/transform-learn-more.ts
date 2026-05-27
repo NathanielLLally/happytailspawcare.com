@@ -11,21 +11,21 @@
 export const LEAD_FORM_MARKER = '<!--HTPC_LEAD_FORM-->'
 
 const FORMINATOR_BLOCK_RE =
-  /<div[^>]*\bforminator-ui[^>]*>[\s\S]*?<\/form>[\s\S]*?<\/div>(?:\s*<\/div>)?/
+  /(?:<div[^>]*\bforminator-ui[^>]*>[\s\S]*?<\/form>[\s\S]*?<\/div>(?:\s*<\/div>)?|\[forminator_form[^\]]*\])/g
 
-export function stripForminator(html: string): {
+export function stripForminator(html: string, marker = LEAD_FORM_MARKER): {
   before: string
   after: string
 } {
   if (!html) return { before: '', after: '' }
-  const replaced = html.replace(FORMINATOR_BLOCK_RE, LEAD_FORM_MARKER)
-  const idx = replaced.indexOf(LEAD_FORM_MARKER)
+  const replaced = html.replace(FORMINATOR_BLOCK_RE, marker)
+  const idx = replaced.indexOf(marker)
   if (idx === -1) {
     // No form found — return the original HTML in `before`, empty `after`.
     return { before: html, after: '' }
   }
   return {
     before: replaced.slice(0, idx),
-    after: replaced.slice(idx + LEAD_FORM_MARKER.length),
+    after: replaced.slice(idx + marker.length),
   }
 }
