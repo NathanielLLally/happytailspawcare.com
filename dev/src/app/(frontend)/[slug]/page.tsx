@@ -46,8 +46,8 @@ export default async function PageBySlug({ params }: { params: Promise<Params> }
   if (hasBlocks) {
     renderedBody = <PageBlocks blocks={page.layout} sourcePage={`/${slug}`} />
   } else if (page.rawHtml) {
-    const isBusinessForm = page.rawHtml.includes('id="421"')
-    const isLeadForm = page.rawHtml.includes('id="420"') || page.rawHtml.includes('forminator-ui')
+    const isBusinessForm = page.rawHtml.includes('forminator-module-421')
+    const isLeadForm = page.rawHtml.includes('forminator-module-420') || page.rawHtml.includes('forminator-ui')
 
     if (isBusinessForm || isLeadForm) {
       const { before, after } = stripForminator(page.rawHtml)

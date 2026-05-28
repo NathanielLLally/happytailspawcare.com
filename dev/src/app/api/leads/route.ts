@@ -25,7 +25,8 @@ export async function POST(req: NextRequest) {
   const phone = typeof body.phone === 'string' ? body.phone.trim() : ''
   const message = typeof body.message === 'string' ? body.message.trim() : ''
   const smsOptIn = Boolean(body.smsOptIn)
-  const serviceType = Array.isArray(body.serviceType) ? body.serviceType : []
+  const serviceTypeRaw = Array.isArray(body.serviceType) ? body.serviceType[0] : body.serviceType
+  const serviceType = typeof serviceTypeRaw === 'string' ? serviceTypeRaw : undefined
   const speculationModel = typeof body.speculationModel === 'string' ? body.speculationModel : ''
   const leadsPerMonth = typeof body.leadsPerMonth === 'string' ? body.leadsPerMonth : ''
   const activeClients = typeof body.activeClients === 'number' ? body.activeClients : undefined
@@ -91,7 +92,7 @@ export async function POST(req: NextRequest) {
     })
 
     // If this is a business model submission, sync to Google Sheet
-    if (serviceType.length > 0 || speculationModel) {
+    if (serviceType || speculationModel) {
       const gScriptUrl = new URL(
         'https://script.google.com/macros/s/AKfycbwJXeC4vPpjUAZGqNQ-_qq8cKTB5g5tSSIyvfDzOchjxNv9V_Z4auBwC-adljfYQ2m6/exec',
       )
@@ -99,7 +100,7 @@ export async function POST(req: NextRequest) {
       gScriptUrl.searchParams.set('name', name)
       gScriptUrl.searchParams.set('email', email)
       gScriptUrl.searchParams.set('phone', phone)
-      gScriptUrl.searchParams.set('service_type', serviceType.join(', '))
+      gScriptUrl.searchParams.set('service_type', serviceType ?? '')
       gScriptUrl.searchParams.set('speculation_model', speculationModel)
       gScriptUrl.searchParams.set('leads', leadsPerMonth)
       gScriptUrl.searchParams.set('active_clients', String(activeClients ?? 0))
@@ -114,7 +115,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ id: doc.id }, { status: 201 })
   } catch (err: any) {
-    console.error('lead submit failed', err)
+    console.error('lead submit failed', err, 'cause:', err?.cause)
     return NextResponse.json(
       { message: err?.message || 'Submission failed.' },
       { status: 500 },
