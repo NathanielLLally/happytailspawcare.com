@@ -37,7 +37,7 @@ const SPECULATION_MODELS = [
 const LEADS_OPTIONS = ['0', '10', '20', '40']
 
 const REDIRECT_URL =
-  'https://script.google.com/macros/s/AKfycbwJXeC4vPpjUAZGqNQ-_qq8cKTB5g5tSSIyvfDzOchjxNv9V_Z4auBwC-adljfYQ2m6/exec?action=update'
+  'https://script.google.com/macros/s/AKfycbwAprWsNyKLmXZqTma-_BISTJrdo1QlBmFabZbuu4UbQUgy1Uhf-miev6wiS66x1Tg_/exec?action=update'
 
 export function BusinessModelForm({ sourcePage = '/your-business-model' }: { sourcePage?: string }) {
   const [state, setState] = useState<State>({ kind: 'idle' })
